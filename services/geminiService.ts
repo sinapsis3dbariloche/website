@@ -6,15 +6,16 @@ export const getLatestNews = async () => {
   
   if (!apiKey) {
     console.warn("API_KEY no configurada. Usando datos locales.");
-    return getFallbackNews();
+    return { news: getFallbackNews(), sources: [] };
   }
 
   try {
     const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
-      contents: "Genera 3 noticias breves y emocionantes sobre 'Sinapsis 3D Bariloche'. Menciona impresión 3D, regalos personalizados, venta mayorista y souvenirs para eventos. Devuelve en formato JSON.",
+      model: "gemini-3-pro-preview",
+      contents: "Investiga el perfil de Instagram 'https://www.instagram.com/sinapsis3dbariloche/'. Identifica las 3 actividades o publicaciones más recientes (pueden ser Reels, Posts o novedades de tienda). Devuelve un JSON con un array de objetos: id, type (REEL, POST o STORE), title, content (resumen corto), y date (ej: 'Hoy', 'Ayer', 'Hace 3 días').",
       config: {
+        tools: [{ googleSearch: {} }],
         responseMimeType: "application/json",
         responseSchema: {
           type: Type.ARRAY,
@@ -22,40 +23,47 @@ export const getLatestNews = async () => {
             type: Type.OBJECT,
             properties: {
               id: { type: Type.STRING },
+              type: { type: Type.STRING },
               title: { type: Type.STRING },
               content: { type: Type.STRING },
               date: { type: Type.STRING },
             },
-            required: ["id", "title", "content", "date"]
+            required: ["id", "type", "title", "content", "date"]
           }
         }
       }
     });
     
-    return JSON.parse(response.text);
+    const sources = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
+    const news = JSON.parse(response.text);
+    
+    return { news, sources };
   } catch (error) {
-    console.error("Error al obtener noticias de Gemini:", error);
-    return getFallbackNews();
+    console.error("Error al obtener noticias de Gemini con Search:", error);
+    return { news: getFallbackNews(), sources: [] };
   }
 };
 
 const getFallbackNews = () => [
   {
     id: '1',
-    title: '¡Venta Mayorista Disponible!',
-    content: 'Potenciamos tu negocio con producciones en serie de alta calidad.',
+    type: 'POST',
+    title: 'Soluciones Industriales',
+    content: 'Fabricación de repuestos y prototipos con precisión para empresas locales.',
     date: 'Destacado'
   },
   {
     id: '2',
-    title: 'Souvenirs para Eventos',
-    content: 'Creamos toppers y recuerdos personalizados para que tu fiesta sea inolvidable.',
-    date: 'Novedad'
+    type: 'REEL',
+    title: 'Detrás de Escena',
+    content: 'Mira cómo nuestras Bambu Lab trabajan 24/7 en tus pedidos personalizados.',
+    date: 'Reciente'
   },
   {
     id: '3',
-    title: 'Envíos a Domicilio',
-    content: 'Recibí tus pedidos en la puerta de tu casa en Bariloche o cualquier punto del país.',
-    date: 'Info'
+    type: 'STORE',
+    title: 'Catálogo Actualizado',
+    content: 'Nuevos diseños de toppers y souvenirs disponibles en nuestra bio.',
+    date: 'Ahora'
   }
 ];
