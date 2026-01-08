@@ -1,0 +1,7 @@
+{
+  "name": "Sinapsis 3D Bariloche",
+  "description": "Landing page oficial de Sinapsis 3D Bariloche, expertos en diseño e impresión 3D personalizada en la Patagonia.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
