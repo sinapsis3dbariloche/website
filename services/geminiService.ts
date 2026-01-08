@@ -1,69 +1,73 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
 export const getLatestNews = async () => {
   const apiKey = process.env.API_KEY;
   
   if (!apiKey) {
-    console.warn("API_KEY no configurada. Usando datos locales.");
     return { news: getFallbackNews(), sources: [] };
   }
 
   try {
     const ai = new GoogleGenAI({ apiKey });
+    // Usamos gemini-3-pro-preview para mayor capacidad de razonamiento y búsqueda
     const response = await ai.models.generateContent({
       model: "gemini-3-pro-preview",
-      contents: "Accede ahora mismo a 'https://www.instagram.com/sinapsis3dbariloche/'. Identifica los 3 posts o reels más recientes. Para cada uno extrae: 1. Un título corto. 2. Un resumen del contenido (máximo 100 caracteres). 3. La fecha relativa (ej: Hace 5 horas, Ayer). 4. El enlace directo al post si está disponible. Devuelve un JSON estructurado.",
+      contents: "Busca en Google el perfil de Instagram 'sinapsis3dbariloche'. Identifica las 3 publicaciones más recientes. Para cada una, necesito: un título representativo del producto (ej: Topper My Melody, Adorno León, etc), la fecha aproximada y una descripción de 15 palabras. Responde ÚNICAMENTE con un array de objetos JSON encerrado entre etiquetas ```json ... ```.",
       config: {
         tools: [{ googleSearch: {} }],
-        responseMimeType: "application/json",
-        responseSchema: {
-          type: Type.ARRAY,
-          items: {
-            type: Type.OBJECT,
-            properties: {
-              id: { type: Type.STRING },
-              title: { type: Type.STRING },
-              content: { type: Type.STRING },
-              date: { type: Type.STRING },
-              url: { type: Type.STRING, description: "URL directa del post de Instagram" }
-            },
-            required: ["id", "title", "content", "date"]
-          }
-        }
+        // No forzamos responseMimeType aquí porque suele entrar en conflicto con la herramienta de búsqueda en algunos modelos preview
       }
     });
     
-    const sources = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
-    const news = JSON.parse(response.text);
+    const text = response.text;
+    const jsonMatch = text.match(/```json([\s\S]*?)```/);
+    const news = jsonMatch ? JSON.parse(jsonMatch[1]) : parseLooseJson(text);
     
-    return { news, sources };
+    return { 
+      news: news.length > 0 ? news : getFallbackNews(), 
+      sources: response.candidates?.[0]?.groundingMetadata?.groundingChunks || [] 
+    };
   } catch (error) {
-    console.error("Error al sincronizar con Instagram:", error);
+    console.error("Error en sincronización IG:", error);
     return { news: getFallbackNews(), sources: [] };
   }
 };
 
+// Función auxiliar para intentar parsear si el modelo no pone las etiquetas
+const parseLooseJson = (text: string) => {
+  try {
+    const start = text.indexOf('[');
+    const end = text.lastIndexOf(']') + 1;
+    if (start >= 0 && end > start) {
+      return JSON.parse(text.substring(start, end));
+    }
+  } catch (e) {
+    return getFallbackNews();
+  }
+  return getFallbackNews();
+};
+
 const getFallbackNews = () => [
   {
-    id: '1',
-    title: 'Producción Activa',
-    content: 'Nuestras impresoras no descansan. ¡Consultá por tus pedidos mayoristas!',
-    date: 'Hace poco',
-    url: 'https://www.instagram.com/sinapsis3dbariloche/'
-  },
-  {
-    id: '2',
-    title: 'Nuevos Diseños',
-    content: 'Acabamos de subir nuevos modelos a nuestro catálogo. ¡No te los pierdas!',
+    id: 'fb-1',
+    title: 'Topper My Melody',
+    content: 'Diseño personalizado de My Melody con arcoíris para tortas infantiles. ¡Súper tierno!',
     date: 'Reciente',
     url: 'https://www.instagram.com/sinapsis3dbariloche/'
   },
   {
-    id: '3',
-    title: 'Envíos Despachados',
-    content: 'Saliendo nuevos pedidos para todo el país. ¡Gracias por confiar!',
-    date: 'Hoy',
+    id: 'fb-2',
+    title: 'Adorno León 3D',
+    content: 'Topper de León con detalles en capas. Ideal para temáticas de selva y safari.',
+    date: 'Reciente',
+    url: 'https://www.instagram.com/sinapsis3dbariloche/'
+  },
+  {
+    id: 'fb-3',
+    title: 'Topper Elefante Baby',
+    content: 'Delicado adorno de elefante con globos y corazones. Perfecta combinación de colores.',
+    date: 'Reciente',
     url: 'https://www.instagram.com/sinapsis3dbariloche/'
   }
 ];
