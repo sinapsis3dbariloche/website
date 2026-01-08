@@ -12,6 +12,7 @@
       body {
         font-family: 'Inter', sans-serif;
         background-color: #09090b;
+        color: white;
       }
       .orange-gradient {
         background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
@@ -48,5 +49,7 @@
 </head>
 <body>
     <div id="root"></div>
+    <!-- Esta es la línea que faltaba para que Vercel ejecute el código -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>

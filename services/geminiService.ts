@@ -1,13 +1,19 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 export const getLatestNews = async () => {
+  const apiKey = process.env.API_KEY;
+  
+  if (!apiKey) {
+    console.warn("API_KEY no configurada. Usando datos locales.");
+    return getFallbackNews();
+  }
+
   try {
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
-      contents: "Genera 3 noticias breves y emocionantes sobre 'Sinapsis 3D Bariloche' (un taller de impresión 3D). Menciona nuevos diseños, trabajos personalizados y la ubicación en Bariloche. Devuelve en formato JSON.",
+      contents: "Genera 3 noticias breves y emocionantes sobre 'Sinapsis 3D Bariloche'. Menciona impresión 3D, regalos personalizados, venta mayorista y souvenirs para eventos. Devuelve en formato JSON.",
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -28,27 +34,28 @@ export const getLatestNews = async () => {
     
     return JSON.parse(response.text);
   } catch (error) {
-    console.error("Error fetching news from Gemini:", error);
-    // Fallback static data
-    return [
-      {
-        id: '1',
-        title: '¡Nuevos Diseños en MakerWorld!',
-        content: 'Ya están disponibles nuestras últimas creaciones. ¡Corre a descargarlas!',
-        date: 'Reciente'
-      },
-      {
-        id: '2',
-        title: 'Pedidos Personalizados Abiertos',
-        content: '¿Tenés una idea en mente? En Sinapsis 3D la hacemos realidad con la mejor precisión.',
-        date: 'Esta semana'
-      },
-      {
-        id: '3',
-        title: 'Directo desde el Taller',
-        content: 'Nuestra granja de impresoras en Altos del Cóndor está trabajando sin parar.',
-        date: 'Hoy'
-      }
-    ];
+    console.error("Error al obtener noticias de Gemini:", error);
+    return getFallbackNews();
   }
 };
+
+const getFallbackNews = () => [
+  {
+    id: '1',
+    title: '¡Venta Mayorista Disponible!',
+    content: 'Potenciamos tu negocio con producciones en serie de alta calidad.',
+    date: 'Destacado'
+  },
+  {
+    id: '2',
+    title: 'Souvenirs para Eventos',
+    content: 'Creamos toppers y recuerdos personalizados para que tu fiesta sea inolvidable.',
+    date: 'Novedad'
+  },
+  {
+    id: '3',
+    title: 'Envíos a Domicilio',
+    content: 'Recibí tus pedidos en la puerta de tu casa en Bariloche o cualquier punto del país.',
+    date: 'Info'
+  }
+];
