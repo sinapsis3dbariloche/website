@@ -13,7 +13,7 @@ export const getLatestNews = async () => {
     const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: "gemini-3-pro-preview",
-      contents: "Investiga el perfil de Instagram 'https://www.instagram.com/sinapsis3dbariloche/'. Identifica las 3 actividades o publicaciones más recientes (pueden ser Reels, Posts o novedades de tienda). Devuelve un JSON con un array de objetos: id, type (REEL, POST o STORE), title, content (resumen corto), y date (ej: 'Hoy', 'Ayer', 'Hace 3 días').",
+      contents: "Accede ahora mismo a 'https://www.instagram.com/sinapsis3dbariloche/'. Identifica los 3 posts o reels más recientes. Para cada uno extrae: 1. Un título corto. 2. Un resumen del contenido (máximo 100 caracteres). 3. La fecha relativa (ej: Hace 5 horas, Ayer). 4. El enlace directo al post si está disponible. Devuelve un JSON estructurado.",
       config: {
         tools: [{ googleSearch: {} }],
         responseMimeType: "application/json",
@@ -23,12 +23,12 @@ export const getLatestNews = async () => {
             type: Type.OBJECT,
             properties: {
               id: { type: Type.STRING },
-              type: { type: Type.STRING },
               title: { type: Type.STRING },
               content: { type: Type.STRING },
               date: { type: Type.STRING },
+              url: { type: Type.STRING, description: "URL directa del post de Instagram" }
             },
-            required: ["id", "type", "title", "content", "date"]
+            required: ["id", "title", "content", "date"]
           }
         }
       }
@@ -39,7 +39,7 @@ export const getLatestNews = async () => {
     
     return { news, sources };
   } catch (error) {
-    console.error("Error al obtener noticias de Gemini con Search:", error);
+    console.error("Error al sincronizar con Instagram:", error);
     return { news: getFallbackNews(), sources: [] };
   }
 };
@@ -47,23 +47,23 @@ export const getLatestNews = async () => {
 const getFallbackNews = () => [
   {
     id: '1',
-    type: 'POST',
-    title: 'Soluciones Industriales',
-    content: 'Fabricación de repuestos y prototipos con precisión para empresas locales.',
-    date: 'Destacado'
+    title: 'Producción Activa',
+    content: 'Nuestras impresoras no descansan. ¡Consultá por tus pedidos mayoristas!',
+    date: 'Hace poco',
+    url: 'https://www.instagram.com/sinapsis3dbariloche/'
   },
   {
     id: '2',
-    type: 'REEL',
-    title: 'Detrás de Escena',
-    content: 'Mira cómo nuestras Bambu Lab trabajan 24/7 en tus pedidos personalizados.',
-    date: 'Reciente'
+    title: 'Nuevos Diseños',
+    content: 'Acabamos de subir nuevos modelos a nuestro catálogo. ¡No te los pierdas!',
+    date: 'Reciente',
+    url: 'https://www.instagram.com/sinapsis3dbariloche/'
   },
   {
     id: '3',
-    type: 'STORE',
-    title: 'Catálogo Actualizado',
-    content: 'Nuevos diseños de toppers y souvenirs disponibles en nuestra bio.',
-    date: 'Ahora'
+    title: 'Envíos Despachados',
+    content: 'Saliendo nuevos pedidos para todo el país. ¡Gracias por confiar!',
+    date: 'Hoy',
+    url: 'https://www.instagram.com/sinapsis3dbariloche/'
   }
 ];
