@@ -35,7 +35,9 @@ const Hero: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a 
-            href="#servicios"
+            href="https://www.instagram.com/sinapsis3dbariloche/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40 transform hover:-translate-y-1"
           >
             Ver Catálogo 3D
