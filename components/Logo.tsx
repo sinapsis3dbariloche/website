@@ -1,40 +1,44 @@
-
 import React from 'react';
 
 interface LogoProps {
   className?: string;
-  showText?: boolean;
   variant?: 'full' | 'icon';
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "h-12", showText = true, variant = 'full' }) => {
+const Logo: React.FC<LogoProps> = ({ className = "h-12", variant = 'full' }) => {
+  // SVG que recrea fielmente el isotipo de la gota de Sinapsis 3D
+  // Optimizado con un trazo gris oscuro para el contorno y un naranja vibrante claro para la gota central.
+  const Isotipo = () => (
+    <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-auto">
+      {/* Círculo/Gota Exterior con relleno naranja principal y trazo gris oscuro (Zinc 800) */}
+      <path 
+        d="M50 5C50 5 15 45 15 75C15 94.33 30.67 110 50 110C69.33 110 85 94.33 85 75C85 45 50 5 50 5ZM50 95C38.95 95 30 86.05 30 75C30 63.95 38.95 55 50 55C61.05 55 70 63.95 70 75C70 86.05 61.05 95 50 95Z" 
+        fill="#F97316" 
+        stroke="#27272A"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      {/* Gota Interior con un tono de naranja más claro (#FB923C) para resaltar el centro */}
+      <path 
+        d="M50 65C50 65 38 78.33 38 88.33C38 94.96 43.37 100.33 50 100.33C56.63 100.33 62 94.96 62 88.33C62 78.33 50 65 50 65Z" 
+        fill="#FB923C" 
+      />
+    </svg>
+  );
+
+  if (variant === 'icon') {
+    return <div className={className}><Isotipo /></div>;
+  }
+
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      {/* Icono de la Gota Naranja */}
-      <svg 
-        viewBox="0 0 100 100" 
-        className={`${variant === 'icon' ? 'w-full h-full' : 'h-2/3'}`}
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path 
-          d="M50 5C50 5 20 40 20 65C20 81.5685 33.4315 95 50 95C66.5685 95 80 81.5685 80 65C80 40 50 5 50 5Z" 
-          fill="#F97316"
-        />
-        <circle cx="50" cy="65" r="15" fill="#09090B" />
-        <path 
-          d="M50 58C50 58 42 66 42 72C42 76.4183 45.5817 80 50 80C54.4183 80 58 76.4183 58 72C58 66 50 58 50 58Z" 
-          fill="#F97316" 
-        />
-      </svg>
-      
-      {/* Texto SINAPSIS 3D */}
-      {showText && variant === 'full' && (
-        <div className="flex flex-col items-center mt-1 leading-none">
-          <span className="text-white font-black tracking-tighter text-[1.2rem] uppercase italic">SINAPSIS</span>
-          <span className="text-white font-black tracking-[0.3em] text-[0.8rem] ml-1">3D</span>
-        </div>
-      )}
+    <div className={`flex flex-col items-center justify-center gap-2 ${className}`}>
+      <div className="h-2/3">
+        <Isotipo />
+      </div>
+      <div className="flex flex-col items-center -space-y-1">
+        <span className="text-white font-black text-2xl tracking-tighter uppercase">SINAPSIS</span>
+        <span className="text-white font-black text-3xl tracking-tighter uppercase">3D</span>
+      </div>
     </div>
   );
 };

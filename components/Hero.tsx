@@ -10,10 +10,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        {/* Logo Principal de Marca */}
-        <div className="mb-8 transform hover:scale-105 transition-transform duration-700">
-           <Logo className="h-40 md:h-56" />
-        </div>
+        {/* El logo que estaba aquí ha sido eliminado para que la home comience con el siguiente bloque */}
 
         <div className="inline-block p-1 rounded-full bg-zinc-800 border border-zinc-700 mb-6">
           <span className="px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-xs font-bold tracking-widest uppercase flex items-center gap-2">
@@ -27,7 +24,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight">
-          Líderes en Diseño e Impresión 3D en la Patagonia
+          Referente en Diseño e Impresión 3D de la Patagonia
         </h2>
         
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
@@ -54,19 +51,19 @@ const Hero: React.FC = () => {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-4xl opacity-70">
            <div className="flex flex-col items-center group">
               <i className="fa-solid fa-cake-candles text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
-              <span className="text-xs font-bold text-white uppercase tracking-widest">Souvenirs 3D</span>
+              <span className="text-xs font-bold text-white uppercase tracking-widest text-center">Souvenirs y Toppers</span>
            </div>
            <div className="flex flex-col items-center group">
               <i className="fa-solid fa-trophy text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
-              <span className="text-xs font-bold text-white uppercase tracking-widest">Trofeos</span>
+              <span className="text-xs font-bold text-white uppercase tracking-widest text-center">Trofeos y Medallas</span>
            </div>
            <div className="flex flex-col items-center group">
               <i className="fa-solid fa-shop text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
-              <span className="text-xs font-bold text-white uppercase tracking-widest">Venta Mayorista</span>
+              <span className="text-xs font-bold text-white uppercase tracking-widest text-center">Venta Mayorista</span>
            </div>
            <div className="flex flex-col items-center group">
               <i className="fa-solid fa-gears text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
-              <span className="text-xs font-bold text-white uppercase tracking-widest">Diseño a Medida</span>
+              <span className="text-xs font-bold text-white uppercase tracking-widest text-center">Diseño Industrial</span>
            </div>
         </div>
       </div>
