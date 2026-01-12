@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { CONTACT, SOCIALS } from '../constants';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contacto" className="py-24 bg-zinc-950 relative overflow-hidden">
+    <section id="contacto" className="pt-12 pb-24 bg-zinc-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>

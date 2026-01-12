@@ -5,7 +5,7 @@ import { SOCIALS } from '../constants';
 const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass border-b border-zinc-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo */}
           <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
               <span className="text-lg font-black tracking-tighter text-white">
                 SINAPSIS <span className="text-orange-500">3D</span>
               </span>
-              <span className="text-[10px] text-zinc-500 font-bold tracking-[0.2em] uppercase">Patagonia</span>
+              <span className="text-[10px] text-zinc-500 font-bold tracking-[0.2em] uppercase">Bariloche</span>
             </div>
           </div>
           
