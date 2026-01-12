@@ -1,25 +1,30 @@
 
 import React, { useEffect, useState } from 'react';
 import { getLatestNews } from '../services/geminiService';
+import Logo from './Logo';
 
 interface InstagramNews {
   id: string;
   title: string;
   content: string;
   date: string;
+  icon?: string;
   url?: string;
 }
 
+// Component to display recent social media updates synced via Gemini API
 const Updates: React.FC = () => {
   const [news, setNews] = useState<InstagramNews[]>([]);
   const [loading, setLoading] = useState(true);
   const [syncing, setSyncing] = useState(false);
   const [lastSync, setLastSync] = useState<string>('');
+  const [sources, setSources] = useState<any[]>([]);
 
   const handleSync = async () => {
     setSyncing(true);
-    const { news: newsData } = await getLatestNews();
+    const { news: newsData, sources: groundingSources } = await getLatestNews();
     setNews(newsData);
+    setSources(groundingSources || []);
     setLastSync(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
     setLoading(false);
     setSyncing(false);
@@ -32,14 +37,14 @@ const Updates: React.FC = () => {
   return (
     <section id="novedades" className="py-24 bg-zinc-900 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header con Sincronización */}
+        {/* Header with Sync Context */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
           <div className="flex items-center gap-6">
             <div className="relative">
               <div className="w-20 h-20 rounded-full p-[3px] bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600">
                 <div className="w-full h-full rounded-full bg-zinc-900 p-1">
-                  <div className="w-full h-full rounded-full bg-orange-500 flex items-center justify-center">
-                    <i className="fa-solid fa-cube text-white text-2xl"></i>
+                  <div className="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center p-2">
+                    <Logo variant="icon" className="w-full h-full" />
                   </div>
                 </div>
               </div>
@@ -49,10 +54,10 @@ const Updates: React.FC = () => {
             </div>
             
             <div>
-              <h2 className="text-3xl font-black text-white mb-1">Instagram Feed</h2>
+              <h2 className="text-3xl font-black text-white mb-1 uppercase tracking-tight">Social <span className="text-orange-500 italic">Live</span> Feed</h2>
               <p className="text-zinc-500 text-sm flex items-center gap-2">
                 <span className={`w-2 h-2 rounded-full ${syncing ? 'bg-yellow-500 animate-pulse' : 'bg-green-500'}`}></span>
-                Sincronizado: {lastSync || 'Conectando...'}
+                Estado: {syncing ? 'Analizando Instagram...' : `Última sincronización: ${lastSync || 'Conectando...'}`}
               </p>
             </div>
           </div>
@@ -60,84 +65,81 @@ const Updates: React.FC = () => {
           <button 
             onClick={handleSync}
             disabled={syncing}
-            className="group flex items-center gap-2 px-5 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-full text-xs font-bold transition-all disabled:opacity-50"
+            className="group flex items-center gap-2 px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-2xl text-[10px] font-black tracking-widest transition-all disabled:opacity-50 border border-zinc-700 active:scale-95 shadow-xl shadow-black/40"
           >
             <i className={`fa-solid fa-rotate ${syncing ? 'animate-spin' : 'group-hover:rotate-180 transition-transform duration-500'}`}></i>
-            {syncing ? 'Sincronizando...' : 'Actualizar Feed'}
+            {syncing ? 'RASTREANDO...' : 'SINCRONIZAR FEED'}
           </button>
         </div>
 
-        {/* Feed Grid */}
+        {/* Feed Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {loading ? (
             Array(3).fill(0).map((_, i) => (
-              <div key={i} className="aspect-[4/5] bg-zinc-800/50 rounded-3xl animate-pulse border border-zinc-800"></div>
+              <div key={i} className="aspect-[4/5] bg-zinc-800/20 rounded-3xl border border-zinc-800 flex items-center justify-center">
+                 <i className="fa-brands fa-instagram text-zinc-800 text-5xl animate-bounce"></i>
+              </div>
             ))
           ) : (
             news.map((item, idx) => (
               <a 
-                key={item.id} 
+                key={item.id || idx} 
                 href={item.url || 'https://www.instagram.com/sinapsis3dbariloche/'}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-zinc-950 border border-zinc-800 hover:border-orange-500/40 transition-all flex flex-col shadow-2xl"
               >
-                {/* Imagen/Fondo Simulado con los colores de la marca */}
-                <div className="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-950 opacity-50 group-hover:opacity-30 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/10 to-zinc-950 opacity-40 group-hover:opacity-10 transition-opacity"></div>
                 
-                {/* Contenido Visual */}
+                {/* Product/Icon Representation */}
                 <div className="relative flex-grow flex items-center justify-center p-8">
-                   <div className="w-24 h-24 bg-orange-500/10 rounded-full flex items-center justify-center border border-orange-500/20 group-hover:scale-110 transition-transform duration-500">
-                      <i className={`fa-solid ${idx === 0 ? 'fa-cake-candles' : idx === 1 ? 'fa-paw' : 'fa-shapes'} text-4xl text-orange-500`}></i>
+                   <div className="w-28 h-28 bg-orange-500/5 rounded-full flex items-center justify-center border border-orange-500/10 group-hover:scale-110 group-hover:bg-orange-500/10 transition-all duration-700">
+                      <i className={`fa-solid ${item.icon || 'fa-cube'} text-5xl text-orange-500/80 group-hover:text-orange-500 transition-colors`}></i>
                    </div>
                    
-                   {/* Badge de "Nuevo" */}
-                   <div className="absolute top-6 right-6 px-3 py-1 bg-orange-600 text-[10px] font-black text-white rounded-full tracking-tighter">
-                      POST RECIENTE
+                   <div className="absolute top-6 right-6 px-3 py-1 bg-zinc-900/80 backdrop-blur-sm border border-white/5 text-[9px] font-black text-orange-500 rounded-full tracking-widest uppercase">
+                      {item.date || 'RECIENTE'}
                    </div>
                 </div>
 
-                {/* Info Card (Estilo Glass) */}
-                <div className="relative p-6 bg-zinc-900/80 backdrop-blur-md border-t border-white/5">
+                {/* Content Overlay Card */}
+                <div className="relative p-6 bg-zinc-900/95 backdrop-blur-md border-t border-white/5">
                   <div className="flex items-center gap-2 mb-3">
-                     <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center text-[8px] text-white">
-                        <i className="fa-solid fa-cube"></i>
+                     <div className="w-6 h-6 rounded-full bg-zinc-950 border border-zinc-800 flex items-center justify-center">
+                        <i className="fa-brands fa-instagram text-[10px] text-zinc-500"></i>
                      </div>
-                     <span className="text-[10px] font-bold text-zinc-300 uppercase tracking-widest">sinapsis3dbariloche</span>
+                     <span className="text-[10px] font-bold text-zinc-400 tracking-widest uppercase">Instagram Update</span>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2 leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm line-clamp-2 italic mb-4">
-                    "{item.content}"
-                  </p>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <div className="flex gap-4 text-zinc-500">
-                       <i className="fa-regular fa-heart hover:text-red-500 transition-colors cursor-pointer"></i>
-                       <i className="fa-regular fa-comment hover:text-white transition-colors cursor-pointer"></i>
-                    </div>
-                    <span className="text-[10px] font-black text-orange-500 flex items-center gap-1">
-                      VER POST <i className="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
-                    </span>
-                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-orange-500 transition-colors line-clamp-1">{item.title}</h3>
+                  <p className="text-zinc-500 text-xs leading-relaxed line-clamp-2">{item.content}</p>
                 </div>
               </a>
             ))
           )}
         </div>
 
-        {/* Botón Call to Action Final */}
-        <div className="mt-16 text-center">
-           <a 
-            href="https://www.instagram.com/sinapsis3dbariloche/" 
-            target="_blank"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-2xl font-black hover:bg-orange-500 hover:text-white transition-all transform hover:-translate-y-1 shadow-xl"
-           >
-             <i className="fa-brands fa-instagram text-2xl"></i>
-             VER TODAS LAS PUBLICACIONES
-           </a>
-        </div>
+        {/* Sources display for Grounding Compliance */}
+        {!loading && sources.length > 0 && (
+          <div className="mt-12 p-6 bg-zinc-950/50 rounded-2xl border border-zinc-800">
+            <h4 className="text-zinc-400 text-xs font-bold uppercase tracking-[0.2em] mb-4">Fuentes de información (Google Search)</h4>
+            <div className="flex flex-wrap gap-4">
+              {sources.map((source, i) => (
+                source.web && (
+                  <a 
+                    key={i} 
+                    href={source.web.uri} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-xs text-orange-500/70 hover:text-orange-500 transition-colors flex items-center gap-2"
+                  >
+                    <i className="fa-solid fa-link text-[10px]"></i>
+                    {source.web.title || 'Ver fuente'}
+                  </a>
+                )
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { SOCIALS } from '../constants';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -8,17 +9,18 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-             <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center">
-                <i className="fa-solid fa-cube text-white text-sm"></i>
+             <Logo variant="icon" className="w-8 h-8" />
+             <div className="flex flex-col -space-y-1">
+                <span className="text-lg font-black text-white tracking-tighter">
+                  SINAPSIS <span className="text-orange-500">3D</span>
+                </span>
+                <span className="text-[8px] text-zinc-600 font-bold tracking-widest uppercase text-center">Bariloche</span>
              </div>
-             <span className="text-lg font-bold text-white tracking-tighter">
-               SINAPSIS <span className="text-orange-500">3D</span>
-             </span>
           </div>
 
           <div className="text-zinc-500 text-sm text-center">
              © {new Date().getFullYear()} Sinapsis 3D Bariloche. Todos los derechos reservados. <br className="md:hidden" />
-             Diseñado con precisión en la Patagonia.
+             Diseñado con precisión en la Patagonia Argentina.
           </div>
 
           <div className="flex items-center gap-6">

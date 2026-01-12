@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './Logo';
 
 const Hero: React.FC = () => {
   return (
@@ -10,6 +11,11 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        {/* Logo Principal de Marca */}
+        <div className="mb-8 transform hover:scale-105 transition-transform duration-700">
+           <Logo className="h-40 md:h-56" />
+        </div>
+
         <div className="inline-block p-1 rounded-full bg-zinc-800 border border-zinc-700 mb-6">
           <span className="px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-xs font-bold tracking-widest uppercase flex items-center gap-2">
             <i className="fa-solid fa-truck-fast"></i> Envíos a todo el país y a domicilio
@@ -28,7 +34,6 @@ const Hero: React.FC = () => {
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
           <span className="text-white font-semibold">Venta Minorista y Mayorista.</span> <br />
           Especialistas en regalos únicos, souvenirs para eventos, toppers de torta, medallas y trofeos. 
-          Desarrollamos prototipos y repuestos a medida con precisión industrial.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -39,28 +44,28 @@ const Hero: React.FC = () => {
             Ver Catálogo
           </a>
           <a 
-            href="#especialidades"
-            className="w-full sm:w-auto px-10 py-4 glass text-white rounded-xl font-bold text-lg transition-all hover:bg-white/10"
+            href="#contacto"
+            className="w-full sm:w-auto px-10 py-4 glass text-white rounded-xl font-bold text-lg transition-all hover:bg-white/10 border-zinc-700"
           >
-            Nuestros Servicios
+            Presupuesto Gratis
           </a>
         </div>
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 w-full max-w-4xl opacity-70">
-           <div className="flex flex-col items-center">
-              <i className="fa-solid fa-cake-candles text-2xl text-orange-500 mb-2"></i>
+           <div className="flex flex-col items-center group">
+              <i className="fa-solid fa-cake-candles text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
               <span className="text-xs font-bold text-white uppercase tracking-widest">Eventos</span>
            </div>
-           <div className="flex flex-col items-center">
-              <i className="fa-solid fa-trophy text-2xl text-orange-500 mb-2"></i>
+           <div className="flex flex-col items-center group">
+              <i className="fa-solid fa-trophy text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
               <span className="text-xs font-bold text-white uppercase tracking-widest">Trofeos</span>
            </div>
-           <div className="flex flex-col items-center">
-              <i className="fa-solid fa-shop text-2xl text-orange-500 mb-2"></i>
+           <div className="flex flex-col items-center group">
+              <i className="fa-solid fa-shop text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
               <span className="text-xs font-bold text-white uppercase tracking-widest">Mayorista</span>
            </div>
-           <div className="flex flex-col items-center">
-              <i className="fa-solid fa-gears text-2xl text-orange-500 mb-2"></i>
+           <div className="flex flex-col items-center group">
+              <i className="fa-solid fa-gears text-2xl text-orange-500 mb-2 group-hover:scale-110 transition-transform"></i>
               <span className="text-xs font-bold text-white uppercase tracking-widest">Prototipos</span>
            </div>
         </div>
