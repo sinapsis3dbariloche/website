@@ -2,6 +2,12 @@ import React from 'react';
 import Logo from './Logo';
 
 const Hero: React.FC = () => {
+  const trackClick = (label: string) => {
+    if ((window as any).trackConversion) {
+      (window as any).trackConversion(label, 'interés');
+    }
+  };
+
   return (
     <section id="inicio" className="relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden pointer-events-none opacity-20">
@@ -10,8 +16,6 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
-        {/* El logo que estaba aquí ha sido eliminado para que la home comience con el siguiente bloque */}
-
         <div className="inline-block p-1 rounded-full bg-zinc-800 border border-zinc-700 mb-6">
           <span className="px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-xs font-bold tracking-widest uppercase flex items-center gap-2">
             <i className="fa-solid fa-truck-fast"></i> Impresión 3D en Bariloche con envíos a todo el País
@@ -38,12 +42,14 @@ const Hero: React.FC = () => {
             href="https://www.instagram.com/sinapsis3dbariloche/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackClick('ver_catalogo_hero')}
             className="w-full sm:w-auto px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40 transform hover:-translate-y-1"
           >
             Ver Catálogo 3D
           </a>
           <a 
             href="#contacto"
+            onClick={() => trackClick('ver_presupuesto_hero')}
             className="w-full sm:w-auto px-10 py-4 glass text-white rounded-xl font-bold text-lg transition-all hover:bg-white/10 border-zinc-700"
           >
             Presupuesto Diseño 3D
