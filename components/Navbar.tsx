@@ -1,13 +1,14 @@
-
 import React from 'react';
 import Logo from './Logo';
+import { SOCIALS } from '../constants';
 
 const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass border-b border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3 group cursor-pointer">
+          {/* Brand Logo */}
+          <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <Logo variant="icon" className="w-10 h-10 transform group-hover:scale-110 transition-transform" />
             <div className="flex flex-col -space-y-1">
               <span className="text-lg font-black tracking-tighter text-white">
@@ -17,18 +18,43 @@ const Navbar: React.FC = () => {
             </div>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium">Inicio</a>
-            <a href="#portfolio" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium">Catálogo</a>
-            <a href="#novedades" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium">Novedades</a>
-            <a href="#contacto" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium">Contacto</a>
+          {/* Main Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <a href="#inicio" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Inicio</a>
+            <a href="#servicios" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Servicios</a>
+            <a 
+              href="https://www.instagram.com/sinapsis3dbariloche/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider flex items-center gap-2"
+            >
+              Catálogo <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+            <a href="#contacto" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Contacto</a>
           </div>
           
-          <div>
+          {/* Socials and CTA */}
+          <div className="flex items-center gap-6">
+            <div className="hidden sm:flex items-center gap-4 border-r border-zinc-800 pr-6 mr-0">
+              {SOCIALS.map((social) => (
+                <a 
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors text-lg"
+                  aria-label={social.platform}
+                >
+                  <i className={social.icon}></i>
+                </a>
+              ))}
+            </div>
+            
             <a 
               href={`https://wa.me/5492944914816`}
               target="_blank"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-orange-900/40"
+              rel="noopener noreferrer"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shadow-lg shadow-orange-900/40 whitespace-nowrap"
             >
               Consultar Proyecto
             </a>

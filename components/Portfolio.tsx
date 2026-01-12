@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PORTFOLIOS } from '../constants';
 
@@ -11,11 +10,11 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-zinc-950">
+    <section id="servicios" className="py-24 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="especialidades" className="mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-            Nuestras <span className="text-orange-500">Especialidades</span>
+            Nuestros <span className="text-orange-500">Servicios</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specialties.map((spec, idx) => (
@@ -32,7 +31,7 @@ const Portfolio: React.FC = () => {
 
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Catálogo de <span className="text-orange-500">Modelos</span>
+            Diseños <span className="text-orange-500">propios</span>
           </h2>
           <p className="text-zinc-500 text-lg max-w-2xl">
             Explorá nuestras colecciones digitales. Podés descargar los diseños o pedirnos la impresión terminada.
@@ -62,18 +61,6 @@ const Portfolio: React.FC = () => {
               </div>
             </a>
           ))}
-        </div>
-
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-           {[1, 2, 3, 4].map(i => (
-             <div key={i} className="aspect-square rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden group">
-               <img 
-                 src={`https://picsum.photos/seed/sinapsis-3d-${i}/600/600`} 
-                 alt="Producto Impreso" 
-                 className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-               />
-             </div>
-           ))}
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Logo from './Logo';
 
@@ -33,12 +32,13 @@ const Hero: React.FC = () => {
         
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
           <span className="text-white font-semibold">Venta Minorista y Mayorista.</span> <br />
-          Especialistas en regalos únicos, souvenirs para eventos, toppers de torta, medallas y trofeos. 
+          Especialistas en regalos únicos, souvenirs para eventos, toppers de torta, medallas y trofeos. <br />
+          <span className="text-orange-500 font-bold italic">Diseños personalizados y exclusivos.</span>
         </p>
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a 
-            href="#portfolio"
+            href="#servicios"
             className="w-full sm:w-auto px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40 transform hover:-translate-y-1"
           >
             Ver Catálogo
