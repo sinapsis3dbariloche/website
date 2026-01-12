@@ -7,15 +7,16 @@
     <meta name="description" content="Expertos en Impresión 3D en Bariloche. Diseños personalizados, souvenirs para eventos, trofeos y venta mayorista en toda la Patagonia. ¡Transformamos tus ideas!">
     <meta name="keywords" content="impresión 3d bariloche, diseño 3d personalizado, trofeos 3d, souvenirs 3d, toppers de torta, patagonia, venta mayorista 3d">
     
-    <!-- Google Analytics (GA4) - Configurado para Sinapsis 3D -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC8F43NF90"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-BC8F43NF90');
-      
-      // Función global para trackear eventos de conversión
+
+      // Función adicional para trackear eventos específicos (WhatsApp, Catálogo)
       window.trackConversion = function(eventName, category) {
         if (typeof gtag === 'function') {
           gtag('event', eventName, {
