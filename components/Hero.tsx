@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
 
         <div className="inline-block p-1 rounded-full bg-zinc-800 border border-zinc-700 mb-6">
           <span className="px-4 py-1 rounded-full bg-orange-500/10 text-orange-500 text-xs font-bold tracking-widest uppercase flex items-center gap-2">
-            <i className="fa-solid fa-truck-fast"></i> Impresión 3D en Bariloche con envíos a toda la Patagonia
+            <i className="fa-solid fa-truck-fast"></i> Impresión 3D en Bariloche con envíos a todo el País
           </span>
         </div>
         
