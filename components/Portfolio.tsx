@@ -3,10 +3,10 @@ import { PORTFOLIOS } from '../constants';
 
 const Portfolio: React.FC = () => {
   const specialties = [
-    { title: 'Eventos y Souvenirs', desc: 'Souvenirs únicos y toppers de torta personalizados para cumpleaños y casamientos en Bariloche.', icon: 'fa-cake-candles' },
-    { title: 'Trofeos y Medallas', desc: 'Medallas y trofeos 3D de alta calidad con diseños exclusivos para torneos y eventos deportivos.', icon: 'fa-trophy' },
-    { title: 'Diseño Personalizado', desc: 'Diseño 3D de prototipos, repuestos industriales y piezas técnicas bajo pedido en la Patagonia.', icon: 'fa-compass-drafting' },
-    { title: 'Venta Mayorista 3D', desc: 'Producción de impresión 3D a escala para comercios, empresas y revendedores de Argentina.', icon: 'fa-box-open' },
+    { title: 'Souvenirs Híbridos', desc: 'Toppers de torta y souvenirs que combinan impresión 3D con gráfica de alta definición para un acabado premium.', icon: 'fa-cake-candles' },
+    { title: 'Trofeos e Identidad', desc: 'Medallas, trofeos y llaveros institucionales personalizados para clubes, empresas y eventos deportivos.', icon: 'fa-trophy' },
+    { title: 'Kits Escolares 3D', desc: 'Tags para mochilas y cartucheras con nombre en relieve, ultra resistentes y 100% personalizados.', icon: 'fa-graduation-cap' },
+    { title: 'Diseño Técnico', desc: 'Soportes, repuestos y prototipos funcionales desarrollados con precisión para necesidades específicas.', icon: 'fa-gears' },
   ];
 
   return (
@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="especialidades" className="mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-            Servicios de <span className="text-orange-500">Impresión 3D</span>
+            Especialistas en <span className="text-orange-500 text-orange-glow">Impresión 3D</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specialties.map((spec, idx) => (

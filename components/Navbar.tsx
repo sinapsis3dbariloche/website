@@ -23,7 +23,8 @@ const Navbar: React.FC = () => {
           {/* Main Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <a href="#inicio" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Inicio</a>
-            <a href="#servicios" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Servicios</a>
+            <a href="#servicios" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Impresión 3D</a>
+            <a href="#grafica" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider">Gráfica</a>
             <a 
               href="https://www.instagram.com/sinapsis3dbariloche/" 
               target="_blank" 

@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
           <div>
             <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
               ¿Tenés un <br />
-              <span className="text-orange-500">Desafío 3D?</span>
+              <span className="text-orange-500">Desafío Creativo?</span>
             </h2>
             
             <div className="space-y-8">
