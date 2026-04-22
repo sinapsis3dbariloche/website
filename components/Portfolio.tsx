@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="especialidades" className="mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-            Especialistas en <span className="text-orange-500 text-orange-glow">Impresión 3D</span>
+            Expertos en <span className="text-orange-500 text-orange-glow">Impresión 3D Bariloche</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {specialties.map((spec, idx) => (

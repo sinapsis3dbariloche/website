@@ -42,7 +42,7 @@ const GraphicsServices: React.FC = () => {
             ¡Novedad! Nuevo Servicio
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Gráfica y <span className="text-orange-500 text-orange-glow">Papelería</span>
+            Diseño Gráfico y <span className="text-orange-500 text-orange-glow">Gráfica en Bariloche</span>
           </h2>
           <p className="text-zinc-400 text-lg max-w-2xl">
             Ampliamos nuestra propuesta para que tus eventos sean completos. <br />

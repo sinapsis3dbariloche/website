@@ -20,7 +20,9 @@ const Footer: React.FC = () => {
 
           <div className="text-zinc-500 text-sm text-center">
              © {new Date().getFullYear()} Sinapsis 3D Bariloche. Todos los derechos reservados. <br className="md:hidden" />
-             Diseñado con precisión en la Patagonia Argentina.
+             <span className="text-zinc-600 block mt-2">
+               Referente en <strong>Diseño</strong>, <strong>Impresión 3D</strong> y <strong>Gráfica</strong> en <strong>Bariloche</strong>, Patagonia Argentina.
+             </span>
           </div>
 
           <div className="flex items-center gap-6">
