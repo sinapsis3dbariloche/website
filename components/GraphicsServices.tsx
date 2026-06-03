@@ -1,34 +1,42 @@
 import React from 'react';
 
-const GraphicsServices: React.FC = () => {
+interface GraphicsServicesProps {
+  onImageClick?: (src: string, title: string, desc?: string) => void;
+}
+
+const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => {
   const graphicProducts = [
     {
       title: 'Tatuajes Temporales',
-      desc: '¡Un cumpleaños de Campeones! Tatuajes personalizados súper fáciles de usar. Solo agua, presionás y listo.',
+      desc: '¡Un cumpleaños de Campeones! Tatuajes personalizados súper fáciles de usar. Solo agua, presionás y listo y vive la magia mundialista o de tu temática favorita.',
       items: ['Para Casamientos', 'Cumples', 'Eventos'],
       icon: 'fa-bolt',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-orange-500 to-orange-600',
+      imageUrl: '/images/tatuajes-temporales-argentina-campeones-del-mundo-souvenirs.jpeg'
     },
     {
       title: 'Etiquetas Escolares',
       desc: '¡Chau ropa perdida! Etiquetas textiles termotransferibles para ropa y stickers premium laminados para tuppers y botellas.',
       items: ['Resisten Lavados', 'Pack 16 etiquetas', 'Diseños a elección'],
       icon: 'fa-tags',
-      color: 'from-blue-500 to-indigo-600'
+      color: 'from-blue-500 to-indigo-600',
+      imageUrl: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg'
     },
     {
       title: 'Identidad y Prensa',
       desc: 'Tarjetas de presentación y gráfica comercial que destaca. Diseños que reflejan la energía de tu emprendimiento o club.',
       items: ['Papel Fotográfico', 'Alta resolución', 'Diseño incluido'],
       icon: 'fa-address-card',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-500 to-pink-600',
+      imageUrl: '/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg'
     },
     {
       title: 'Papelería y Regalos',
       desc: 'Todos los detalles para que tu evento sea único. Juegos y sorpresas personalizadas para regalar.',
       items: ['Memory Game / Memotest', 'Libritos para pintar', 'Banderines', 'Cajitas cubo'],
       icon: 'fa-gift',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600',
+      imageUrl: '/images/marcapaginas-harry-potter-impresion-3d-clip.jpeg'
     }
   ];
 
@@ -75,36 +83,45 @@ const GraphicsServices: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="hidden lg:flex w-40 h-40 bg-zinc-900 rounded-2xl border border-zinc-800 items-center justify-center relative overflow-hidden group-hover:border-orange-500/30">
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent"></div>
-                  <i className={`fa-solid ${product.icon} text-6xl text-zinc-800/50 group-hover:scale-110 group-hover:text-orange-500/20 transition-all duration-700`}></i>
-                  <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-zinc-600 uppercase tracking-widest">Premium</span>
+                <div 
+                  onClick={() => {
+                    if (product.imageUrl && onImageClick) {
+                      onImageClick(product.imageUrl, product.title, product.desc);
+                    }
+                  }}
+                  className={`flex w-full md:w-40 h-48 md:h-40 bg-zinc-900 rounded-2xl border border-zinc-800 items-center justify-center relative overflow-hidden group-hover:border-orange-500/30 shrink-0 ${product.imageUrl ? 'cursor-zoom-in' : ''}`}
+                >
+                  {product.imageUrl ? (
+                    <>
+                      <img 
+                        src={product.imageUrl} 
+                        alt={product.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 animate-fade-in"
+                      />
+                      {/* Zoom Indicator */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/40">
+                        <div className="w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                          <i className="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent"></div>
+                      <i className={`fa-solid ${product.icon} text-6xl text-zinc-800/50 group-hover:scale-110 group-hover:text-orange-500/20 transition-all duration-700`}></i>
+                    </>
+                  )}
+                  <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-bold text-zinc-300 bg-zinc-950/80 px-2.5 py-1 rounded-lg uppercase tracking-widest backdrop-blur border border-zinc-800/40">
+                    {product.imageUrl ? 'Real' : 'Premium'}
+                  </span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 glass p-8 rounded-3xl border-orange-500/20 bg-orange-500/5 flex flex-col md:flex-row items-center justify-between gap-8">
-           <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-3xl shrink-0 shadow-lg shadow-orange-900/40">
-                <i className="fa-solid fa-tags"></i>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-white">Super Promos de Lanzamiento</h4>
-                <p className="text-zinc-400">Consultá por nuestros packs de 30 tatuajes temporales y combos personalizados para eventos.</p>
-              </div>
-           </div>
-           <a 
-              href="https://wa.me/5492944914816"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full md:w-auto px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-2xl font-bold transition-all shadow-xl shadow-orange-900/20 flex items-center justify-center gap-3"
-           >
-              <i className="fa-brands fa-whatsapp text-xl"></i>
-              Pedir Cotización Gráfica
-           </a>
-        </div>
+
       </div>
     </section>
   );
