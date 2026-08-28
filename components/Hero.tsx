@@ -22,13 +22,13 @@ const Hero: React.FC = () => {
           </span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4">
-          SINAPSIS 3D <br />
-          <span className="text-orange-500 text-orange-glow">Bariloche</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4 flex flex-col items-center">
+          <span className="text-xl md:text-2xl text-orange-500 mb-2 font-bold tracking-widest uppercase text-orange-glow">Impresión 3D Bariloche</span>
+          <span>SINAPSIS 3D</span>
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight">
-          Referente en Diseño y Soluciones Creativas de la Patagonia
+          Diseño y Gráfica Personalizada en la Patagonia
         </h2>
         
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">

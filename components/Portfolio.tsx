@@ -388,96 +388,204 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredWorks.map((work) => {
-              const isFailed = failedImages[work.id] ?? false;
-              return (
-                <div 
-                  key={work.id} 
-                  className="group glass rounded-3xl border-zinc-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden flex flex-col"
-                >
-                  {/* Image Container with Fallback */}
-                  <div 
-                    onClick={() => {
-                      if (!isFailed && onImageClick) {
-                        onImageClick(work.imagePath, work.title, work.desc);
-                      }
-                    }}
-                    className={`relative aspect-video bg-zinc-900 border-b border-zinc-900 overflow-hidden ${!isFailed ? 'cursor-zoom-in' : ''}`}
-                  >
-                    {!isFailed ? (
-                      <>
-                        <img 
-                          src={work.imagePath} 
-                          alt={work.title} 
-                          referrerPolicy="no-referrer"
-                          onError={() => handleImageError(work.id)}
-                          className={`w-full h-full ${(work as any).objectClass || 'object-cover object-center'} group-hover:scale-105 transition-all duration-700`}
-                        />
-                        {/* Hover Overlay & Zoom Indicator */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/40">
-                          <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                            <i className="fa-solid fa-magnifying-glass-plus text-sm"></i>
+          {activeTab === 'Todos' ? (
+            <div className="flex flex-col gap-16">
+              {['Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración'].map(category => (
+                <div key={category} className="scroll-mt-24">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 border-l-4 border-orange-500 pl-4">
+                    {category} en Impresión 3D
+                  </h3>
+                  <p className="text-zinc-400 mb-8 pl-4 max-w-3xl leading-relaxed">
+                    Catálogo de productos para {category.toLowerCase()}, fabricados a medida y con terminaciones premium en San Carlos de Bariloche.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {realWorks.filter(w => w.category === category).map((work) => {
+                      const isFailed = failedImages[work.id] ?? false;
+                      return (
+                        <article 
+                          key={work.id} 
+                          className="group glass rounded-3xl border-zinc-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden flex flex-col"
+                          itemScope itemType="http://schema.org/Product"
+                        >
+                          {/* Image Container with Fallback */}
+                          <div 
+                            onClick={() => {
+                              if (!isFailed && onImageClick) {
+                                onImageClick(work.imagePath, work.title, work.desc);
+                              }
+                            }}
+                            className={`relative aspect-video bg-zinc-900 border-b border-zinc-900 overflow-hidden ${!isFailed ? 'cursor-zoom-in' : ''}`}
+                          >
+                            {!isFailed ? (
+                              <>
+                                <img 
+                                  src={work.imagePath} 
+                                  alt={work.title} 
+                                  itemProp="image"
+                                  referrerPolicy="no-referrer"
+                                  onError={() => handleImageError(work.id)}
+                                  className={`w-full h-full ${(work as any).objectClass || 'object-cover object-center'} group-hover:scale-105 transition-all duration-700`}
+                                />
+                                {/* Hover Overlay & Zoom Indicator */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/40">
+                                  <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                    <i className="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
+                              work.fallback
+                            )}
                           </div>
-                        </div>
-                      </>
-                    ) : (
-                      work.fallback
-                    )}
-                  </div>
 
-                  {/* Content */}
-                  <div className="p-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      {/* Category and Badges */}
-                      <div className="flex items-center justify-between gap-4 mb-4">
-                        <span className="text-orange-500 font-bold text-xs uppercase tracking-wider">
-                          {work.category}
-                        </span>
-                        <div className="flex flex-wrap gap-1">
-                          {work.tags.slice(0, 2).map((tag, i) => (
-                            <span key={i} className="text-[9px] font-semibold text-zinc-500 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-full uppercase">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                          {/* Content */}
+                          <div className="p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                              {/* Category and Badges */}
+                              <div className="flex items-center justify-between gap-4 mb-4">
+                                <span className="text-orange-500 font-bold text-xs uppercase tracking-wider">
+                                  {work.category}
+                                </span>
+                                <div className="flex flex-wrap gap-1">
+                                  {work.tags.slice(0, 2).map((tag, i) => (
+                                    <span key={i} className="text-[9px] font-semibold text-zinc-500 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-full uppercase">
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
 
-                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors">
-                        {work.title}
-                      </h3>
-                      
-                      <p className="text-zinc-400 text-sm leading-relaxed">
-                        {work.desc}
-                      </p>
+                              <h4 itemProp="name" className="text-2xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors">
+                                {work.title}
+                              </h4>
+                              
+                              <p itemProp="description" className="text-zinc-400 text-sm leading-relaxed">
+                                {work.desc}
+                              </p>
 
-                      {/* Pie de página explicativo del trabajo hecho, según la solicitud del usuario */}
-                      <div className="mt-5 pt-4 border-t border-zinc-900/60 flex items-start gap-3 bg-zinc-950/40 p-3 rounded-2xl border border-zinc-900/20">
-                        <i className="fa-solid fa-square-check text-orange-500 text-sm mt-0.5 shrink-0"></i>
-                        <div className="text-[11px] leading-relaxed text-zinc-500">
-                          <strong className="text-zinc-400 block mb-0.5 uppercase tracking-wide text-[10px]">Trabajo realizado y acabado:</strong>
-                          {work.detail}
-                        </div>
-                      </div>
-                    </div>
+                              <div className="mt-5 pt-4 border-t border-zinc-900/60 flex items-start gap-3 bg-zinc-950/40 p-3 rounded-2xl border border-zinc-900/20">
+                                <i className="fa-solid fa-square-check text-orange-500 text-sm mt-0.5 shrink-0"></i>
+                                <div className="text-[11px] leading-relaxed text-zinc-500">
+                                  <strong className="text-zinc-400 block mb-0.5 uppercase tracking-wide text-[10px]">Trabajo realizado y acabado:</strong>
+                                  {work.detail}
+                                </div>
+                              </div>
+                            </div>
 
-                    <div className="flex items-center justify-end border-t border-zinc-800/60 pt-6 mt-6">
-                      <a 
-                        href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola! Vi la Colección de "${work.title}" en la web de Sinapsis 3D y me gustaría cotizar un trabajo personalizado similar.`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 rounded-xl bg-orange-500/10 text-orange-500 text-xs font-bold hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
-                      >
-                        <i className="fa-brands fa-whatsapp"></i>
-                        Cotizar Similar
-                      </a>
-                    </div>
+                            <div className="flex items-center justify-end border-t border-zinc-800/60 pt-6 mt-6">
+                              <a 
+                                href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola! Vi la Colección de "${work.title}" en la web de Sinapsis 3D y me gustaría cotizar un trabajo personalizado similar.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-4 py-2 rounded-xl bg-orange-500/10 text-orange-500 text-xs font-bold hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
+                              >
+                                <i className="fa-brands fa-whatsapp"></i>
+                                Cotizar Similar
+                              </a>
+                            </div>
+                          </div>
+                        </article>
+                      );
+                    })}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredWorks.map((work) => {
+                const isFailed = failedImages[work.id] ?? false;
+                return (
+                  <article 
+                    key={work.id} 
+                    className="group glass rounded-3xl border-zinc-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden flex flex-col"
+                    itemScope itemType="http://schema.org/Product"
+                  >
+                    {/* Image Container with Fallback */}
+                    <div 
+                      onClick={() => {
+                        if (!isFailed && onImageClick) {
+                          onImageClick(work.imagePath, work.title, work.desc);
+                        }
+                      }}
+                      className={`relative aspect-video bg-zinc-900 border-b border-zinc-900 overflow-hidden ${!isFailed ? 'cursor-zoom-in' : ''}`}
+                    >
+                      {!isFailed ? (
+                        <>
+                          <img 
+                            src={work.imagePath} 
+                            alt={work.title} 
+                            itemProp="image"
+                            referrerPolicy="no-referrer"
+                            onError={() => handleImageError(work.id)}
+                            className={`w-full h-full ${(work as any).objectClass || 'object-cover object-center'} group-hover:scale-105 transition-all duration-700`}
+                          />
+                          {/* Hover Overlay & Zoom Indicator */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black/40">
+                            <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                              <i className="fa-solid fa-magnifying-glass-plus text-sm"></i>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        work.fallback
+                      )}
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-8 flex-1 flex flex-col justify-between">
+                      <div>
+                        {/* Category and Badges */}
+                        <div className="flex items-center justify-between gap-4 mb-4">
+                          <span className="text-orange-500 font-bold text-xs uppercase tracking-wider">
+                            {work.category}
+                          </span>
+                          <div className="flex flex-wrap gap-1">
+                            {work.tags.slice(0, 2).map((tag, i) => (
+                              <span key={i} className="text-[9px] font-semibold text-zinc-500 bg-zinc-900 border border-zinc-800 px-2 py-0.5 rounded-full uppercase">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <h4 itemProp="name" className="text-2xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors">
+                          {work.title}
+                        </h4>
+                        
+                        <p itemProp="description" className="text-zinc-400 text-sm leading-relaxed">
+                          {work.desc}
+                        </p>
+
+                        {/* Pie de página explicativo del trabajo hecho, según la solicitud del usuario */}
+                        <div className="mt-5 pt-4 border-t border-zinc-900/60 flex items-start gap-3 bg-zinc-950/40 p-3 rounded-2xl border border-zinc-900/20">
+                          <i className="fa-solid fa-square-check text-orange-500 text-sm mt-0.5 shrink-0"></i>
+                          <div className="text-[11px] leading-relaxed text-zinc-500">
+                            <strong className="text-zinc-400 block mb-0.5 uppercase tracking-wide text-[10px]">Trabajo realizado y acabado:</strong>
+                            {work.detail}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-end border-t border-zinc-800/60 pt-6 mt-6">
+                        <a 
+                          href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola! Vi la Colección de "${work.title}" en la web de Sinapsis 3D y me gustaría cotizar un trabajo personalizado similar.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-4 py-2 rounded-xl bg-orange-500/10 text-orange-500 text-xs font-bold hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
+                        >
+                          <i className="fa-brands fa-whatsapp"></i>
+                          Cotizar Similar
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         <div className="mb-16">

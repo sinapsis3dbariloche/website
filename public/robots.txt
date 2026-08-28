@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.sinapsis3dbariloche.com.ar/sitemap.xml
