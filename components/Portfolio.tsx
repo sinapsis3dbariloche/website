@@ -236,7 +236,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'set-didactico-cabildo',
       title: 'Set Didáctico Cabildo 3D',
       desc: 'Maqueta interactiva articulada del histórico Cabildo de Buenos Aires, separada por módulos encastrables ideal para colegios e instituciones en Bariloche.',
-      category: 'Hogar y Decoración',
+      category: 'Escolar y Didáctico',
       tags: ['Educativo', 'Cabildo 3D', 'Maqueta', 'Didáctico'],
       imagePath: '/images/set-patrio-didactico-cabildo-3d-escuelas-jardines.jpeg',
       seoFilename: 'set-patrio-didactico-cabildo-3d-escuelas-jardines.jpeg',
@@ -300,7 +300,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'kit-escolar-mochilas',
       title: 'Kit de Etiquetas y Llaveros Escolares',
       desc: 'Etiquetas personalizadas ultra resistentes para mochilas junto con tags 3D grabados con nombre, la solución definitiva para personalizar útiles estudiantiles.',
-      category: 'Corporativo y Marcas',
+      category: 'Escolar y Didáctico',
       tags: ['Escolar', 'Personalizado', 'Resistente', 'Llavero Nombre'],
       imagePath: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
       seoFilename: 'kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
@@ -376,6 +376,152 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
         </div>
       )
     }
+,
+    {
+      id: 'cajitas-souvenir-personalizadas-one-piece',
+      title: 'Cajitas Souvenir Personalizadas One Piece',
+      desc: 'Hermosas cajitas para golosinas totalmente personalizadas a medida con la temática de One Piece para tu fiesta. Diseñamos cada detalle con el nombre del agasajado y frases de agradecimiento únicas.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["souvenirs","one piece","cajitas personalizadas","cumpleaños"],
+      imagePath: '/images/cajitas-souvenir-personalizadas-one-piece.png',
+      seoFilename: 'cajitas-souvenir-personalizadas-one-piece.png',
+      detail: 'Hermosas cajitas para golosinas totalmente personalizadas a medida con la temática de One Piece para tu fiesta. Diseñamos cada detalle con el nombre del agasajado y frases de agradecimiento únicas.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Cajitas Souvenir Personalizadas One Piece</span>
+        </div>
+      )
+    },
+    {
+      id: 'boligrafos-ecologicos-personalizados',
+      title: 'Bolígrafos Ecológicos Personalizados',
+      desc: 'Bolígrafos de cartón kraft personalizados a medida con el logotipo de tu marca o empresa. Una opción de merchandising sostenible ideal para eventos corporativos y regalía publicitaria.',
+      category: 'Corporativo y Marcas',
+      tags: ["boligrafos personalizados","merchandising","grafica corporativa","ecologico"],
+      imagePath: '/images/boligrafos-ecologicos-personalizados.png',
+      seoFilename: 'boligrafos-ecologicos-personalizados.png',
+      detail: 'Bolígrafos de cartón kraft personalizados a medida con el logotipo de tu marca o empresa. Una opción de merchandising sostenible ideal para eventos corporativos y regalía publicitaria.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Bolígrafos Ecológicos Personalizados</span>
+        </div>
+      )
+    },
+    {
+      id: 'topper-torta-personalizado-plim-plim',
+      title: 'Cake Topper Personalizado Plim Plim',
+      desc: 'Hermoso set de toppers para torta totalmente personalizado a medida con el nombre y la edad para tu evento. Diseñado e impreso en alta definición para darle un toque mágico y único a la mesa dulce.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["cake topper","plim plim","cumpleaños infantil","papeleria personalizada"],
+      imagePath: '/images/topper-torta-personalizado-plim-plim.png',
+      seoFilename: 'topper-torta-personalizado-plim-plim.png',
+      detail: 'Hermoso set de toppers para torta totalmente personalizado a medida con el nombre y la edad para tu evento. Diseñado e impreso en alta definición para darle un toque mágico y único a la mesa dulce.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Cake Topper Personalizado Plim Plim</span>
+        </div>
+      )
+    },
+    {
+      id: 'cake-topper-hulk-personalizado',
+      title: 'Topper de Torta Personalizado Hulk',
+      desc: 'Transforma tu fiesta de cumpleaños con este increíble set de topper de torta hecho a medida con temática de Hulk. Diseñado de forma totalmente personalizada con el nombre del cumpleañero y detalles únicos.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["cake topper","hulk","cumpleaños","personalizado"],
+      imagePath: '/images/cake-topper-hulk-personalizado.png',
+      seoFilename: 'cake-topper-hulk-personalizado.png',
+      detail: 'Transforma tu fiesta de cumpleaños con este increíble set de topper de torta hecho a medida con temática de Hulk. Diseñado de forma totalmente personalizada con el nombre del cumpleañero y detalles únicos.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Topper de Torta Personalizado Hulk</span>
+        </div>
+      )
+    }
+,
+    {
+      id: 'lapiz-topper-3d-stitch',
+      title: 'Lápiz Personalizado con Topper 3D de Stitch',
+      desc: 'Personaliza tus eventos o útiles escolares con este exclusivo lápiz temático de Stitch. Incluye topper impreso en 3D y envoltorio a juego totalmente personalizable.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["stitch","topper 3d","lapiz personalizado","souvenirs","impresion 3d"],
+      imagePath: '/images/lapiz-topper-3d-stitch.png',
+      seoFilename: 'lapiz-topper-3d-stitch.png',
+      detail: 'Personaliza tus eventos o útiles escolares con este exclusivo lápiz temático de Stitch. Incluye topper impreso en 3D y envoltorio a juego totalmente personalizable.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Lápiz Personalizado con Topper 3D de Stitch</span>
+        </div>
+      )
+    },
+    {
+      id: 'llaveros-hockey-personalizados-impresion-3d',
+      title: 'Llaveros Personalizados de Hockey',
+      desc: 'Llaveros 3D personalizados en forma de palo de hockey ideales para torneos y clubes. Personaliza texto y colores a medida para tu evento deportivo.',
+      category: 'Deportivos y Premios',
+      tags: ["hockey","llaveros personalizados","impresion 3d","souvenirs deportivos","eventos"],
+      imagePath: '/images/llaveros-hockey-personalizados-impresion-3d.png',
+      seoFilename: 'llaveros-hockey-personalizados-impresion-3d.png',
+      detail: 'Llaveros 3D personalizados en forma de palo de hockey ideales para torneos y clubes. Personaliza texto y colores a medida para tu evento deportivo.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Llaveros Personalizados de Hockey</span>
+        </div>
+      )
+    },
+    {
+      id: 'souvenirs-mariposas-personalizadas',
+      title: 'Souvenirs de Mariposas Personalizados',
+      desc: 'Hermosos souvenirs en forma de mariposas hechos a medida, ideales para cumpleaños, eventos y celebraciones especiales.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["mariposas","souvenirs","cumpleaños","impresion 3d","personalizado"],
+      imagePath: '/images/souvenirs-mariposas-personalizadas.png',
+      seoFilename: 'souvenirs-mariposas-personalizadas.png',
+      detail: 'Hermosos souvenirs en forma de mariposas hechos a medida, ideales para cumpleaños, eventos y celebraciones especiales.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Souvenirs de Mariposas Personalizados</span>
+        </div>
+      )
+    },
+    {
+      id: 'cajitas-souvenir-brawl-stars-personalizadas',
+      title: 'Cajitas Souvenir Personalizadas Brawl Stars',
+      desc: 'Increíbles cajitas para souvenirs con la temática de Brawl Stars. Totalmente personalizables con el nombre y diseño a medida para un cumpleaños inolvidable.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["brawl stars", "cajitas", "souvenirs", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/cajitas-souvenir-brawl-stars-personalizadas.png',
+      seoFilename: 'cajitas-souvenir-brawl-stars-personalizadas.png',
+      detail: 'Increíbles cajitas para souvenirs con la temática de Brawl Stars. Totalmente personalizables con el nombre y diseño a medida para un cumpleaños inolvidable.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-star text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Cajitas Souvenir Personalizadas Brawl Stars</span>
+        </div>
+      )
+    },
+    {
+      id: 'toppers-torta-brawl-stars',
+      title: 'Toppers de Torta de Brawl Stars',
+      desc: 'Toppers decorativos para torta de cumpleaños con personajes y logo de Brawl Stars en impresión 3D.',
+      category: 'Souvenirs y Cumpleaños',
+      tags: ["brawl stars", "topper", "torta", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/toppers-torta-brawl-stars.png',
+      seoFilename: 'toppers-torta-brawl-stars.png',
+      detail: 'Toppers decorativos para torta de cumpleaños con personajes y logo de Brawl Stars en impresión 3D, ideal para resaltar la temática de la fiesta.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-cake-candles text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Toppers de Torta Brawl Stars</span>
+        </div>
+      )
+    }
   ];
 
 
@@ -421,7 +567,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {/* Categorías de Filtro */}
           <div className="flex flex-wrap items-center gap-2 mb-12 bg-zinc-900/30 p-2 rounded-2xl border border-zinc-900 max-w-fit">
-            {['Todos', 'Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración'].map((tab) => (
+            {['Todos', 'Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración', 'Escolar y Didáctico'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -438,7 +584,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {activeTab === 'Todos' ? (
             <div className="flex flex-col gap-16">
-              {['Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración'].map(category => (
+              {['Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración', 'Escolar y Didáctico'].map(category => (
                 <div key={category} className="scroll-mt-24">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 border-l-4 border-orange-500 pl-4">
                     {category} en Impresión 3D
