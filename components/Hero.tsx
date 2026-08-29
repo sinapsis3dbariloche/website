@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Hero: React.FC = () => {
@@ -23,30 +24,29 @@ const Hero: React.FC = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4 flex flex-col items-center">
-          <span className="text-xl md:text-2xl text-orange-500 mb-2 font-bold tracking-widest uppercase text-orange-glow">Impresión 3D Bariloche</span>
-          <span>SINAPSIS 3D</span>
+          <span className="text-xl md:text-2xl text-orange-500 mb-2 font-bold tracking-widest uppercase text-orange-glow">Imprimimos tus ideas</span>
+          <span>SINAPSIS</span>
         </h1>
 
-        <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight">
-          Diseños y Creaciones <span className="text-orange-500">100% Personalizadas</span>
+        <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight flex flex-col items-center gap-1">
+          <span>Diseños y Creaciones <span className="text-orange-500">100% Personalizadas</span></span>
+          <span className="text-lg md:text-2xl text-zinc-400 font-medium">en Impresión 3D y/o Gráfica</span>
         </h2>
         
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
-          Nuestro mayor diferencial es la <span className="text-white font-semibold">personalización total</span> en cada uno de nuestros trabajos. <br />
-          Adaptamos nombres, formas y temáticas a medida en todos nuestros productos: desde impresión 3D, souvenirs y trofeos, hasta stickers y gráfica integral. <br />
-          <span className="text-orange-500 font-bold italic">Transformamos tus ideas en creaciones únicas en Bariloche, con envíos a todo el País.</span>
+          Nuestro mayor diferencial es la <span className="text-white font-semibold">personalización absoluta</span>. Transformamos tus ideas en piezas únicas: desde <span className="text-white font-medium">souvenirs temáticos, toppers de pastelería y lightboxes increíbles</span>, hasta <span className="text-white font-medium">merchandising corporativo, trofeos y material escolar didáctico</span>. <br />
+          Adaptamos nombres, formas y diseños para que cada creación sea exactamente como la imaginaste. <br />
+          <span className="text-orange-500 font-bold italic">Creaciones únicas en Bariloche, con envíos a todo el País.</span>
         </p>
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <a 
-            href="https://www.instagram.com/sinapsis3dbariloche/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackClick('ver_catalogo_hero')}
-            className="w-full sm:w-auto px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40 transform hover:-translate-y-1"
+          <Link 
+            to="/portfolio"
+            onClick={() => trackClick('ver_portfolio_hero')}
+            className="w-full sm:w-auto px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl shadow-orange-900/40 transform hover:-translate-y-1 text-center"
           >
-            Ver Catálogo Online
-          </a>
+            Ver nuestros trabajos
+          </Link>
           <a 
             href="#contacto"
             onClick={() => trackClick('ver_presupuesto_hero')}

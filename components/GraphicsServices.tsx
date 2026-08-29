@@ -16,7 +16,7 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
     },
     {
       title: 'Etiquetas Escolares',
-      desc: '¡Chau ropa perdida! Etiquetas textiles termotransferibles para ropa y stickers premium laminados para tuppers y botellas.',
+      desc: '¡Chau ropa perdida! Etiquetas textiles y stickers premium laminados para útiles. Hacen el match perfecto con nuestros identificadores 3D para mochilas.',
       items: ['Resisten Lavados', 'Pack 16 etiquetas', 'Diseños a elección'],
       icon: 'fa-tags',
       color: 'from-blue-500 to-indigo-600',
@@ -24,7 +24,7 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
     },
     {
       title: 'Identidad y Prensa',
-      desc: 'Tarjetas de presentación y gráfica comercial que destaca. Diseños que reflejan la energía de tu emprendimiento o club.',
+      desc: 'Tarjetas de presentación y gráfica comercial que destaca. El complemento ideal para exhibidores y merchandising institucional.',
       items: ['Papel Fotográfico', 'Alta resolución', 'Diseño incluido'],
       icon: 'fa-address-card',
       color: 'from-purple-500 to-pink-600',
@@ -32,7 +32,7 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
     },
     {
       title: 'Papelería y Regalos',
-      desc: 'Todos los detalles para que tu evento sea único. Juegos y sorpresas personalizadas para regalar.',
+      desc: 'Detalles que hacen tu evento único. Libritos de pintar y juegos que complementan a la perfección nuestros souvenirs impresos en 3D.',
       items: ['Memory Game / Memotest', 'Libritos para pintar', 'Banderines', 'Cajitas cubo'],
       icon: 'fa-gift',
       color: 'from-green-500 to-emerald-600',

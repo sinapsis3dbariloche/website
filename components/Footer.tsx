@@ -11,15 +11,16 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-3">
              <Logo variant="icon" className="w-8 h-8" />
              <div className="flex flex-col -space-y-1">
-                <span className="text-lg font-black text-white tracking-tighter">
-                  SINAPSIS <span className="text-orange-500">3D</span>
+                <span className="text-lg font-black text-white tracking-widest leading-none">
+                  SINAPSIS
                 </span>
-                <span className="text-[8px] text-zinc-600 font-bold tracking-widest uppercase text-center">Bariloche</span>
+                <span className="text-[0.65rem] text-orange-500 font-bold tracking-[0.2em] uppercase mt-1">Bariloche</span>
              </div>
           </div>
 
           <div className="text-zinc-500 text-sm text-center">
-             © {new Date().getFullYear()} Sinapsis 3D Bariloche. Todos los derechos reservados. <br className="md:hidden" />
+             <span className="text-orange-500 font-bold text-base uppercase tracking-widest block mb-2">Imprimimos Tus Ideas</span>
+             © {new Date().getFullYear()} Sinapsis Impresiones Bariloche. Todos los derechos reservados. <br className="md:hidden" />
              <span className="text-zinc-600 block mt-2">
                Referente en <strong>Diseño</strong>, <strong>Impresión 3D</strong> y <strong>Gráfica</strong> en <strong>Bariloche</strong>, Patagonia Argentina.
              </span>

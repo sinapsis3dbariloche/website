@@ -29,11 +29,11 @@ const Navbar: React.FC = () => {
               <div className="w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center transform group-hover:scale-110 transition-transform">
                  <Logo variant="icon" />
               </div>
-              <div className="flex flex-col -space-y-1">
-                <span className="text-base sm:text-lg font-black tracking-tighter text-white">
-                  SINAPSIS <span className="text-orange-500">3D</span>
+              <div className="flex flex-col -space-y-1 mt-1">
+                <span className="text-base sm:text-lg font-black tracking-widest text-white leading-none">
+                  SINAPSIS
                 </span>
-                <span className="text-[9px] sm:text-[10px] text-zinc-500 font-bold tracking-[0.2em] uppercase">Bariloche</span>
+                <span className="text-[0.65rem] text-orange-500 font-bold tracking-[0.2em] uppercase mt-1">Bariloche</span>
               </div>
             </Link>
           </div>

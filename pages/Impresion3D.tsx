@@ -9,7 +9,7 @@ const Impresion3D: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Impresión 3D a Medida y Personalizada en Bariloche | Sinapsis 3D</title>
+        <title>Impresión 3D a Medida y Personalizada en Bariloche | Sinapsis Impresiones</title>
         <meta name="description" content="Especialistas en Impresión 3D personalizada en Bariloche. Nos destacamos por crear diseños únicos a medida, adaptando nombres, temáticas y formas en trofeos, souvenirs y merchandising." />
         <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/impresion-3d" />
       </Helmet>

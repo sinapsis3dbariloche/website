@@ -9,7 +9,7 @@ const PortfolioPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio de Trabajos Personalizados | Sinapsis 3D Bariloche</title>
+        <title>Portfolio de Trabajos Personalizados | Sinapsis Impresiones Bariloche</title>
         <meta name="description" content="Galería de trabajos personalizados en Impresión 3D y Gráfica. Diseños a medida, temáticas exclusivas y creaciones con nombres para eventos y empresas." />
         <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/portfolio" />
       </Helmet>

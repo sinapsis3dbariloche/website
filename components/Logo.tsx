@@ -51,9 +51,9 @@ const Logo: React.FC<LogoProps> = ({ className = "h-12", variant = 'full' }) => 
       <div className="h-2/3">
         <Isotipo />
       </div>
-      <div className="flex flex-col items-center -space-y-1">
-        <span className="text-white font-black text-2xl tracking-tighter uppercase">SINAPSIS</span>
-        <span className="text-white font-black text-3xl tracking-tighter uppercase">3D</span>
+      <div className="flex flex-col items-center -space-y-1 mt-1">
+        <span className="text-white font-black text-xl tracking-widest uppercase leading-none">SINAPSIS</span>
+        <span className="text-[0.65rem] text-orange-500 font-bold tracking-[0.2em] uppercase mt-1">Bariloche</span>
       </div>
     </div>
   );

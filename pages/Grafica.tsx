@@ -9,7 +9,7 @@ const Servicios: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Gráfica, Diseño y Papelería Personalizada | Sinapsis 3D Bariloche</title>
+        <title>Gráfica, Diseño y Papelería Personalizada | Sinapsis Impresiones Bariloche</title>
         <meta name="description" content="Servicios integrales de gráfica y diseño totalmente personalizados. Creamos stickers, papelería y cartelería a medida, adaptando temáticas y nombres a tus necesidades en Bariloche." />
         <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/grafica" />
       </Helmet>

@@ -7,10 +7,10 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
   const specialties = [
-    { title: 'Souvenirs Híbridos', desc: 'Toppers de torta y souvenirs que combinan impresión 3D con gráfica de alta definición para un acabado premium.', icon: 'fa-cake-candles' },
-    { title: 'Trofeos e Identidad', desc: 'Medallas, trofeos y llaveros institucionales personalizados para clubes, empresas y eventos deportivos.', icon: 'fa-trophy' },
-    { title: 'Kits Escolares 3D', desc: 'Tags para mochilas y cartucheras con nombre en relieve, ultra resistentes y 100% personalizados.', icon: 'fa-graduation-cap' },
-    { title: 'Diseño Técnico', desc: 'Soportes, repuestos y prototipos funcionales desarrollados con precisión para necesidades específicas.', icon: 'fa-gears' },
+    { title: 'Eventos y Souvenirs', desc: 'Llaveros, centros de mesa y regalitos temáticos totalmente personalizados para hacer que cada cumpleaños o celebración sea inolvidable.', icon: 'fa-gift' },
+    { title: 'Pastelería Creativa', desc: 'Toppers 3D multicapa, cortantes de galletitas y herramientas a medida para darle un toque profesional y único a tus tortas.', icon: 'fa-cake-candles' },
+    { title: 'Lámparas y Deco', desc: 'Lightboxes de personajes, veladores LED y figuras decorativas impresas en 3D que iluminan y le dan vida a cualquier espacio.', icon: 'fa-lightbulb' },
+    { title: 'Institucional y Escolar', desc: 'Trofeos, medallas, juegos didácticos y exhibidores corporativos diseñados con tu logo o necesidades específicas.', icon: 'fa-award' },
   ];
 
   // Helper hook array state to track image errors and filters
@@ -24,10 +24,447 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
   // Galería completa de 18 trabajos reales con detalles técnicos personalizados (Caption / Pie de página)
   const realWorks = [
     {
+      id: 'figuras-brain-rot',
+      title: 'Figuras Brain Rot 3D',
+      desc: 'Figuras impresas en 3D de personajes "Brain Rot". Diseño divertido y actual, ideal para decorar o regalar.',
+      category: 'Figuras y Coleccionables',
+      tags: ["brain rot", "figuras", "personajes", "tendencia", "impresion 3d"],
+      imagePath: '/images/figuras-brain-rot-3d.png',
+      seoFilename: 'figuras-brain-rot-3d.png',
+      detail: 'Figuras impresas en 3D de personajes virales "Brain Rot". Diseño divertido y actual, ideal para coleccionar, decorar escritorios o para un regalo original.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-face-laugh-squint text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Figuras Brain Rot</span>
+        </div>
+      )
+    },
+    {
+      id: 'mate-pelota-futbol',
+      title: 'Mate Pelota de Fútbol',
+      desc: 'Mate personalizado con forma de pelota de fútbol impreso en 3D. Práctico y súper original para fanáticos.',
+      category: 'Mates y Accesorios',
+      tags: ["mate", "futbol", "pelota", "deportes", "impresion 3d"],
+      imagePath: '/images/mate-pelota-futbol-3d.png',
+      seoFilename: 'mate-pelota-futbol-3d.png',
+      detail: 'Mate personalizado con forma de pelota de fútbol impreso en 3D. Práctico, original y perfecto para regalar a cualquier apasionado por este deporte.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-futbol text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Mate Fútbol</span>
+        </div>
+      )
+    },
+    {
+      id: 'mate-pelota-voley',
+      title: 'Mate Pelota de Vóley',
+      desc: 'Mate personalizado con forma de pelota de vóley. Ideal para amantes del deporte que disfrutan de un buen mate.',
+      category: 'Mates y Accesorios',
+      tags: ["mate", "voley", "pelota", "deportes", "impresion 3d"],
+      imagePath: '/images/mate-pelota-voley-3d.png',
+      seoFilename: 'mate-pelota-voley-3d.png',
+      detail: 'Mate personalizado con forma de pelota de vóley. Ideal para jugadores y amantes del deporte que disfrutan de un buen mate en su día a día.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-volleyball text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Mate Vóley</span>
+        </div>
+      )
+    },
+    {
+      id: 'llaveros-souvenir-snoopy',
+      title: 'Llaveros Souvenir Snoopy',
+      desc: 'Tiernos llaveros de Snoopy impresos en 3D. Excelentes como souvenirs temáticos para cumpleaños y eventos.',
+      category: 'Souvenirs y Eventos',
+      tags: ["snoopy", "llaveros", "souvenirs", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/llaveros-souvenir-snoopy-3d.png',
+      seoFilename: 'llaveros-souvenir-snoopy-3d.png',
+      detail: 'Tiernos llaveros de Snoopy impresos en 3D. Excelentes como souvenirs temáticos para cumpleaños infantiles o reuniones. Detalle súper original y duradero.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-dog text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Llaveros Snoopy</span>
+        </div>
+      )
+    },
+    {
+      id: 'exhibidor-llaveros-messi',
+      title: 'Exhibidor de Llaveros Fútbol & Messi',
+      desc: 'Soporte exhibidor diseñado para llaveros de fútbol y Funko de Messi. Perfecto para venta mayorista o locales.',
+      category: 'Ventas Mayoristas y Comercios',
+      tags: ["exhibidor", "llaveros", "futbol", "messi", "mayorista"],
+      imagePath: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
+      seoFilename: 'exhibidor-llaveros-futbol-messi-mayorista-3d.png',
+      detail: 'Soporte exhibidor fabricado en 3D diseñado para lucir llaveros de fútbol y piezas Funko de Messi. Herramienta perfecta para venta mayorista, comercios y puestos.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-shop text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Exhibidor Llaveros</span>
+        </div>
+      )
+    },
+    {
+      id: 'formas-geometricas-colegio',
+      title: 'Set de Formas Geométricas Escolares',
+      desc: 'Piezas didácticas con distintas formas geométricas. Ideal para el aprendizaje en colegios e instituciones.',
+      category: 'Escolar y Didáctico',
+      tags: ["geometria", "escolar", "didactico", "formas", "impresion 3d"],
+      imagePath: '/images/formas-geometricas-colegio-3d.png',
+      seoFilename: 'formas-geometricas-colegio-3d.png',
+      detail: 'Set de piezas con distintas formas y figuras geométricas. Solución didáctica, táctil y visual excelente para apoyar el aprendizaje de matemáticas en colegios.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-shapes text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Formas Geométricas</span>
+        </div>
+      )
+    },
+    {
+      id: 'escarapelas-colegio-mayorista',
+      title: 'Escarapelas Patrias 3D',
+      desc: 'Escarapelas argentinas impresas en 3D, ultra resistentes. Disponibles para colegios y para venta mayorista.',
+      category: 'Ventas Mayoristas y Comercios',
+      tags: ["escarapelas", "patria", "escolar", "mayorista", "impresion 3d"],
+      imagePath: '/images/escarapelas-colegio-mayorista-3d.png',
+      seoFilename: 'escarapelas-colegio-mayorista-3d.png',
+      detail: 'Escarapelas argentinas impresas en 3D, innovadoras y duraderas. Producidas en cantidad, son ideales para actos en colegios, eventos patrios y venta mayorista.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-ribbon text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Escarapelas 3D</span>
+        </div>
+      )
+    },
+
+    {
+      id: 'topper-torta-hello-kitty',
+      title: 'Topper y Letras 3D Hello Kitty',
+      desc: 'Topper decorativo para torta de Hello Kitty con apliques frontales del nombre impresos en 3D.',
+      category: 'Pastelería y Repostería',
+      tags: ["hello kitty", "topper", "torta", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/topper-torta-hello-kitty-letras-3d.png',
+      seoFilename: 'topper-torta-hello-kitty-letras-3d.png',
+      detail: 'Topper decorativo para torta de Hello Kitty con apliques frontales del nombre impresos en 3D. Personalización total para decorar mesas dulces.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-cake-candles text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Topper Hello Kitty</span>
+        </div>
+      )
+    },
+    {
+      id: 'lightbox-jurassic-world',
+      title: 'Lightbox Jurassic World & Dinosaurios',
+      desc: 'Lámpara Lightbox de Jurassic World acompañada de divertidos dinosaurios mordelones impresos en 3D.',
+      category: 'Lámparas y Lightboxes',
+      tags: ["jurassic world", "lightbox", "dinosaurios", "lampara", "impresion 3d"],
+      imagePath: '/images/lightbox-jurassic-world-dinosaurios-mordelones-3d.png',
+      seoFilename: 'lightbox-jurassic-world-dinosaurios-mordelones-3d.png',
+      detail: 'Lámpara Lightbox de Jurassic World acompañada de divertidos dinosaurios mordelones impresos en 3D. Excelente detalle para iluminar habitaciones infantiles.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-lightbulb text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Lightbox Jurassic World</span>
+        </div>
+      )
+    },
+    {
+      id: 'souvenir-plim-plim',
+      title: 'Souvenirs Payaso Plim Plim',
+      desc: 'Coloridos souvenirs del Payaso Plim Plim diseñados especialmente para el primer añito.',
+      category: 'Souvenirs y Eventos',
+      tags: ["plim plim", "souvenirs", "cumpleaños", "1 año", "impresion 3d"],
+      imagePath: '/images/souvenir-cumpleanos-plim-plim-3d.png',
+      seoFilename: 'souvenir-cumpleanos-plim-plim-3d.png',
+      detail: 'Coloridos souvenirs del Payaso Plim Plim diseñados especialmente para festejar un cumpleaños de 1 año. Detalle inolvidable para los invitados.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-gift text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Souvenir Plim Plim</span>
+        </div>
+      )
+    },
+    {
+      id: 'llaveros-souvenir-abejita',
+      title: 'Llaveros Souvenir de Abejita',
+      desc: 'Tiernos llaveros con forma de abejita, perfectos como souvenirs originales para eventos y cumpleaños.',
+      category: 'Souvenirs y Eventos',
+      tags: ["abejitas", "llaveros", "souvenirs", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/llaveros-souvenir-abejita-impresion-3d.png',
+      seoFilename: 'llaveros-souvenir-abejita-impresion-3d.png',
+      detail: 'Tiernos llaveros con forma de abejita, perfectos como souvenirs originales para eventos infantiles, cumpleaños o baby showers.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-key text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Llaveros Abejita</span>
+        </div>
+      )
+    },
+    {
+      id: 'gatos-decorativos-reciclado',
+      title: 'Gatos Decorativos Reciclados',
+      desc: 'Gatos decorativos impresos en 3D, rellenos con material de filamento reciclado (caquitas) aportando un diseño ecológico y original.',
+      category: 'Hogar y Decoración',
+      tags: ["gatos", "decoracion", "reciclado", "ecologico", "impresion 3d"],
+      imagePath: '/images/gatos-decorativos-reciclado-filamento-3d.png',
+      seoFilename: 'gatos-decorativos-reciclado-filamento-3d.png',
+      detail: 'Gatos decorativos impresos en 3D, rellenos con material de descarte de filamento (caquitas) aportando peso y un diseño ecológico consciente para tu hogar.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-cat text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Gatos Decorativos</span>
+        </div>
+      )
+    },
+
+    {
+      id: 'animalitos-flexi-jardin',
+      title: 'Animalitos Flexi Articulados',
+      desc: 'Divertidos animalitos articulados (selva, mar, insectos). Muy solicitados por maestras jardineras como material lúdico y didáctico.',
+      category: 'Escolar y Didáctico',
+      tags: ["animalitos", "flexi", "articulados", "jardin", "didactico"],
+      imagePath: '/images/animalitos-flexi-jardin-didactico-impresion-3d.png',
+      seoFilename: 'animalitos-flexi-jardin-didactico-impresion-3d.png',
+      detail: 'Divertidos animalitos articulados (selva, mar, insectos). Muy solicitados por maestras jardineras como material lúdico y didáctico para jugar con los chicos.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-hippo text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Animalitos Flexi</span>
+        </div>
+      )
+    },
+    {
+      id: 'cortantes-galletitas-tematicos',
+      title: 'Cortantes de Galletitas Temáticos',
+      desc: 'Cortantes para masa de galletitas personalizados por temática. Ideales para pastelería creativa o para cumples infantiles.',
+      category: 'Pastelería y Repostería',
+      tags: ["cortantes", "galletitas", "pasteleria", "cumpleaños", "impresion 3d"],
+      imagePath: '/images/cortantes-galletitas-tematicos-cumpleanos-3d.png',
+      seoFilename: 'cortantes-galletitas-tematicos-cumpleanos-3d.png',
+      detail: 'Cortantes para masa de galletitas personalizados por temática. Ideales para pastelería creativa, emprendimientos, o para preparar un cumpleaños temático en casa.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-cookie-bite text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Cortantes Galletitas</span>
+        </div>
+      )
+    },
+    {
+      id: 'trofeos-personalizados-premios',
+      title: 'Trofeos Personalizados 3D',
+      desc: 'Trofeos diseñados a medida para torneos, competencias deportivas y eventos especiales. Totalmente personalizados.',
+      category: 'Trofeos y Medallas',
+      tags: ["trofeos", "premios", "deportes", "torneo", "impresion 3d"],
+      imagePath: '/images/trofeos-personalizados-premios-impresion-3d.png',
+      seoFilename: 'trofeos-personalizados-premios-impresion-3d.png',
+      detail: 'Trofeos diseñados a medida para torneos, competencias deportivas y reconocimientos en eventos especiales. Personalizados con el logo y colores correspondientes.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-trophy text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Trofeos Personalizados</span>
+        </div>
+      )
+    },
+    {
+      id: 'juguete-casita-hamster',
+      title: 'Casita de Hámster de Juguete',
+      desc: 'Colorida casita de hámster en miniatura que incluye su comidita. Un juguete hermoso y súper original.',
+      category: 'Figuras y Coleccionables',
+      tags: ["juguete", "dia del niño", "hamster", "infantil", "impresion 3d"],
+      imagePath: '/images/juguete-casita-hamster-dia-del-nino-3d.png',
+      seoFilename: 'juguete-casita-hamster-dia-del-nino-3d.png',
+      detail: 'Colorida casita de hámster en miniatura que incluye su comidita y accesorios. Fue uno de los juguetes más pedidos para el Día del Niño.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-house-chimney text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Casita de Hámster</span>
+        </div>
+      )
+    },
+    {
+      id: 'mate-antivuelco-personalizado',
+      title: 'Mate Antivuelco Personalizado',
+      desc: 'Mate con sistema de diseño antivuelco impreso en 3D. Práctico y seguro, personalizable en la combinación de colores que elijas.',
+      category: 'Mates y Accesorios',
+      tags: ["mate", "antivuelco", "hogar", "personalizado", "impresion 3d"],
+      imagePath: '/images/mate-antivuelco-personalizado-impresion-3d.png',
+      seoFilename: 'mate-antivuelco-personalizado-impresion-3d.png',
+      detail: 'Mate con innovador sistema antivuelco para evitar accidentes. Totalmente personalizable en colores, combinando estética moderna con funcionalidad.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-mug-hot text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Mate Antivuelco</span>
+        </div>
+      )
+    },
+
+    {
+      id: 'cucharitas-princesas-frozen',
+      title: 'Cucharitas Personalizadas Princesas',
+      desc: 'Cucharitas de diseño exclusivo con temática de Olaf y princesas, ideales como souvenirs originales para cumpleaños y eventos infantiles.',
+      category: 'Souvenirs y Eventos',
+      tags: ["cucharitas", "souvenirs", "princesas", "olaf", "cumpleaños"],
+      imagePath: '/images/cucharitas-personalizadas-princesas-frozen-3d.png',
+      seoFilename: 'cucharitas-personalizadas-princesas-frozen-3d.png',
+      detail: 'Cucharitas de diseño exclusivo con temática de Olaf y princesas (Frozen/Elena), ideales como souvenirs originales para cumpleaños y eventos infantiles.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-spoon text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Cucharitas Princesas</span>
+        </div>
+      )
+    },
+    {
+      id: 'soporte-nintendo-switch',
+      title: 'Soporte de Pared Nintendo Switch',
+      desc: 'Práctico soporte de pared diseñado a medida para consola Nintendo Switch y sus joysticks, manteniendo el espacio de juego ordenado.',
+      category: 'Hogar y Decoración',
+      tags: ["nintendo switch", "soporte", "gaming", "organizacion", "impresion 3d"],
+      imagePath: '/images/soporte-pared-nintendo-switch-3d.png',
+      seoFilename: 'soporte-pared-nintendo-switch-3d.png',
+      detail: 'Práctico soporte de pared diseñado a medida para consola Nintendo Switch y sus joysticks, manteniendo el espacio de juego ordenado.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-gamepad text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Soporte Switch</span>
+        </div>
+      )
+    },
+    {
+      id: 'bolitas-sensoriales-escolar',
+      title: 'Bolitas Sensoriales Escolares',
+      desc: 'Bolitas texturizadas y coloridas diseñadas especialmente a pedido de docentes como material didáctico y sensorial para niños.',
+      category: 'Escolar y Didáctico',
+      tags: ["didactico", "sensorial", "escolar", "juguetes", "impresion 3d"],
+      imagePath: '/images/bolitas-sensoriales-didactico-escolar-3d.png',
+      seoFilename: 'bolitas-sensoriales-didactico-escolar-3d.png',
+      detail: 'Bolitas texturizadas y coloridas diseñadas especialmente a pedido de docentes como material didáctico y sensorial para niños.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-shapes text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Bolitas Sensoriales</span>
+        </div>
+      )
+    },
+    {
+      id: 'toppers-torta-mayorista',
+      title: 'Toppers de Torta Venta Mayorista',
+      desc: 'Variedad de toppers de torta con diferentes temáticas fabricados en cantidad. Pedido mayorista ideal para cotillones.',
+      category: 'Ventas Mayoristas y Comercios',
+      tags: ["toppers", "mayorista", "cotillon", "torta", "impresion 3d"],
+      imagePath: '/images/toppers-torta-mayorista-cotillon-3d.png',
+      seoFilename: 'toppers-torta-mayorista-cotillon-3d.png',
+      detail: 'Variedad de toppers de torta con diferentes temáticas fabricados en cantidad. Pedido mayorista ideal para cotillones.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-cake-candles text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Toppers Mayorista</span>
+        </div>
+      )
+    },
+    {
+      id: 'fracciones-matematicas-didactico',
+      title: 'Juego de Fracciones Matemáticas',
+      desc: 'Set de piezas geométricas diseñadas para enseñar y aprender fracciones de manera visual y táctil en el aula.',
+      category: 'Escolar y Didáctico',
+      tags: ["matematicas", "fracciones", "escolar", "didactico", "impresion 3d"],
+      imagePath: '/images/fracciones-matematicas-didactico-escolar-3d.png',
+      seoFilename: 'fracciones-matematicas-didactico-escolar-3d.png',
+      detail: 'Set de piezas geométricas diseñadas para enseñar y aprender fracciones de manera visual y táctil en el aula.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-chart-pie text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Fracciones Matemáticas</span>
+        </div>
+      )
+    },
+
+    {
+      id: 'funkos-stranger-things',
+      title: 'Funkos Personajes de Stranger Things',
+      desc: 'Figuras impresas en 3D de los personajes de Stranger Things, pintadas a mano con gran detalle.',
+      category: 'Figuras y Coleccionables',
+      tags: ["stranger things", "funkos", "figuras 3d", "pintado a mano"],
+      imagePath: '/images/funkos-stranger-things-impresion-3d-pintado-mano.png',
+      seoFilename: 'funkos-stranger-things-impresion-3d-pintado-mano.png',
+      detail: 'Figuras impresas en 3D de los personajes de Stranger Things, pintadas a mano con gran detalle.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-user-astronaut text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Funkos Stranger Things</span>
+        </div>
+      )
+    },
+    {
+      id: 'soporte-exhibidor-labiales',
+      title: 'Soporte Exhibidor de Labiales',
+      desc: 'Soporte con forma de labio diseñado exclusivamente para exhibir labiales y maquillaje. Ideal para marcas y comercios.',
+      category: 'Corporativo y Marcas',
+      tags: ["maquillaje", "soporte", "labiales", "exhibidor", "diseño 3d"],
+      imagePath: '/images/soporte-exhibidor-labiales-impresion-3d.png',
+      seoFilename: 'soporte-exhibidor-labiales-impresion-3d.png',
+      detail: 'Soporte con forma de labio diseñado exclusivamente para exhibir labiales y maquillaje. Ideal para marcas y comercios.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-lips text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Soporte Labiales</span>
+        </div>
+      )
+    },
+    {
+      id: 'papa-noel-gimnasio-navidad',
+      title: 'Papá Noel con Pesas para Gimnasio',
+      desc: 'Figura personalizada de Papá Noel sosteniendo una barra de pesas. Diseño exclusivo para la decoración navideña de un gimnasio.',
+      category: 'Figuras y Coleccionables',
+      tags: ["navidad", "gimnasio", "papa noel", "figuras 3d", "decoracion"],
+      imagePath: '/images/papa-noel-pesas-gimnasio-decoracion-navidad-3d.png',
+      seoFilename: 'papa-noel-pesas-gimnasio-decoracion-navidad-3d.png',
+      detail: 'Figura personalizada de Papá Noel sosteniendo una barra de pesas. Diseño exclusivo para la decoración navideña de un gimnasio.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-dumbbell text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Papá Noel Gimnasio</span>
+        </div>
+      )
+    },
+    {
+      id: 'mascara-fnaf-foxy-real',
+      title: 'Máscara de Foxy (FNAF) Tamaño Real',
+      desc: 'Impresionante máscara en tamaño real de Foxy, el personaje de Five Nights at Freddy\'s (FNAF), fabricada mediante impresión 3D.',
+      category: 'Figuras y Coleccionables',
+      tags: ["fnaf", "foxy", "mascara", "cosplay", "impresion 3d"],
+      imagePath: '/images/mascara-fnaf-foxy-tamano-real-impresion-3d.png',
+      seoFilename: 'mascara-fnaf-foxy-tamano-real-impresion-3d.png',
+      detail: 'Impresionante máscara en tamaño real de Foxy, el personaje de Five Nights at Freddy\'s (FNAF), fabricada mediante impresión 3D.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-masks-theater text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Máscara Foxy</span>
+        </div>
+      )
+    },
+    {
+      id: 'souvenirs-loro-cumpleanos',
+      title: 'Souvenirs de Loro para Cumpleaños',
+      desc: 'Divertidos souvenirs en forma de loro impresos en 3D, perfectos para cumpleaños y eventos infantiles.',
+      category: 'Souvenirs y Eventos',
+      tags: ["loro", "souvenirs", "cumpleaños infantil", "impresion 3d"],
+      imagePath: '/images/souvenirs-cumpleanos-loro-impresion-3d.png',
+      seoFilename: 'souvenirs-cumpleanos-loro-impresion-3d.png',
+      detail: 'Divertidos souvenirs en forma de loro impresos en 3D, perfectos para cumpleaños y eventos infantiles.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-crow text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Souvenirs Loro</span>
+        </div>
+      )
+    },
+
+    {
       id: 'trofeos-futbol',
       title: 'Colección de Trofeos de Fútbol 3D',
       desc: 'Trofeos de 1º, 2º y 3º puesto personalizados impresos en 3D en Bariloche, con diseño de pelota esférica de fútbol, sobre pedestales negros con placas texturizadas hechas a medida.',
-      category: 'Deportivos y Premios',
+      category: 'Trofeos y Medallas',
       tags: ['Pelota 3D', 'Alta Densidad', 'Pintado a mano', 'Deportivos'],
       imagePath: '/images/trofeos-personalizados-futbol-impresion-3d.png',
       seoFilename: 'trofeos-personalizados-futbol-impresion-3d.png',
@@ -43,7 +480,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'trofeos-basquet',
       title: 'Trofeos y Medallas de Básquet',
       desc: 'Diseño y fabricación íntegra de trofeos para torneos de Básquetbol con silueta y relieve de pelota en color naranja vibrante sobre pedestales negros texturizados de doble tono.',
-      category: 'Deportivos y Premios',
+      category: 'Trofeos y Medallas',
       tags: ['Básquet 3D', 'Torneos', 'Medallas', 'Relieve'],
       imagePath: '/images/trofeos-y-medallas-de-basquet-personalizados-impresion-3d.jpeg',
       seoFilename: 'trofeos-y-medallas-de-basquet-personalizados-impresion-3d.jpeg',
@@ -107,7 +544,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'marcapaginas-harry-potter',
       title: 'Marcapáginas Harry Potter con Clip',
       desc: 'Señaladores y clips de lectura coleccionables con logos temáticos impresos en 3D de alta definición, el souvenir perfecto para fanáticos de la saga.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Escolar y Didáctico',
       tags: ['Harry Potter', 'Sagas', 'Clips de Lectura', 'Coleccionables'],
       imagePath: '/images/marcapaginas-harry-potter-impresion-3d-clip.jpeg',
       seoFilename: 'marcapaginas-harry-potter-impresion-3d-clip.jpeg',
@@ -124,7 +561,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'kit-minecraft',
       title: 'Kit Cumpleaños Minecraft Personalizado',
       desc: 'Ambientación y toppers temáticos de Minecraft impresos en 3D: espadas, herramientas y bloques geométricos ideales como recuerdo y adorno de torta de cumpleaños.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ['Minecraft', 'Topper Torta', 'Personalizado', 'Infantil'],
       imagePath: '/images/kit-cumpleanos-minecraft-personalizado-adornos-torta-3d.jpeg',
       seoFilename: 'kit-cumpleanos-minecraft-personalizado-adornos-torta-3d.jpeg',
@@ -140,7 +577,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'toppers-graduacion',
       title: 'Toppers de Graduación para Torta',
       desc: 'Centro de torta festivo para egresados con nombre personalizado en altorrelieve, birrete 3D y base brillante, conmemorando el cierre de una hermosa etapa escolar.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Pastelería y Repostería',
       tags: ['Egresados', 'Topper Torta', 'Graduación', 'Brillante'],
       imagePath: '/images/toppers-de-graduacion-adornos-para-torta-egresados-3d.jpeg',
       seoFilename: 'toppers-de-graduacion-adornos-para-torta-egresados-3d.jpeg',
@@ -156,7 +593,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'toppers-lapices-capibara',
       title: 'Toppers para Lápices Capibara',
       desc: 'Tapas decorativas e interactivas coleccionables con diseño ultra tierno de carpincho (Capibara) impresos en 3D de alta definición, ideales para souvenir escolar escolar.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Escolar y Didáctico',
       tags: ['Capibara', 'Para Lápiz', 'Coleccionables', 'Escritorio'],
       imagePath: '/images/toppers-para-lapices-capibara-impresion-3d.jpeg',
       seoFilename: 'toppers-para-lapices-capibara-impresion-3d.jpeg',
@@ -172,7 +609,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'centros-mesa-infantiles',
       title: 'Centros de Mesa Infantiles Temáticos',
       desc: 'Soportes de mesa estables y coloridos con logos o siluetas de personajes infantiles en relieve, diseñados de acuerdo a la temática especial de tu fiesta.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ['Fiestas', 'Centros de Mesa', 'Decoración', 'Cumples'],
       imagePath: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
       seoFilename: 'centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
@@ -188,7 +625,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'llaveros-snoopy',
       title: 'Llaveros Snoopy Coleccionables 3D',
       desc: 'Llaveros silueteados de Snoopy hechos en dos colores con un acabado plano perfecto, ideales para merchandising coleccionable, clubes o fanáticos de Peanuts.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ['Snoopy', 'Doble Color', 'Souvenirs', 'Peanuts'],
       imagePath: '/images/llaveros-de-snoopy-impresion-3d-merchandising-peanuts.jpeg',
       seoFilename: 'llaveros-de-snoopy-impresion-3d-merchandising-peanuts.jpeg',
@@ -204,7 +641,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'llaveros-plim-plim',
       title: 'Llaveros Plim Plim para Primer Añito',
       desc: 'El souvenir más alegre para el primer cumpleaños. Llaveros a todo color de Plim Plim impresos con plásticos premium atóxicos biodegradables para la mayor seguridad.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ['Plim Plim', 'Primer Año', 'Eco-Plástico', 'Souvenirs'],
       imagePath: '/images/llaveros-plim-plim-impresion-3d-souvenirs-primer-anito.jpeg',
       seoFilename: 'llaveros-plim-plim-impresion-3d-souvenirs-primer-anito.jpeg',
@@ -220,7 +657,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'agitadores-tragos',
       title: 'Agitadores de Tragos Neon Personalizados',
       desc: 'Agitadores reutilizables con nombres, marcas o frases personalizadas que brillan bajo luz negra, ideales para barras móviles, bodas o fiestas electrónicas.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ['Cotillón', 'Neon', 'Barras', 'Agitadores'],
       imagePath: '/images/agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg',
       seoFilename: 'agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg',
@@ -252,7 +689,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'lampara-luna',
       title: 'Lámpara Luna 3D Velador LED',
       desc: 'Luz de noche velador Inteligente con relieve geográfico lunar real. Funciona con conexión USB de bajo consumo, aportando una calidez mágica a cualquier habitación.',
-      category: 'Hogar y Decoración',
+      category: 'Lámparas y Lightboxes',
       tags: ['Relieve Lunar', 'Luz LED', 'Velador', 'Sorprendente'],
       imagePath: '/images/lampara-luna-3d-velador-led-regulable-usb.jpeg',
       seoFilename: 'lampara-luna-3d-velador-led-regulable-usb.jpeg',
@@ -284,7 +721,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'servicio-diseno-tecnico',
       title: 'Fabricación e Impresión Profesional 3D',
       desc: 'Servicio técnico especializado en la reproducción y calibrado serial de repuestos mecánicos o prototipos volumétricos con la mayor fidelidad de la Patagonia.',
-      category: 'Hogar y Decoración',
+      category: 'Ventas Mayoristas y Comercios',
       tags: ['Ingeniería', 'Prototipos', 'Precisión', 'Sinapsis 3D'],
       imagePath: '/images/servicio-diseno-e-impresion-3d-bariloche-sinapsis.jpeg',
       seoFilename: 'servicio-diseno-e-impresion-3d-bariloche-sinapsis.jpeg',
@@ -316,7 +753,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'rueditas-texturizadoras',
       title: 'Rueditas Texturizadoras para Cerámica y Pastelería',
       desc: 'Herramientas de rodillo texturizado impresas en 3D de alta definición para marcar hermosos patrones repetitivos en arcilla, cerámica, porcelana fría, fondant o repostería artesanal.',
-      category: 'Hogar y Decoración',
+      category: 'Pastelería y Repostería',
       tags: ['Pastelería', 'Cerámica', 'Decoración', 'Herramientas'],
       imagePath: '/images/rueditas-texturizadoras-para-ceramica-porcelana-fria-y-pasteleria.jpeg',
       seoFilename: 'rueditas-texturizadoras-para-ceramica-porcelana-fria-y-pasteleria.jpeg',
@@ -332,7 +769,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'lightbox-capibara',
       title: 'Lightbox Personalizada Capibara',
       desc: 'Caja de luz (lightbox) personalizada con diseño exclusivo de Capibara (Carpincho), iluminada desde su interior para dar un toque único y divertido a tus espacios.',
-      category: 'Hogar y Decoración',
+      category: 'Lámparas y Lightboxes',
       tags: ['Lightbox', 'Capibara', 'Diseño 3D', 'Decoración'],
       imagePath: '/images/lightbox_capibara.png',
       seoFilename: 'lightbox_capibara.png',
@@ -348,7 +785,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'lightbox-one-piece',
       title: 'Lightbox One Piece - Anime a Medida',
       desc: 'Caja de luz temática personalizada de One Piece, fabricada a pedido para fanáticos y coleccionistas. Un detalle 100% original con iluminación de alta intensidad.',
-      category: 'Hogar y Decoración',
+      category: 'Lámparas y Lightboxes',
       tags: ['Lightbox', 'One Piece', 'Anime', 'Colección'],
       imagePath: '/images/lightbox_onepice.png',
       seoFilename: 'lightbox_onepice.png',
@@ -364,7 +801,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'lightbox-stitch',
       title: 'Lightbox Stitch Personalizado',
       desc: 'Lámpara caja de luz con diseño de Stitch, elaborada a medida y retroiluminada. Un regalo personalizado perfecto y llamativo para grandes y chicos.',
-      category: 'Hogar y Decoración',
+      category: 'Lámparas y Lightboxes',
       tags: ['Lightbox', 'Stitch', 'Lámpara 3D', 'Regalo'],
       imagePath: '/images/lightbox_stich.png',
       seoFilename: 'lightbox_stich.png',
@@ -381,7 +818,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'cajitas-souvenir-personalizadas-one-piece',
       title: 'Cajitas Souvenir Personalizadas One Piece',
       desc: 'Hermosas cajitas para golosinas totalmente personalizadas a medida con la temática de One Piece para tu fiesta. Diseñamos cada detalle con el nombre del agasajado y frases de agradecimiento únicas.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ["souvenirs","one piece","cajitas personalizadas","cumpleaños"],
       imagePath: '/images/cajitas-souvenir-personalizadas-one-piece.png',
       seoFilename: 'cajitas-souvenir-personalizadas-one-piece.png',
@@ -413,7 +850,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'topper-torta-personalizado-plim-plim',
       title: 'Cake Topper Personalizado Plim Plim',
       desc: 'Hermoso set de toppers para torta totalmente personalizado a medida con el nombre y la edad para tu evento. Diseñado e impreso en alta definición para darle un toque mágico y único a la mesa dulce.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Pastelería y Repostería',
       tags: ["cake topper","plim plim","cumpleaños infantil","papeleria personalizada"],
       imagePath: '/images/topper-torta-personalizado-plim-plim.png',
       seoFilename: 'topper-torta-personalizado-plim-plim.png',
@@ -429,7 +866,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'cake-topper-hulk-personalizado',
       title: 'Topper de Torta Personalizado Hulk',
       desc: 'Transforma tu fiesta de cumpleaños con este increíble set de topper de torta hecho a medida con temática de Hulk. Diseñado de forma totalmente personalizada con el nombre del cumpleañero y detalles únicos.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Pastelería y Repostería',
       tags: ["cake topper","hulk","cumpleaños","personalizado"],
       imagePath: '/images/cake-topper-hulk-personalizado.png',
       seoFilename: 'cake-topper-hulk-personalizado.png',
@@ -446,7 +883,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'lapiz-topper-3d-stitch',
       title: 'Lápiz Personalizado con Topper 3D de Stitch',
       desc: 'Personaliza tus eventos o útiles escolares con este exclusivo lápiz temático de Stitch. Incluye topper impreso en 3D y envoltorio a juego totalmente personalizable.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Escolar y Didáctico',
       tags: ["stitch","topper 3d","lapiz personalizado","souvenirs","impresion 3d"],
       imagePath: '/images/lapiz-topper-3d-stitch.png',
       seoFilename: 'lapiz-topper-3d-stitch.png',
@@ -462,7 +899,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'llaveros-hockey-personalizados-impresion-3d',
       title: 'Llaveros Personalizados de Hockey',
       desc: 'Llaveros 3D personalizados en forma de palo de hockey ideales para torneos y clubes. Personaliza texto y colores a medida para tu evento deportivo.',
-      category: 'Deportivos y Premios',
+      category: 'Trofeos y Medallas',
       tags: ["hockey","llaveros personalizados","impresion 3d","souvenirs deportivos","eventos"],
       imagePath: '/images/llaveros-hockey-personalizados-impresion-3d.png',
       seoFilename: 'llaveros-hockey-personalizados-impresion-3d.png',
@@ -478,7 +915,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'souvenirs-mariposas-personalizadas',
       title: 'Souvenirs de Mariposas Personalizados',
       desc: 'Hermosos souvenirs en forma de mariposas hechos a medida, ideales para cumpleaños, eventos y celebraciones especiales.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ["mariposas","souvenirs","cumpleaños","impresion 3d","personalizado"],
       imagePath: '/images/souvenirs-mariposas-personalizadas.png',
       seoFilename: 'souvenirs-mariposas-personalizadas.png',
@@ -494,7 +931,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'cajitas-souvenir-brawl-stars-personalizadas',
       title: 'Cajitas Souvenir Personalizadas Brawl Stars',
       desc: 'Increíbles cajitas para souvenirs con la temática de Brawl Stars. Totalmente personalizables con el nombre y diseño a medida para un cumpleaños inolvidable.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Souvenirs y Eventos',
       tags: ["brawl stars", "cajitas", "souvenirs", "cumpleaños", "impresion 3d"],
       imagePath: '/images/cajitas-souvenir-brawl-stars-personalizadas.png',
       seoFilename: 'cajitas-souvenir-brawl-stars-personalizadas.png',
@@ -510,7 +947,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       id: 'toppers-torta-brawl-stars',
       title: 'Toppers de Torta de Brawl Stars',
       desc: 'Toppers decorativos para torta de cumpleaños con personajes y logo de Brawl Stars en impresión 3D.',
-      category: 'Souvenirs y Cumpleaños',
+      category: 'Pastelería y Repostería',
       tags: ["brawl stars", "topper", "torta", "cumpleaños", "impresion 3d"],
       imagePath: '/images/toppers-torta-brawl-stars.png',
       seoFilename: 'toppers-torta-brawl-stars.png',
@@ -567,7 +1004,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {/* Categorías de Filtro */}
           <div className="flex flex-wrap items-center gap-2 mb-12 bg-zinc-900/30 p-2 rounded-2xl border border-zinc-900 max-w-fit">
-            {['Todos', 'Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración', 'Escolar y Didáctico'].map((tab) => (
+            {['Todos', 'Figuras y Coleccionables', 'Ventas Mayoristas y Comercios', 'Corporativo y Marcas', 'Lámparas y Lightboxes', 'Pastelería y Repostería', 'Mates y Accesorios', 'Escolar y Didáctico', 'Souvenirs y Eventos', 'Trofeos y Medallas', 'Hogar y Decoración'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -584,7 +1021,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {activeTab === 'Todos' ? (
             <div className="flex flex-col gap-16">
-              {['Souvenirs y Cumpleaños', 'Corporativo y Marcas', 'Deportivos y Premios', 'Hogar y Decoración', 'Escolar y Didáctico'].map(category => (
+              {['Figuras y Coleccionables', 'Ventas Mayoristas y Comercios', 'Corporativo y Marcas', 'Lámparas y Lightboxes', 'Pastelería y Repostería', 'Mates y Accesorios', 'Escolar y Didáctico', 'Souvenirs y Eventos', 'Trofeos y Medallas', 'Hogar y Decoración'].map(category => (
                 <div key={category} className="scroll-mt-24">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 border-l-4 border-orange-500 pl-4">
                     {category} en Impresión 3D
