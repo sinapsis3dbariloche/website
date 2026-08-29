@@ -54,6 +54,26 @@ const HOME_CATEGORIES = [
     title: 'Ventas Mayoristas',
     image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
     link: '/portfolio?category=Ventas+Mayoristas+y+Comercios'
+  },
+  {
+    title: 'Tatuajes Temporales',
+    image: '/images/tatuajes-temporales-argentina-campeones-del-mundo-souvenirs.jpeg',
+    link: '/portfolio?category=Tatuajes+Temporales'
+  },
+  {
+    title: 'Etiquetas Escolares',
+    image: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
+    link: '/portfolio?category=Etiquetas+Escolares'
+  },
+  {
+    title: 'Identidad Comercial',
+    image: '/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg',
+    link: '/portfolio?category=Identidad+Comercial'
+  },
+  {
+    title: 'Papelería y Regalos',
+    image: '/images/marcapaginas-harry-potter-impresion-3d-clip.jpeg',
+    link: '/portfolio?category=Papelería+y+Regalos'
   }
 ];
 
@@ -73,22 +93,6 @@ const Home: React.FC = () => {
       />
       
       <Hero />
-      
-      {/* Additional SEO text content, visible but nicely formatted */}
-      <section className="bg-zinc-950 py-10 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Servicios de Impresión 3D y Diseño en Bariloche</h2>
-          <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-            En <strong>Sinapsis Impresiones</strong> nos especializamos en brindar soluciones creativas de <strong>Impresión 3D y Diseño Gráfico</strong> en la ciudad de <strong>San Carlos de Bariloche</strong>. 
-            Nuestro enfoque principal es la personalización total de cada proyecto, desde pequeños souvenirs para cumpleaños y eventos sociales, hasta el desarrollo de productos corporativos, merchandising institucional, trofeos deportivos a medida y papelería comercial.
-          </p>
-          <p className="text-zinc-400 text-lg leading-relaxed">
-            Trabajamos con materiales de alta calidad y tecnología de vanguardia para garantizar acabados excepcionales. 
-            Si buscás diseños únicos, grabados personalizados y regalos memorables en la Patagonia, estás en el lugar correcto. 
-            Realizamos <strong>envíos a todo el país</strong>, conectando el arte de la impresión 3D con tus necesidades, estés donde estés.
-          </p>
-        </div>
-      </section>
       
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />

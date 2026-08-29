@@ -10,13 +10,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
   const [searchParams] = useSearchParams();
   const initialCategory = searchParams.get('category') || 'Todos';
 
-  const specialties = [
-    { title: 'Eventos y Souvenirs', desc: 'Llaveros, centros de mesa y regalitos temáticos totalmente personalizados para hacer que cada cumpleaños o celebración sea inolvidable.', icon: 'fa-gift' },
-    { title: 'Pastelería Creativa', desc: 'Toppers 3D multicapa, cortantes de galletitas y herramientas a medida para darle un toque profesional y único a tus tortas.', icon: 'fa-cake-candles' },
-    { title: 'Lámparas y Deco', desc: 'Lightboxes de personajes, veladores LED y figuras decorativas impresas en 3D que iluminan y le dan vida a cualquier espacio.', icon: 'fa-lightbulb' },
-    { title: 'Institucional y Escolar', desc: 'Trofeos, medallas, juegos didácticos y exhibidores corporativos diseñados con tu logo o necesidades específicas.', icon: 'fa-award' },
-  ];
-
   // Helper hook array state to track image errors and filters
   const [failedImages, setFailedImages] = React.useState<Record<string, boolean>>({});
   const [activeTab, setActiveTab] = React.useState<string>(initialCategory);
@@ -26,7 +19,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
     if (cat) {
       setActiveTab(cat);
       // Auto-scroll to the portfolio section if needed
-      const el = document.getElementById('especialidades');
+      const el = document.getElementById('galeria');
       if (el) {
         // Small delay to ensure render
         setTimeout(() => {
@@ -977,9 +970,89 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
           <span className="text-zinc-400 text-xs font-bold text-center">Toppers de Torta Brawl Stars</span>
         </div>
       )
+    },
+    {
+      id: 'tatuajes-temporales',
+      title: 'Tatuajes Temporales',
+      desc: '¡Un cumpleaños de Campeones! Tatuajes personalizados súper fáciles de usar.',
+      category: 'Tatuajes Temporales',
+      tags: ["tatuajes", "temporales", "grafica", "campeones"],
+      imagePath: '/images/tatuajes-temporales-argentina-campeones-del-mundo-souvenirs.jpeg',
+      seoFilename: 'tatuajes-temporales-argentina-campeones-del-mundo-souvenirs.jpeg',
+      detail: 'Tatuajes personalizados súper fáciles de usar. Solo agua, presionás y listo.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-bolt text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Tatuajes Temporales</span>
+        </div>
+      )
+    },
+    {
+      id: 'etiquetas-escolares',
+      title: 'Etiquetas Escolares',
+      desc: 'Etiquetas textiles y stickers premium laminados para útiles. Hacen el match perfecto con nuestros identificadores 3D para mochilas.',
+      category: 'Etiquetas Escolares',
+      tags: ["etiquetas", "escolar", "stickers", "grafica"],
+      imagePath: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
+      seoFilename: 'kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
+      detail: 'Etiquetas textiles y stickers premium laminados para útiles.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-tags text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Etiquetas Escolares</span>
+        </div>
+      )
+    },
+    {
+      id: 'identidad-comercial',
+      title: 'Identidad y Prensa',
+      desc: 'Tarjetas de presentación y gráfica comercial que destaca. El complemento ideal para exhibidores y merchandising institucional.',
+      category: 'Identidad Comercial',
+      tags: ["tarjetas", "identidad", "comercial", "grafica"],
+      imagePath: '/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg',
+      seoFilename: 'tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg',
+      detail: 'Tarjetas de presentación y gráfica comercial que destaca.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-address-card text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Identidad Comercial</span>
+        </div>
+      )
+    },
+    {
+      id: 'papeleria-regalos',
+      title: 'Papelería y Regalos',
+      desc: 'Detalles que hacen tu evento único. Libritos de pintar y juegos que complementan a la perfección nuestros souvenirs impresos en 3D.',
+      category: 'Papelería y Regalos',
+      tags: ["papeleria", "regalos", "eventos", "grafica"],
+      imagePath: '/images/marcapaginas-harry-potter-impresion-3d-clip.jpeg',
+      seoFilename: 'marcapaginas-harry-potter-impresion-3d-clip.jpeg',
+      detail: 'Detalles que hacen tu evento único. Libritos de pintar y juegos.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-gift text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Papelería y Regalos</span>
+        </div>
+      )
     }
   ];
 
+  const PORTFOLIO_CATEGORIES = [
+    'Figuras y Coleccionables', 
+    'Ventas Mayoristas y Comercios', 
+    'Corporativo y Marcas', 
+    'Lámparas y Lightboxes', 
+    'Pastelería y Repostería', 
+    'Mates y Accesorios', 
+    'Escolar y Didáctico', 
+    'Souvenirs y Eventos', 
+    'Trofeos y Medallas', 
+    'Hogar y Decoración',
+    'Tatuajes Temporales',
+    'Etiquetas Escolares',
+    'Identidad Comercial',
+    'Papelería y Regalos'
+  ];
 
   const filteredWorks = activeTab === 'Todos'
     ? realWorks
@@ -988,23 +1061,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
   return (
     <section id="servicios" className="pt-24 pb-12 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div id="especialidades" className="mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
-            Expertos en <span className="text-orange-500 text-orange-glow">Impresión 3D Bariloche</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {specialties.map((spec, idx) => (
-              <div key={idx} className="glass p-6 rounded-2xl border-zinc-800 hover:border-orange-500/30 transition-all group">
-                <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                  <i className={`fa-solid ${spec.icon} text-xl`}></i>
-                </div>
-                <h3 className="text-white font-bold mb-2">{spec.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{spec.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* NUEVA SECCIÓN: Galería de Trabajos Reales */}
         <div id="galeria" className="mb-24 relative">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-orange-500/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -1023,7 +1079,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {/* Categorías de Filtro */}
           <div className="flex flex-wrap items-center gap-2 mb-12 bg-zinc-900/30 p-2 rounded-2xl border border-zinc-900 max-w-fit">
-            {['Todos', 'Figuras y Coleccionables', 'Ventas Mayoristas y Comercios', 'Corporativo y Marcas', 'Lámparas y Lightboxes', 'Pastelería y Repostería', 'Mates y Accesorios', 'Escolar y Didáctico', 'Souvenirs y Eventos', 'Trofeos y Medallas', 'Hogar y Decoración'].map((tab) => (
+            {['Todos', ...PORTFOLIO_CATEGORIES].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -1040,10 +1096,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
           {activeTab === 'Todos' ? (
             <div className="flex flex-col gap-16">
-              {['Figuras y Coleccionables', 'Ventas Mayoristas y Comercios', 'Corporativo y Marcas', 'Lámparas y Lightboxes', 'Pastelería y Repostería', 'Mates y Accesorios', 'Escolar y Didáctico', 'Souvenirs y Eventos', 'Trofeos y Medallas', 'Hogar y Decoración'].map(category => (
+              {PORTFOLIO_CATEGORIES.map(category => (
                 <div key={category} className="scroll-mt-24">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 border-l-4 border-orange-500 pl-4">
-                    {category} en Impresión 3D
+                    {category}
                   </h3>
                   <p className="text-zinc-400 mb-8 pl-4 max-w-3xl leading-relaxed">
                     Catálogo de productos para {category.toLowerCase()}, fabricados a medida y con terminaciones premium en San Carlos de Bariloche.
