@@ -47,14 +47,14 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <div className="inline-block px-4 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">
-            ¡Novedad! Nuevo Servicio
+            Totalmente a tu medida
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Diseño Gráfico y <span className="text-orange-500 text-orange-glow">Gráfica en Bariloche</span>
+            Gráfica y Diseño <span className="text-orange-500 text-orange-glow">100% Personalizado</span>
           </h2>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Ampliamos nuestra propuesta para que tus eventos sean completos. <br />
-            Ahora también diseñamos e imprimimos <span className="text-white font-semibold">toda la gráfica de tus cumples, casamientos y eventos.</span>
+            Ampliamos nuestra propuesta para que tus eventos y marca destaquen. <br />
+            Diseñamos e imprimimos <span className="text-white font-semibold">toda la gráfica adaptada a tus temáticas, con nombres y estilos a elección.</span>
           </p>
         </div>
 

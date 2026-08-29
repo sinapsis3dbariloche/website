@@ -361,13 +361,13 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
           
           <div className="mb-12">
             <div className="inline-block px-4 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">
-              Calidad y Detalle Real
+              A Tu Medida
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Galería de <span className="text-orange-500">Trabajos Reales</span>
+              Portfolio de <span className="text-orange-500">Trabajos Personalizados</span>
             </h2>
             <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed">
-              Descubrí cómo materializamos las ideas. Así es como lucen nuestros productos terminados, listos para entregar en San Carlos de Bariloche.
+              Descubrí cómo materializamos las ideas. Todos estos trabajos fueron diseñados a medida, adaptando nombres, colores y temáticas exclusivas para cada cliente en Bariloche y todo el País.
             </p>
           </div>
 

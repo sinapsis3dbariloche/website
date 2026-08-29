@@ -28,13 +28,13 @@ const Hero: React.FC = () => {
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight">
-          Diseño y Gráfica Personalizada en la Patagonia
+          Diseños y Creaciones <span className="text-orange-500">100% Personalizadas</span>
         </h2>
         
         <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed">
-          Ofrecemos <span className="text-white font-semibold">venta minorista y mayorista de impresión 3D y Gráfica.</span> <br />
-          Especialistas en stickers, tatuajes temporales, souvenirs, toppers de torta, medallas y trofeos 3D. <br />
-          <span className="text-orange-500 font-bold italic">Diseño e Impresión Personalizada en Bariloche y envíos a todo el País.</span>
+          Nuestro mayor diferencial es la <span className="text-white font-semibold">personalización total</span> en cada uno de nuestros trabajos. <br />
+          Adaptamos nombres, formas y temáticas a medida en todos nuestros productos: desde impresión 3D, souvenirs y trofeos, hasta stickers y gráfica integral. <br />
+          <span className="text-orange-500 font-bold italic">Transformamos tus ideas en creaciones únicas en Bariloche, con envíos a todo el País.</span>
         </p>
         
         <div className="flex flex-col sm:flex-row items-center gap-4">
