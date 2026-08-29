@@ -2,6 +2,60 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
+import CategorySlider from '../components/CategorySlider';
+
+const IMPRESION3D_CATEGORIES = [
+  {
+    title: 'Souvenirs y Eventos',
+    image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
+    link: '/portfolio?category=Souvenirs+y+Eventos'
+  },
+  {
+    title: 'Trofeos y Medallas',
+    image: '/images/trofeos-personalizados-futbol-impresion-3d.png',
+    link: '/portfolio?category=Trofeos+y+Medallas'
+  },
+  {
+    title: 'Lámparas y Lightboxes',
+    image: '/images/lightbox_stich.png',
+    link: '/portfolio?category=Lámparas+y+Lightboxes'
+  },
+  {
+    title: 'Pastelería y Repostería',
+    image: '/images/topper-torta-personalizado-plim-plim.png',
+    link: '/portfolio?category=Pastelería+y+Repostería'
+  },
+  {
+    title: 'Figuras y Coleccionables',
+    image: '/images/figuras-brain-rot-3d.png',
+    link: '/portfolio?category=Figuras+y+Coleccionables'
+  },
+  {
+    title: 'Mates y Accesorios',
+    image: '/images/mate-pelota-futbol-3d.png',
+    link: '/portfolio?category=Mates+y+Accesorios'
+  },
+  {
+    title: 'Corporativo y Marcas',
+    image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
+    link: '/portfolio?category=Corporativo+y+Marcas'
+  },
+  {
+    title: 'Escolar y Didáctico',
+    image: '/images/set-patrio-didactico-cabildo-3d-escuelas-jardines.jpeg',
+    link: '/portfolio?category=Escolar+y+Didáctico'
+  },
+  {
+    title: 'Hogar y Decoración',
+    image: '/images/portallaves-de-pared-gatito-3d-organizador-de-llaves.jpeg',
+    link: '/portfolio?category=Hogar+y+Decoración'
+  },
+  {
+    title: 'Ventas Mayoristas',
+    image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
+    link: '/portfolio?category=Ventas+Mayoristas+y+Comercios'
+  }
+];
 
 const Impresion3D: React.FC = () => {
   const [activeImage, setActiveImage] = useState<LightboxImage | null>(null);
@@ -28,9 +82,18 @@ const Impresion3D: React.FC = () => {
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Temáticas Exclusivas</span>
             </div>
         </div>
+
+        <div className="pb-10">
+          <CategorySlider 
+            title="Categorías 3D Destacadas" 
+            subtitle="Hacé click para ver la galería filtrada de cada sección"
+            categories={IMPRESION3D_CATEGORIES} 
+          />
+        </div>
+
         <Portfolio onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} />
       </div>
-      
+
       <Lightbox activeImage={activeImage} onClose={() => setActiveImage(null)} />
     </>
   );

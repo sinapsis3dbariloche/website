@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { PORTFOLIOS } from '../constants';
 
 interface PortfolioProps {
@@ -6,6 +7,9 @@ interface PortfolioProps {
 }
 
 const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
+  const [searchParams] = useSearchParams();
+  const initialCategory = searchParams.get('category') || 'Todos';
+
   const specialties = [
     { title: 'Eventos y Souvenirs', desc: 'Llaveros, centros de mesa y regalitos temáticos totalmente personalizados para hacer que cada cumpleaños o celebración sea inolvidable.', icon: 'fa-gift' },
     { title: 'Pastelería Creativa', desc: 'Toppers 3D multicapa, cortantes de galletitas y herramientas a medida para darle un toque profesional y único a tus tortas.', icon: 'fa-cake-candles' },
@@ -15,7 +19,22 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
 
   // Helper hook array state to track image errors and filters
   const [failedImages, setFailedImages] = React.useState<Record<string, boolean>>({});
-  const [activeTab, setActiveTab] = React.useState<string>('Todos');
+  const [activeTab, setActiveTab] = React.useState<string>(initialCategory);
+
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat) {
+      setActiveTab(cat);
+      // Auto-scroll to the portfolio section if needed
+      const el = document.getElementById('especialidades');
+      if (el) {
+        // Small delay to ensure render
+        setTimeout(() => {
+          window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [searchParams]);
 
   const handleImageError = (id: string) => {
     setFailedImages((prev) => ({ ...prev, [id]: true }));
