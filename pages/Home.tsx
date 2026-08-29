@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import CategorySlider from '../components/CategorySlider';
+import SEO from '../components/SEO';
 
 const HOME_CATEGORIES = [
   {
@@ -66,13 +66,29 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Sinapsis Impresiones Bariloche | Diseño, Impresión 3D y Gráfica Patagonia</title>
-        <meta name="description" content="Expertos en Diseño, Impresión 3D y Gráfica en Bariloche. Destacamos por la personalización total de nuestros trabajos a medida: temáticas, nombres y diseños exclusivos en toda la Patagonia." />
-        <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/" />
-      </Helmet>
+      <SEO 
+        title="Sinapsis Impresiones | Diseño e Impresión 3D Bariloche"
+        description="Especialistas en Impresión 3D y Gráfica en Bariloche. Fabricamos souvenirs, trofeos personalizados, y merchandising con envíos a toda la Patagonia."
+        canonical="https://www.sinapsis3dbariloche.com.ar/"
+      />
       
       <Hero />
+      
+      {/* Additional SEO text content, visible but nicely formatted */}
+      <section className="bg-zinc-950 py-10 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Servicios de Impresión 3D y Diseño en Bariloche</h2>
+          <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            En <strong>Sinapsis Impresiones</strong> nos especializamos en brindar soluciones creativas de <strong>Impresión 3D y Diseño Gráfico</strong> en la ciudad de <strong>San Carlos de Bariloche</strong>. 
+            Nuestro enfoque principal es la personalización total de cada proyecto, desde pequeños souvenirs para cumpleaños y eventos sociales, hasta el desarrollo de productos corporativos, merchandising institucional, trofeos deportivos a medida y papelería comercial.
+          </p>
+          <p className="text-zinc-400 text-lg leading-relaxed">
+            Trabajamos con materiales de alta calidad y tecnología de vanguardia para garantizar acabados excepcionales. 
+            Si buscás diseños únicos, grabados personalizados y regalos memorables en la Patagonia, estás en el lugar correcto. 
+            Realizamos <strong>envíos a todo el país</strong>, conectando el arte de la impresión 3D con tus necesidades, estés donde estés.
+          </p>
+        </div>
+      </section>
       
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />

@@ -12,12 +12,12 @@ const Hero: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4 flex flex-col items-center mt-4">
-          <span className="text-xl md:text-2xl text-orange-500 mb-2 font-bold tracking-widest uppercase text-orange-glow">Imprimimos tus ideas</span>
-          <span>SINAPSIS</span>
+          <span className="text-xl md:text-2xl text-orange-500 mb-2 font-bold tracking-widest uppercase text-orange-glow">Sinapsis Bariloche</span>
+          <span className="text-4xl md:text-6xl lg:text-7xl">IMPRESIÓN 3D</span>
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight flex flex-col items-center gap-1">
-          <span>Diseños y Creaciones</span>
+          <span>Diseño Gráfico</span>
           <span className="text-orange-500">100% Personalizadas</span>
           <span className="text-lg md:text-2xl text-zinc-400 font-medium mt-1">en Impresión 3D y/o Gráfica</span>
         </h2>

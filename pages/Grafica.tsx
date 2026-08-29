@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import GraphicsServices from '../components/GraphicsServices';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
+import SEO from '../components/SEO';
 
 const GRAFICA_CATEGORIES = [
   {
@@ -32,11 +32,11 @@ const Servicios: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Gráfica, Diseño y Papelería Personalizada | Sinapsis Impresiones Bariloche</title>
-        <meta name="description" content="Servicios integrales de gráfica y diseño totalmente personalizados. Creamos stickers, papelería y cartelería a medida, adaptando temáticas y nombres a tus necesidades en Bariloche." />
-        <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/grafica" />
-      </Helmet>
+      <SEO 
+        title="Gráfica, Diseño y Papelería | Sinapsis Impresiones"
+        description="Servicios integrales de gráfica y diseño totalmente personalizados en Bariloche. Creamos stickers, papelería y diseños a medida."
+        canonical="https://www.sinapsis3dbariloche.com.ar/grafica"
+      />
       
       <div className="pt-10 bg-zinc-950">
         <CategorySlider 

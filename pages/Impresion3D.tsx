@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
+import SEO from '../components/SEO';
 
 const IMPRESION3D_CATEGORIES = [
   {
@@ -62,11 +62,11 @@ const Impresion3D: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Impresión 3D a Medida y Personalizada en Bariloche | Sinapsis Impresiones</title>
-        <meta name="description" content="Especialistas en Impresión 3D personalizada en Bariloche. Nos destacamos por crear diseños únicos a medida, adaptando nombres, temáticas y formas en trofeos, souvenirs y merchandising." />
-        <link rel="canonical" href="https://www.sinapsis3dbariloche.com.ar/impresion-3d" />
-      </Helmet>
+      <SEO 
+        title="Impresión 3D a Medida | Sinapsis Impresiones"
+        description="Especialistas en Impresión 3D personalizada en Bariloche. Creamos diseños únicos a medida en trofeos, souvenirs y merchandising."
+        canonical="https://www.sinapsis3dbariloche.com.ar/impresion-3d"
+      />
       
       <div className="pt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
