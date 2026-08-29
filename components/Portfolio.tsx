@@ -327,6 +327,54 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
           <span className="text-zinc-400 text-xs font-bold">Rueditas Texturizadoras</span>
         </div>
       )
+    },
+    {
+      id: 'lightbox-capibara',
+      title: 'Lightbox Personalizada Capibara',
+      desc: 'Caja de luz (lightbox) personalizada con diseño exclusivo de Capibara (Carpincho), iluminada desde su interior para dar un toque único y divertido a tus espacios.',
+      category: 'Hogar y Decoración',
+      tags: ['Lightbox', 'Capibara', 'Diseño 3D', 'Decoración'],
+      imagePath: '/images/lightbox_capibara.png',
+      seoFilename: 'lightbox_capibara.png',
+      detail: 'Impresión de capas translúcidas de múltiples colores que cobran vida y profundidad al encender la luz trasera.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-lightbulb text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Lightbox Capibara</span>
+        </div>
+      )
+    },
+    {
+      id: 'lightbox-one-piece',
+      title: 'Lightbox One Piece - Anime a Medida',
+      desc: 'Caja de luz temática personalizada de One Piece, fabricada a pedido para fanáticos y coleccionistas. Un detalle 100% original con iluminación de alta intensidad.',
+      category: 'Hogar y Decoración',
+      tags: ['Lightbox', 'One Piece', 'Anime', 'Colección'],
+      imagePath: '/images/lightbox_onepice.png',
+      seoFilename: 'lightbox_onepice.png',
+      detail: 'Diseño vectorizado meticulosamente de One Piece, impreso en capas delgadas de color, creando un cuadro iluminado sorprendente.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-lightbulb text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Lightbox One Piece</span>
+        </div>
+      )
+    },
+    {
+      id: 'lightbox-stitch',
+      title: 'Lightbox Stitch Personalizado',
+      desc: 'Lámpara caja de luz con diseño de Stitch, elaborada a medida y retroiluminada. Un regalo personalizado perfecto y llamativo para grandes y chicos.',
+      category: 'Hogar y Decoración',
+      tags: ['Lightbox', 'Stitch', 'Lámpara 3D', 'Regalo'],
+      imagePath: '/images/lightbox_stich.png',
+      seoFilename: 'lightbox_stich.png',
+      detail: 'Efecto de luz con capas de profundidad creadas mediante litofanía plana multitonos en 3D.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-lightbulb text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold">Lightbox Stitch</span>
+        </div>
+      )
     }
   ];
 
