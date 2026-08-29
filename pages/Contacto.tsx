@@ -6,7 +6,7 @@ const Contacto: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Contacto | Sinapsis Impresiones Bariloche"
+        title="Contacto | Sinapsis 3D Bariloche"
         description="Contactanos para cotizar tu proyecto de Impresión 3D o Gráfica en Bariloche. Envíos a toda la Patagonia."
         canonical="https://www.sinapsis3dbariloche.com.ar/contacto"
       />

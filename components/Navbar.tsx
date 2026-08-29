@@ -89,6 +89,8 @@ const Navbar: React.FC = () => {
               <Link to="/" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Inicio</Link>
               <Link to="/impresion-3d" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Impresión 3D</Link>
               <Link to="/grafica" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Gráfica</Link>
+              <Link to="/souvenirs" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Souvenirs</Link>
+              <Link to="/merchandising" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Merchandising</Link>
               <Link to="/portfolio" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Portfolio</Link>
               <Link to="/contacto" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Contacto</Link>
               

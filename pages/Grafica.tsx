@@ -33,7 +33,7 @@ const Servicios: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Gráfica, Diseño y Papelería | Sinapsis Impresiones"
+        title="Gráfica y Papelería Personalizada en Bariloche | Sinapsis 3D"
         description="Servicios integrales de gráfica y diseño totalmente personalizados en Bariloche. Creamos stickers, papelería y diseños a medida."
         canonical="https://www.sinapsis3dbariloche.com.ar/grafica"
       />

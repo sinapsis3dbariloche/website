@@ -9,7 +9,7 @@ const PortfolioPage: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Portfolio de Trabajos | Sinapsis Impresiones"
+        title="Portfolio de Trabajos | Sinapsis 3D Bariloche"
         description="Galería de trabajos personalizados en Impresión 3D y Gráfica. Diseños a medida, temáticas exclusivas y creaciones."
         canonical="https://www.sinapsis3dbariloche.com.ar/portfolio"
       />

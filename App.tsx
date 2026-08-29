@@ -6,6 +6,8 @@ import Grafica from './pages/Grafica';
 import Impresion3D from './pages/Impresion3D';
 import PortfolioPage from './pages/PortfolioPage';
 import Contacto from './pages/Contacto';
+import Souvenirs from './pages/Souvenirs';
+import Merchandising from './pages/Merchandising';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="impresion-3d" element={<Impresion3D />} />
         <Route path="portfolio" element={<PortfolioPage />} />
         <Route path="contacto" element={<Contacto />} />
+        <Route path="souvenirs" element={<Souvenirs />} />
+        <Route path="merchandising" element={<Merchandising />} />
       </Route>
     </Routes>
   );

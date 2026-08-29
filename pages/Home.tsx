@@ -87,13 +87,13 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Sinapsis Impresiones | Diseño e Impresión 3D Bariloche"
+        title="Sinapsis 3D Bariloche | Impresión 3D y Gráfica"
         description="Especialistas en Impresión 3D y Gráfica en Bariloche. Fabricamos souvenirs, trofeos personalizados, y merchandising con envíos a toda la Patagonia."
         canonical="https://www.sinapsis3dbariloche.com.ar/"
       />
       
       <Hero />
-      
+
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />
       </div>
@@ -180,6 +180,25 @@ const Home: React.FC = () => {
             ))}
          </div>
       </section>
+
+      <div className="bg-zinc-950 px-4 py-16 md:py-20 border-t border-zinc-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-2xl md:text-4xl font-black text-white mb-4 uppercase tracking-tight">
+            Impresión 3D, Diseño y Gráfica en Bariloche
+          </h1>
+          <div className="text-zinc-400 text-sm md:text-base leading-relaxed space-y-4">
+            <p>
+              En Sinapsis 3D Bariloche somos especialistas en materializar tus ideas a través de la <strong>impresión 3D y el diseño gráfico</strong>. Nos apasiona crear productos únicos y personalizados, desde regalos originales hasta soluciones prácticas para tu día a día, empresa o evento.
+            </p>
+            <p>
+              Ofrecemos un servicio integral que abarca desde el modelado tridimensional hasta la impresión final, garantizando la máxima calidad en cada detalle. Realizamos <strong>souvenirs para cumpleaños, centros de mesa, trofeos, medallas, merchandising corporativo y papelería personalizada</strong>, adaptándonos siempre a tus necesidades específicas.
+            </p>
+            <p>
+              Ubicados en la Patagonia Argentina, combinamos tecnología avanzada con dedicación artesanal para ofrecerte resultados excepcionales. Explorá nuestro catálogo y descubrí cómo podemos transformar tus proyectos en realidad con diseños a medida y envíos a todo el país.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <style>{`
         @keyframes infinite-scroll {
