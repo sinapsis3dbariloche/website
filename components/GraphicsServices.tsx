@@ -49,9 +49,9 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
           <div className="inline-block px-4 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">
             Totalmente a tu medida
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Gráfica y Diseño <span className="text-orange-500 text-orange-glow">100% Personalizado</span>
-          </h2>
+          </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
             Ampliamos nuestra propuesta para que tus eventos y marca destaquen. <br />
             Diseñamos e imprimimos <span className="text-white font-semibold">toda la gráfica adaptada a tus temáticas, con nombres y estilos a elección.</span>
@@ -96,6 +96,7 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
                       <img 
                         src={product.imageUrl} 
                         alt={product.title}
+                        loading="lazy"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 animate-fade-in"
                       />

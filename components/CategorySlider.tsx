@@ -72,6 +72,7 @@ const CategorySlider: React.FC<CategorySliderProps> = ({ title = "Explora nuestr
                 <img 
                   src={category.image} 
                   alt={category.title} 
+                  loading="lazy"
                   className="w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700"
                 />
               </div>

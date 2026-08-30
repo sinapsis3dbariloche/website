@@ -116,22 +116,6 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
       )
     },
     {
-      id: 'formas-geometricas-colegio',
-      title: 'Set de Formas Geométricas Escolares',
-      desc: 'Piezas didácticas con distintas formas geométricas. Ideal para el aprendizaje en colegios e instituciones.',
-      category: 'Escolar y Didáctico',
-      tags: ["geometria", "escolar", "didactico", "formas", "impresion 3d"],
-      imagePath: '/images/formas-geometricas-colegio-3d.png',
-      seoFilename: 'formas-geometricas-colegio-3d.png',
-      detail: 'Set de piezas con distintas formas y figuras geométricas. Solución didáctica, táctil y visual excelente para apoyar el aprendizaje de matemáticas en colegios.',
-      fallback: (
-        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
-          <i className="fa-solid fa-shapes text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
-          <span className="text-zinc-400 text-xs font-bold text-center">Formas Geométricas</span>
-        </div>
-      )
-    },
-    {
       id: 'escarapelas-colegio-mayorista',
       title: 'Escarapelas Patrias 3D',
       desc: 'Escarapelas argentinas impresas en 3D, ultra resistentes. Disponibles para colegios y para venta mayorista.',
@@ -555,13 +539,13 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
     {
       id: 'marcapaginas-harry-potter',
       title: 'Marcapáginas Harry Potter con Clip',
-      desc: 'Señaladores y clips de lectura coleccionables con logos temáticos impresos en 3D de alta definición, el souvenir perfecto para fanáticos de la saga.',
-      category: 'Escolar y Didáctico',
-      tags: ['Harry Potter', 'Sagas', 'Clips de Lectura', 'Coleccionables'],
+      desc: 'Señalador impreso en 3D con soporte de presentación personalizado en gráfica. Un souvenir híbrido perfecto para fanáticos de la saga.',
+      category: 'Souvenirs y Eventos',
+      tags: ['Harry Potter', 'Sagas', 'Clips de Lectura', 'Souvenirs', 'Gráfica', 'Híbrido'],
       imagePath: '/images/marcapaginas-harry-potter-impresion-3d-clip.jpeg',
       seoFilename: 'marcapaginas-harry-potter-impresion-3d-clip.jpeg',
       objectClass: 'object-cover object-top',
-      detail: 'Clips ultra delgados optimizados térmicamente para una flexibilidad y durabilidad extraordinarias en las hojas de los libros.',
+      detail: 'Este producto destaca por ser un formato híbrido: combina la precisión de la impresión 3D para el clip señalador con un soporte de presentación desarrollado íntegramente en nuestro sector de diseño e impresión gráfica.',
       fallback: (
         <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
           <i className="fa-solid fa-book-bookmark text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
@@ -1034,6 +1018,22 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
           <span className="text-zinc-400 text-xs font-bold text-center">Papelería y Regalos</span>
         </div>
       )
+    },
+    {
+      id: 'formas-geometricas-colegio',
+      title: 'Set de Formas Geométricas Escolares',
+      desc: 'Piezas didácticas con distintas formas geométricas. Ideal para el aprendizaje en colegios e instituciones.',
+      category: 'Escolar y Didáctico',
+      tags: ["geometria", "escolar", "didactico", "formas", "impresion 3d"],
+      imagePath: '',
+      seoFilename: '',
+      detail: 'Set de piezas con distintas formas y figuras geométricas. Solución didáctica, táctil y visual excelente para apoyar el aprendizaje de matemáticas en colegios.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-shapes text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Formas Geométricas</span>
+        </div>
+      )
     }
   ];
 
@@ -1128,6 +1128,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
                                   src={work.imagePath} 
                                   alt={work.title} 
                                   itemProp="image"
+                                  loading="lazy"
                                   referrerPolicy="no-referrer"
                                   onError={() => handleImageError(work.id)}
                                   className={`w-full h-full ${(work as any).objectClass || 'object-cover object-center'} group-hover:scale-105 transition-all duration-700`}
@@ -1223,6 +1224,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
                             src={work.imagePath} 
                             alt={work.title} 
                             itemProp="image"
+                            loading="lazy"
                             referrerPolicy="no-referrer"
                             onError={() => handleImageError(work.id)}
                             className={`w-full h-full ${(work as any).objectClass || 'object-cover object-center'} group-hover:scale-105 transition-all duration-700`}

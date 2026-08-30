@@ -8,6 +8,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import Contacto from './pages/Contacto';
 import Souvenirs from './pages/Souvenirs';
 import Merchandising from './pages/Merchandising';
+import Mayorista from './pages/Mayorista';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="contacto" element={<Contacto />} />
         <Route path="souvenirs" element={<Souvenirs />} />
         <Route path="merchandising" element={<Merchandising />} />
+        <Route path="mayorista" element={<Mayorista />} />
       </Route>
     </Routes>
   );

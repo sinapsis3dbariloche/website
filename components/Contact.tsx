@@ -7,10 +7,10 @@ const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-8">
               ¿Tenés un <br />
               <span className="text-orange-500">Desafío Creativo?</span>
-            </h2>
+            </h1>
             
             <div className="space-y-8">
               {/* Bloque de Envíos */}
