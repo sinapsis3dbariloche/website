@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold text-zinc-200 mb-6 tracking-tight flex flex-col items-center gap-1">
-          <span>Diseño Gráfico</span>
+          <span>Papelería Creativa</span>
           <span className="text-orange-500">100% Personalizadas</span>
           <span className="text-lg md:text-2xl text-zinc-400 font-medium mt-1">en Impresión 3D y/o Gráfica</span>
         </h2>
