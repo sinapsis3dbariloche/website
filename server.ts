@@ -53,11 +53,69 @@ const seoData: Record<string, { title: string, desc: string, h1: string, content
     desc: 'Servicio de venta mayorista para cotillones, artísticas, kioskos y comercios. Accedé a precios por mayor y revendé nuestros productos.',
     h1: 'Ventas Mayoristas',
     content: 'Diseñamos y fabricamos una amplia variedad de productos ideales para la reventa en cotillones, artísticas, kioscos, librerías y tiendas de regalos. Ofrecemos precios diferenciales por cantidad, permitiéndote incorporar artículos novedosos, rentables y de alta rotación a tu catálogo. Contamos con cortantes de repostería, llaveros, merchandising, artículos escolares, didácticos y más.'
+  },
+  '/productos/souvenirs': {
+    title: 'Souvenirs para Eventos y Cumpleaños | Sinapsis 3D Bariloche',
+    desc: 'Souvenirs personalizados en impresión 3D para cumpleaños y eventos en Bariloche. Centros de mesa, llaveros temáticos y adornos.',
+    h1: 'Souvenirs para Eventos y Cumpleaños',
+    content: 'En Sinapsis 3D nos especializamos en fabricar souvenirs y artículos para cumpleaños y eventos de forma completamente personalizada. Transformá tus festejos con detalles únicos que tus invitados van a conservar y recordar. Fabricamos todo a medida mediante impresión 3D: desde llaveros con nombres y temáticas infantiles, centros de mesa exclusivos, adornos para tortas (cake toppers) hasta detalles para mesas dulces, bodas y fiestas infantiles.'
+  },
+  '/productos/merchandising': {
+    title: 'Merchandising para Empresas y Comercios | Sinapsis 3D',
+    desc: 'Merchandising corporativo y artículos promocionales impresos en 3D para empresas en Bariloche. Llaveros con logo, stands y artículos B2B.',
+    h1: 'Merchandising Corporativo',
+    content: 'Potenciá la imagen de tu empresa o marca con nuestras soluciones en merchandising corporativo y artículos promocionales B2B. En Sinapsis 3D creamos piezas que comunican el valor de tu marca de manera efectiva y original. Desde llaveros corporativos con el logo de tu empresa, regalos empresariales personalizados, soportes institucionales hasta tarjetas de presentación y exhibidores.'
+  },
+  '/productos/eventos': {
+    title: 'Productos para Eventos | Sinapsis 3D Bariloche',
+    desc: 'Impresión 3D para eventos en Bariloche. Souvenirs, centros de mesa y detalles únicos para que tu evento sea inolvidable.',
+    h1: 'Productos para Eventos',
+    content: 'Transforma tu evento con nuestros diseños 3D personalizados. Centros de mesa, souvenirs exclusivos y decoración a medida para todo tipo de celebraciones.'
+  },
+  '/productos/cumpleanos': {
+    title: 'Productos para Cumpleaños | Sinapsis 3D Bariloche',
+    desc: 'Artículos y souvenirs impresos en 3D para cumpleaños. Decoración, cake toppers y sorpresas personalizadas.',
+    h1: 'Artículos para Cumpleaños',
+    content: 'Hacé que tu cumpleaños sea inolvidable con souvenirs, cake toppers y decoración temática impresa en 3D. Personalización completa a tu gusto.'
+  },
+  '/productos/coleccionables': {
+    title: 'Figuras y Coleccionables 3D | Sinapsis 3D Bariloche',
+    desc: 'Figuras impresas en 3D y artículos coleccionables. Personajes, funkos, y diseños a medida con excelente nivel de detalle.',
+    h1: 'Figuras y Coleccionables',
+    content: 'Figuras coleccionables de gran calidad, personajes a medida, y diseños únicos impresos en 3D para fanáticos y coleccionistas.'
+  },
+  '/productos/deco-y-hogar': {
+    title: 'Decoración y Hogar 3D | Sinapsis 3D Bariloche',
+    desc: 'Objetos decorativos y soluciones prácticas para el hogar impresas en 3D. Lámparas, macetas, organizadores y más.',
+    h1: 'Decoración y Hogar',
+    content: 'Llevá el diseño a tu hogar con organizadores, macetas, lámparas y accesorios decorativos impresos en 3D.'
+  },
+  '/productos/trofeos': {
+    title: 'Trofeos y Medallas Personalizadas | Sinapsis 3D Bariloche',
+    desc: 'Trofeos y medallas deportivas impresas en 3D. Diseños exclusivos y personalizados para torneos y reconocimientos.',
+    h1: 'Trofeos y Medallas',
+    content: 'Reconocé el esfuerzo con trofeos y medallas impresas en 3D. Diseños totalmente a medida para torneos deportivos y eventos.'
+  },
+  '/productos/escolar': {
+    title: 'Artículos Escolares y Didácticos | Sinapsis 3D Bariloche',
+    desc: 'Material didáctico, juegos educativos y artículos escolares fabricados en impresión 3D.',
+    h1: 'Material Escolar y Didáctico',
+    content: 'Fomentamos el aprendizaje con herramientas didácticas, juegos educativos y útiles personalizados fabricados en 3D.'
+  },
+  '/productos/pasteleria': {
+    title: 'Artículos para Pastelería y Repostería | Sinapsis 3D Bariloche',
+    desc: 'Cortantes de galletitas, cake toppers y herramientas para repostería impresas en 3D. Diseños personalizados.',
+    h1: 'Artículos de Pastelería',
+    content: 'Diseñamos cortantes, cake toppers y herramientas de repostería personalizadas. Llevá tu pastelería creativa al siguiente nivel.'
   }
 };
 
 async function startServer() {
   const app = express();
+
+  // 301 Permanent Redirects para SEO
+  app.get('/souvenirs', (req, res) => res.redirect(301, '/productos/souvenirs'));
+  app.get('/merchandising', (req, res) => res.redirect(301, '/productos/merchandising'));
   
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

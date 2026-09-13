@@ -8,22 +8,22 @@ const MAYORISTA_CATEGORIES = [
   {
     title: 'Ventas Mayoristas y Comercios',
     image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
-    link: '/portfolio?category=Ventas+Mayoristas+y+Comercios'
+    link: '/mayorista'
   },
   {
     title: 'Figuras y Coleccionables',
     image: '/images/figuras-brain-rot-3d.png',
-    link: '/portfolio?category=Figuras+y+Coleccionables'
+    link: '/productos/coleccionables'
   },
   {
     title: 'Escolar y Didáctico',
     image: '/images/set-patrio-didactico-cabildo-3d-escuelas-jardines.jpeg',
-    link: '/portfolio?category=Escolar+y+Didáctico'
+    link: '/productos/escolar'
   },
   {
     title: 'Pastelería y Repostería',
     image: '/images/cortantes-galletitas-tematicos-cumpleanos-3d.png',
-    link: '/portfolio?category=Pastelería+y+Repostería'
+    link: '/productos/pasteleria'
   }
 ];
 

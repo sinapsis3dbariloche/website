@@ -57,31 +57,31 @@ const Navbar: React.FC = () => {
               
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl py-2 flex flex-col min-w-[220px]">
-                  <Link to="/souvenirs" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/souvenirs" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-gift w-6 text-orange-500"></i> Souvenirs
                   </Link>
-                  <Link to="/merchandising" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/merchandising" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-store w-6 text-orange-500"></i> Merchandising
                   </Link>
-                  <Link to="/portfolio?category=Souvenirs y Eventos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/eventos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-glass-cheers w-6 text-orange-500"></i> Eventos
                   </Link>
-                  <Link to="/souvenirs" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/cumpleanos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-cake-candles w-6 text-orange-500"></i> Cumpleaños
                   </Link>
-                  <Link to="/portfolio?category=Figuras y Coleccionables" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/coleccionables" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-robot w-6 text-orange-500"></i> Coleccionables
                   </Link>
-                  <Link to="/portfolio?category=Hogar y Decoración" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/deco-y-hogar" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-house w-6 text-orange-500"></i> Deco y Hogar
                   </Link>
-                  <Link to="/portfolio?category=Trofeos y Medallas" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/trofeos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-trophy w-6 text-orange-500"></i> Trofeos
                   </Link>
-                  <Link to="/portfolio?category=Escolar y Didáctico" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/escolar" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-school w-6 text-orange-500"></i> Escolar
                   </Link>
-                  <Link to="/portfolio?category=Pastelería y Repostería" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                  <Link to="/productos/pasteleria" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-cookie-bite w-6 text-orange-500"></i> Pastelería
                   </Link>
                 </div>
@@ -153,31 +153,31 @@ const Navbar: React.FC = () => {
                       className="overflow-hidden"
                     >
                       <div className="flex flex-col space-y-3 pb-4">
-                        <Link to="/souvenirs" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/souvenirs" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-gift text-orange-500 mr-3 text-lg w-5"></i> Souvenirs
                         </Link>
-                        <Link to="/merchandising" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/merchandising" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-store text-orange-500 mr-3 text-lg w-5"></i> Merchandising
                         </Link>
-                        <Link to="/portfolio?category=Souvenirs y Eventos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/eventos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-glass-cheers text-orange-500 mr-3 text-lg w-5"></i> Eventos
                         </Link>
-                        <Link to="/souvenirs" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/cumpleanos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-cake-candles text-orange-500 mr-3 text-lg w-5"></i> Cumpleaños
                         </Link>
-                        <Link to="/portfolio?category=Figuras y Coleccionables" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/coleccionables" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-robot text-orange-500 mr-3 text-lg w-5"></i> Coleccionables
                         </Link>
-                        <Link to="/portfolio?category=Hogar y Decoración" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/deco-y-hogar" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-house text-orange-500 mr-3 text-lg w-5"></i> Deco y Hogar
                         </Link>
-                        <Link to="/portfolio?category=Trofeos y Medallas" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/trofeos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-trophy text-orange-500 mr-3 text-lg w-5"></i> Trofeos
                         </Link>
-                        <Link to="/portfolio?category=Escolar y Didáctico" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/escolar" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-school text-orange-500 mr-3 text-lg w-5"></i> Escolar
                         </Link>
-                        <Link to="/portfolio?category=Pastelería y Repostería" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
+                        <Link to="/productos/pasteleria" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-cookie-bite text-orange-500 mr-3 text-lg w-5"></i> Pastelería
                         </Link>
                       </div>

@@ -31,13 +31,55 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/souvenirs</loc>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/souvenirs</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/merchandising</loc>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/merchandising</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/eventos</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/cumpleanos</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/coleccionables</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/deco-y-hogar</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/trofeos</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/escolar</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/pasteleria</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

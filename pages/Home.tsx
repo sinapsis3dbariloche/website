@@ -8,12 +8,12 @@ const HOME_CATEGORIES = [
   {
     title: 'Souvenirs y Eventos',
     image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
-    link: '/portfolio?category=Souvenirs+y+Eventos'
+    link: '/productos/eventos'
   },
   {
     title: 'Pastelería y Repostería',
     image: '/images/topper-torta-personalizado-plim-plim.png',
-    link: '/portfolio?category=Pastelería+y+Repostería'
+    link: '/productos/pasteleria'
   },
   {
     title: 'Lámparas y Lightboxes',
@@ -23,17 +23,17 @@ const HOME_CATEGORIES = [
   {
     title: 'Trofeos y Medallas',
     image: '/images/trofeos-personalizados-futbol-impresion-3d.png',
-    link: '/portfolio?category=Trofeos+y+Medallas'
+    link: '/productos/trofeos'
   },
   {
     title: 'Figuras y Coleccionables',
     image: '/images/figuras-brain-rot-3d.png',
-    link: '/portfolio?category=Figuras+y+Coleccionables'
+    link: '/productos/coleccionables'
   },
   {
     title: 'Corporativo y Marcas',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
-    link: '/portfolio?category=Corporativo+y+Marcas'
+    link: '/productos/merchandising'
   },
   {
     title: 'Mates y Accesorios',
@@ -43,17 +43,17 @@ const HOME_CATEGORIES = [
   {
     title: 'Escolar y Didáctico',
     image: '/images/set-patrio-didactico-cabildo-3d-escuelas-jardines.jpeg',
-    link: '/portfolio?category=Escolar+y+Didáctico'
+    link: '/productos/escolar'
   },
   {
     title: 'Hogar y Decoración',
     image: '/images/portallaves-de-pared-gatito-3d-organizador-de-llaves.jpeg',
-    link: '/portfolio?category=Hogar+y+Decoración'
+    link: '/productos/deco-y-hogar'
   },
   {
     title: 'Ventas Mayoristas',
     image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
-    link: '/portfolio?category=Ventas+Mayoristas+y+Comercios'
+    link: '/mayorista'
   },
   {
     title: 'Tatuajes Temporales',

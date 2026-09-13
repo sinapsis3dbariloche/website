@@ -8,12 +8,12 @@ const SOUVENIRS_CATEGORIES = [
   {
     title: 'Souvenirs y Eventos',
     image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
-    link: '/portfolio?category=Souvenirs+y+Eventos'
+    link: '/productos/eventos'
   },
   {
     title: 'Pastelería y Repostería',
     image: '/images/topper-torta-personalizado-plim-plim.png',
-    link: '/portfolio?category=Pastelería+y+Repostería'
+    link: '/productos/pasteleria'
   }
 ];
 

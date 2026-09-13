@@ -4,17 +4,22 @@ import { PORTFOLIOS } from '../constants';
 
 interface PortfolioProps {
   onImageClick?: (src: string, title: string, desc?: string) => void;
+  forceCategory?: string;
 }
 
-const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
+const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) => {
   const [searchParams] = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'Todos';
+  const initialCategory = forceCategory || searchParams.get('category') || 'Todos';
 
   // Helper hook array state to track image errors and filters
   const [failedImages, setFailedImages] = React.useState<Record<string, boolean>>({});
   const [activeTab, setActiveTab] = React.useState<string>(initialCategory);
 
   useEffect(() => {
+    if (forceCategory) {
+      setActiveTab(forceCategory);
+      return;
+    }
     const cat = searchParams.get('category');
     if (cat) {
       setActiveTab(cat);

@@ -8,7 +8,7 @@ const MERCHANDISING_CATEGORIES = [
   {
     title: 'Corporativo y Marcas',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
-    link: '/portfolio?category=Corporativo+y+Marcas'
+    link: '/productos/merchandising'
   },
   {
     title: 'Identidad Comercial',
