@@ -1106,12 +1106,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {realWorks.filter(w => w.category === category).map((work) => {
-                      const isFailed = failedImages[work.id] ?? false;
+                      const isFailed = (failedImages[work.id] ?? false) || !work.imagePath;
                       return (
                         <article 
                           key={work.id} 
                           className="group glass rounded-3xl border-zinc-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden flex flex-col"
-                          itemScope itemType="http://schema.org/Product"
+                          itemScope itemType="http://schema.org/CreativeWork"
                         >
                           {/* Image Container with Fallback */}
                           <div 
@@ -1202,12 +1202,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick }) => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredWorks.map((work) => {
-                const isFailed = failedImages[work.id] ?? false;
+                const isFailed = (failedImages[work.id] ?? false) || !work.imagePath;
                 return (
                   <article 
                     key={work.id} 
                     className="group glass rounded-3xl border-zinc-800 hover:border-orange-500/30 transition-all duration-300 overflow-hidden flex flex-col"
-                    itemScope itemType="http://schema.org/Product"
+                    itemScope itemType="http://schema.org/CreativeWork"
                   >
                     {/* Image Container with Fallback */}
                     <div 
