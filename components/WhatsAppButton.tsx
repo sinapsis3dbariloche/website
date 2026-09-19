@@ -1,13 +1,12 @@
 import React from 'react';
 import { CONTACT } from '../constants';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const WhatsAppButton: React.FC = () => {
   const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}`;
 
   const handleClick = () => {
-    if ((window as any).trackConversion) {
-      (window as any).trackConversion('clic_whatsapp_flotante', 'conversión');
-    }
+    trackWhatsAppClick('flotante', 'Botón Flotante WhatsApp Principal');
   };
 
   return (

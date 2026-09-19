@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const HOME_CATEGORIES = [
   {
@@ -97,6 +98,33 @@ const Home: React.FC = () => {
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />
       </div>
+
+      {/* Direct Quote / Lead CTA Banner */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="relative rounded-3xl overflow-hidden glass border border-zinc-800 p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-orange-950/30 via-zinc-900 to-zinc-950">
+          <div className="flex-1 text-center md:text-left">
+            <span className="text-orange-500 font-bold text-xs uppercase tracking-widest block mb-1">
+              Atención Personalizada en Bariloche
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">
+              ¿Querés un presupuesto para tu idea?
+            </h3>
+            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+              Escribinos con tu temática, cantidad o diseño y te asesoramos al instante sin compromiso.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5492944914816?text=Hola%20Sinapsis%203D!%20Tengo%20una%20consulta%20para%20un%20pedido%20personalizado."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('home_banner_lead', 'Banner Presupuesto WhatsApp Home')}
+            className="flex items-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold px-7 py-4 rounded-2xl text-base transition-all shadow-xl shadow-green-950/40 hover:scale-105 shrink-0"
+          >
+            <i className="fa-brands fa-whatsapp text-2xl"></i>
+            Pedir Presupuesto por WhatsApp
+          </a>
+        </div>
+      </section>
 
       <section className="pb-20 flex flex-col items-center bg-zinc-950">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 w-full max-w-5xl opacity-70 px-4">

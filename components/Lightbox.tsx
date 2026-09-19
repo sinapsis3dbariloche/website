@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 export interface LightboxImage {
   src: string;
@@ -90,6 +91,7 @@ const Lightbox: React.FC<LightboxProps> = ({ activeImage, onClose }) => {
                   href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola Sinapsis 3D! Vi la foto de "${activeImage.title}" en pantalla completa en su web y me interesa encargar uno parecido.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('lightbox', `Cotizar desde Vista Ampliada: ${activeImage.title}`)}
                   className="w-full py-4 px-6 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold transition-all shadow-lg hover:shadow-orange-900/20 flex items-center justify-center gap-3 text-sm"
                 >
                   <i className="fa-brands fa-whatsapp text-lg animate-pulse"></i>

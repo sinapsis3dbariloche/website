@@ -3,6 +3,7 @@ import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const MAYORISTA_CATEGORIES = [
   {
@@ -50,6 +51,19 @@ const Mayorista: React.FC = () => {
               <p>
                 Ofrecemos <span className="text-white font-semibold">precios diferenciales por cantidad</span>, permitiéndote incorporar artículos novedosos, rentables y de alta rotación a tu catálogo. Contamos con cortantes de repostería, llaveros, merchandising, artículos escolares, didácticos y más.
               </p>
+            </div>
+
+            <div>
+              <a
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me gustaría solicitar el catálogo y lista de precios mayorista para comercios.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('mayorista_header', 'Solicitar Catálogo Mayorista por WhatsApp')}
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+              >
+                <i className="fa-brands fa-whatsapp text-lg"></i>
+                Solicitar Lista Mayorista por WhatsApp
+              </a>
             </div>
         </div>
 

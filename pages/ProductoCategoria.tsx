@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const categoryMap: Record<string, { title: string, desc: string, portfolioCategory: string, h1: string }> = {
   'eventos': {
@@ -80,6 +81,19 @@ const ProductoCategoria: React.FC = () => {
             <p className="text-zinc-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-6">
               {categoryData.desc}
             </p>
+
+            <div>
+              <a
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola Sinapsis 3D! Me interesa cotizar productos de la categoría "${categoryData.h1}".`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('categoria_header', `Cotizar Categoria: ${categoryData.h1}`)}
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+              >
+                <i className="fa-brands fa-whatsapp text-lg"></i>
+                Consultar por {categoryData.h1} en WhatsApp
+              </a>
+            </div>
         </div>
 
         <Portfolio 

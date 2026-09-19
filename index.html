@@ -66,11 +66,33 @@
       gtag('js', new Date());
       gtag('config', 'G-BC8F43NF90');
 
-      window.trackConversion = function(eventName, category) {
+      window.trackConversion = function(eventName, category, label) {
         if (typeof gtag === 'function') {
           gtag('event', eventName, {
-            'event_category': category,
-            'event_label': eventName
+            'event_category': category || 'conversión',
+            'event_label': label || eventName
+          });
+        }
+      };
+
+      window.trackWhatsAppClick = function(location, details) {
+        var label = details ? (location + ' - ' + details) : location;
+        if (typeof gtag === 'function') {
+          // Evento personalizado específico de WhatsApp
+          gtag('event', 'click_whatsapp', {
+            'event_category': 'contacto',
+            'event_label': label,
+            'button_location': location,
+            'contact_method': 'whatsapp'
+          });
+          // Evento recomendado oficial de Google Analytics 4 para leads / conversiones
+          gtag('event', 'generate_lead', {
+            'event_category': 'conversión',
+            'event_label': label,
+            'button_location': location,
+            'method': 'whatsapp',
+            'currency': 'ARS',
+            'value': 1
           });
         }
       };

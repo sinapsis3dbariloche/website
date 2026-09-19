@@ -3,6 +3,7 @@ import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const SOUVENIRS_CATEGORIES = [
   {
@@ -41,10 +42,23 @@ const Souvenirs: React.FC = () => {
                 Fabricamos todo a medida mediante impresión 3D: desde <strong>llaveros con nombres y temáticas infantiles, centros de mesa exclusivos, adornos para tortas (cake toppers)</strong> hasta detalles para mesas dulces, bodas y fiestas infantiles. Ya sea un evento íntimo o una gran celebración, aportamos creatividad y calidad para que cada recuerdo sea inolvidable.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Llaveros Temáticos</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Centros de Mesa</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Cake Toppers</span>
+            </div>
+
+            <div>
+              <a
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me gustaría consultar y cotizar souvenirs personalizados para un evento.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('souvenirs_header', 'Cotizar Souvenirs por WhatsApp')}
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+              >
+                <i className="fa-brands fa-whatsapp text-lg"></i>
+                Consultar Souvenirs por WhatsApp
+              </a>
             </div>
         </div>
 

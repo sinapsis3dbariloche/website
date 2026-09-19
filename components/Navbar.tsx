@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import Logo from './Logo';
 import { SOCIALS } from '../constants';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,6 +115,7 @@ const Navbar: React.FC = () => {
               href={`https://wa.me/5492944914816`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('navbar_desktop', 'Pedir Presupuesto Desktop')}
               className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shadow-lg shadow-orange-900/40 whitespace-nowrap"
             >
               Pedir Presupuesto
@@ -195,7 +197,10 @@ const Navbar: React.FC = () => {
                   href={`https://wa.me/5492944914816`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={closeMenu}
+                  onClick={() => {
+                    trackWhatsAppClick('navbar_mobile', 'Pedir Presupuesto Mobile');
+                    closeMenu();
+                  }}
                   className="flex justify-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-4 rounded-xl text-sm font-bold transition-all shadow-lg shadow-orange-900/40"
                 >
                   <i className="fa-brands fa-whatsapp text-lg mr-2"></i> Pedir Presupuesto

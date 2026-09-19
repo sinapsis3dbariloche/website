@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { PORTFOLIOS } from '../constants';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 interface PortfolioProps {
   onImageClick?: (src: string, title: string, desc?: string) => void;
@@ -1190,6 +1191,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
                                 href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola! Vi la Colección de "${work.title}" en la web de Sinapsis 3D y me gustaría cotizar un trabajo personalizado similar.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => trackWhatsAppClick('portfolio_card_collection', `Cotizar Colección: ${work.title}`)}
                                 className="px-4 py-2 rounded-xl bg-orange-500/10 text-orange-500 text-xs font-bold hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
                               >
                                 <i className="fa-brands fa-whatsapp"></i>
@@ -1287,6 +1289,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
                           href={`https://wa.me/5492944914816?text=${encodeURIComponent(`Hola! Vi la Colección de "${work.title}" en la web de Sinapsis 3D y me gustaría cotizar un trabajo personalizado similar.`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => trackWhatsAppClick('portfolio_card', `Cotizar Producto: ${work.title}`)}
                           className="px-4 py-2 rounded-xl bg-orange-500/10 text-orange-500 text-xs font-bold hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
                         >
                           <i className="fa-brands fa-whatsapp"></i>

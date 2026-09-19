@@ -2,5 +2,7 @@
   "name": "Sinapsis 3D Bariloche",
   "description": "Expertos en Diseño, Impresión 3D y Gráfica en Bariloche. Soluciones creativas, souvenirs y trofeos personalizados en toda la Patagonia.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

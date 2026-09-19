@@ -3,6 +3,7 @@ import GraphicsServices from '../components/GraphicsServices';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const GRAFICA_CATEGORIES = [
   {
@@ -39,6 +40,19 @@ const Servicios: React.FC = () => {
       />
       
       <GraphicsServices onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} />
+
+      <div className="max-w-4xl mx-auto px-4 text-center pb-8">
+        <a
+          href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Quiero consultar por trabajos de gráfica y papelería personalizada.')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick('grafica_cta', 'Consultar Gráfica y Papelería por WhatsApp')}
+          className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+        >
+          <i className="fa-brands fa-whatsapp text-lg"></i>
+          Pedir Presupuesto de Gráfica por WhatsApp
+        </a>
+      </div>
 
       <div className="pb-20 bg-zinc-950">
         <CategorySlider 

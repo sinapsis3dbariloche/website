@@ -3,6 +3,7 @@ import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const IMPRESION3D_CATEGORIES = [
   {
@@ -76,10 +77,23 @@ const Impresion3D: React.FC = () => {
             <p className="text-zinc-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-6">
               Diseñamos y fabricamos soluciones tridimensionales totalmente a tu medida. Nuestro fuerte es la <strong className="text-white">personalización absoluta</strong> de cada pieza: desde agregar nombres específicos hasta adaptar la estética completa a la temática de tu evento o marca.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Diseños Únicos</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Nombres a Medida</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Temáticas Exclusivas</span>
+            </div>
+
+            <div>
+              <a
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me gustaría pedir un presupuesto para un trabajo personalizado en Impresión 3D.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('impresion3d_header', 'Cotizar Impresión 3D por WhatsApp')}
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+              >
+                <i className="fa-brands fa-whatsapp text-lg"></i>
+                Cotizar Proyecto 3D por WhatsApp
+              </a>
             </div>
         </div>
 

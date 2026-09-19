@@ -1,5 +1,6 @@
 import React from 'react';
 import { CONTACT, SOCIALS } from '../constants';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const Contact: React.FC = () => {
   return (
@@ -52,6 +53,8 @@ const Contact: React.FC = () => {
                   <a 
                     href={`https://wa.me/${CONTACT.whatsapp}`}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('contacto_directo', 'Enviar Mensaje WhatsApp Página Contacto')}
                     className="mt-4 inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-900/20"
                   >
                     <i className="fa-brands fa-whatsapp mr-2 text-xl"></i> Enviar Mensaje

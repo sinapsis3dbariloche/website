@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const Hero: React.FC = () => {
   return (
@@ -27,6 +28,26 @@ const Hero: React.FC = () => {
           Adaptamos nombres, formas y diseños para que cada creación sea exactamente como la imaginaste. <br />
           <span className="text-orange-500 font-bold italic">Creaciones únicas en Bariloche, con envíos a todo el País.</span>
         </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <a
+            href="https://wa.me/5492944914816?text=Hola%20Sinapsis%203D!%20Quiero%20pedir%20un%20presupuesto%20personalizado."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('hero_cta', 'Pedir Presupuesto Hero')}
+            className="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white px-7 py-3.5 rounded-2xl text-base font-bold transition-all shadow-xl shadow-orange-950/50 hover:scale-105 active:scale-95"
+          >
+            <i className="fa-brands fa-whatsapp text-xl"></i>
+            Pedir Presupuesto por WhatsApp
+          </a>
+          <Link
+            to="/portfolio"
+            className="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white px-6 py-3.5 rounded-2xl text-base font-bold transition-all border border-zinc-800 hover:border-zinc-700"
+          >
+            Ver Catálogo de Trabajos
+            <i className="fa-solid fa-arrow-right text-sm"></i>
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 const MERCHANDISING_CATEGORIES = [
   {
@@ -41,10 +42,23 @@ const Merchandising: React.FC = () => {
                 Desde <strong>llaveros corporativos con el logo de tu empresa, regalos empresariales personalizados, soportes institucionales</strong> hasta tarjetas de presentación y exhibidores. Trabajamos tanto en pedidos unitarios como mayoristas para instituciones, clubes deportivos y comercios de la región, garantizando una excelente calidad de terminación.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Regalos Empresariales</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Pedidos Mayoristas</span>
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Logos en 3D</span>
+            </div>
+
+            <div>
+              <a
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me interesa cotizar merchandising corporativo o regalos empresariales.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('merchandising_header', 'Cotizar Merchandising Corporativo por WhatsApp')}
+                className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/40 hover:scale-105"
+              >
+                <i className="fa-brands fa-whatsapp text-lg"></i>
+                Cotizar Merchandising para tu Empresa
+              </a>
             </div>
         </div>
 
