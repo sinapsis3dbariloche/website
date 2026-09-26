@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
@@ -9,7 +10,7 @@ const IMPRESION3D_CATEGORIES = [
   {
     title: 'Souvenirs y Eventos',
     image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
-    link: '/productos/eventos'
+    link: '/souvenirs'
   },
   {
     title: 'Trofeos y Medallas',
@@ -95,6 +96,28 @@ const Impresion3D: React.FC = () => {
                 Cotizar Proyecto 3D por WhatsApp
               </a>
             </div>
+        </div>
+
+        {/* Featured Souvenirs Callout */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <div className="rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-950/40 via-zinc-900 to-zinc-900 p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4 text-center md:text-left">
+              <div className="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-2xl shrink-0 hidden sm:flex">
+                🎉
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base sm:text-lg">¿Organizando un cumpleaños o evento infantil?</h4>
+                <p className="text-zinc-400 text-xs sm:text-sm">Conocé nuestros 3 combos de cumpleaños completos y souvenirs 3D temáticos (llaveros, animalitos flexi y toppers).</p>
+              </div>
+            </div>
+            <Link
+              to="/souvenirs"
+              className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all shrink-0 hover:scale-105"
+            >
+              <i className="fa-solid fa-gift"></i>
+              Ver Combos de Cumpleaños →
+            </Link>
+          </div>
         </div>
 
         <div className="pb-10">

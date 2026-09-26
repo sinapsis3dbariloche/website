@@ -9,7 +9,7 @@ const HOME_CATEGORIES = [
   {
     title: 'Souvenirs y Eventos',
     image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
-    link: '/productos/eventos'
+    link: '/souvenirs'
   },
   {
     title: 'Pastelería y Repostería',
@@ -98,6 +98,47 @@ const Home: React.FC = () => {
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />
       </div>
+
+      {/* Featured Party & Souvenirs Section */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="relative rounded-3xl overflow-hidden border border-orange-500/30 bg-gradient-to-r from-orange-950/40 via-zinc-900 to-zinc-950 p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-zinc-950">
+          <div className="max-w-2xl text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-3 border border-orange-500/30">
+              <i className="fa-solid fa-cake-candles"></i> Especial Cumpleaños & Fiestas en Bariloche
+            </span>
+            <h3 className="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-3">
+              Combos de Cumpleaños y Recuerdos 3D
+            </h3>
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">
+              ¡Resolvé la mesa principal, sorpresitas y recuerdos en un solo lugar! Descubrí nuestros 3 combos 100% personalizados, animalitos flexi articulados, llaveros y toppers para tortas.
+            </p>
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-zinc-400">
+              <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-orange-500"></i> Vos elegís la temática</span>
+              <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-orange-500"></i> Retiro en Bariloche</span>
+              <span className="flex items-center gap-1.5"><i className="fa-solid fa-check text-orange-500"></i> Pedidos con anticipación</span>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0 justify-center">
+            <Link
+              to="/souvenirs"
+              className="inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/50 hover:scale-105"
+            >
+              <i className="fa-solid fa-gift"></i>
+              Ver Combos y Souvenirs
+            </Link>
+            <a
+              href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Quisiera consultar por los combos de cumpleaños y souvenirs.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('home_souvenirs_lead', 'WhatsApp Souvenirs Home')}
+              className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm border border-zinc-700 transition-colors"
+            >
+              <i className="fa-brands fa-whatsapp text-lg"></i>
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Direct Quote / Lead CTA Banner */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">

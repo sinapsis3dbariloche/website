@@ -7,6 +7,7 @@ interface SEOProps {
   canonical: string;
   image?: string;
   type?: string;
+  schema?: object | object[];
 }
 
 const SEO: React.FC<SEOProps> = ({ 
@@ -14,7 +15,8 @@ const SEO: React.FC<SEOProps> = ({
   description, 
   canonical, 
   image = 'https://www.sinapsis3dbariloche.com.ar/images/sinapsis3dlogo.png',
-  type = 'website'
+  type = 'website',
+  schema
 }) => {
   return (
     <Helmet>
@@ -36,6 +38,13 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {/* Structured Data (Schema.org) */}
+      {schema && (
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      )}
     </Helmet>
   );
 };
