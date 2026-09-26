@@ -6,11 +6,20 @@ import { trackWhatsAppClick } from '../utils/analytics';
 interface PortfolioProps {
   onImageClick?: (src: string, title: string, desc?: string) => void;
   forceCategory?: string;
+  allowedCategories?: string[];
+  title?: string;
+  subtitle?: string;
 }
 
-const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) => {
+const Portfolio: React.FC<PortfolioProps> = ({ 
+  onImageClick, 
+  forceCategory, 
+  allowedCategories,
+  title,
+  subtitle 
+}) => {
   const [searchParams] = useSearchParams();
-  const initialCategory = forceCategory || searchParams.get('category') || 'Todos';
+  const initialCategory = forceCategory || searchParams.get('category') || (allowedCategories && allowedCategories.length === 1 ? allowedCategories[0] : 'Todos');
 
   // Helper hook array state to track image errors and filters
   const [failedImages, setFailedImages] = React.useState<Record<string, boolean>>({});
@@ -32,8 +41,10 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
           window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
         }, 100);
       }
+    } else if (allowedCategories && !allowedCategories.includes(activeTab) && activeTab !== 'Todos') {
+      setActiveTab(allowedCategories[0]);
     }
-  }, [searchParams]);
+  }, [searchParams, forceCategory]);
 
   const handleImageError = (id: string) => {
     setFailedImages((prev) => ({ ...prev, [id]: true }));
@@ -1092,9 +1103,15 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
     'Papelería y Regalos'
   ];
 
+  const categoriesToUse = allowedCategories || PORTFOLIO_CATEGORIES;
+
   const filteredWorks = activeTab === 'Todos'
-    ? realWorks
+    ? (allowedCategories ? realWorks.filter(w => allowedCategories.includes(w.category)) : realWorks)
     : realWorks.filter(work => work.category === activeTab);
+
+  const tabsToShow = allowedCategories && allowedCategories.length === 1 
+    ? allowedCategories 
+    : ['Todos', ...categoriesToUse];
 
   return (
     <section id="servicios" className="pt-24 pb-12 bg-zinc-950">
@@ -1108,16 +1125,20 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
               A Tu Medida
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Portfolio de <span className="text-orange-500">Trabajos Personalizados</span>
+              {title ? (
+                title
+              ) : (
+                <>Portfolio de <span className="text-orange-500">Trabajos Personalizados</span></>
+              )}
             </h2>
             <p className="text-zinc-400 text-lg max-w-2xl leading-relaxed">
-              Descubrí cómo materializamos las ideas. Todos estos trabajos fueron diseñados a medida, adaptando nombres, colores y temáticas exclusivas para cada cliente en Bariloche y todo el País.
+              {subtitle || 'Descubrí cómo materializamos las ideas. Todos estos trabajos fueron diseñados a medida, adaptando nombres, colores y temáticas exclusivas para cada cliente en Bariloche y todo el País.'}
             </p>
           </div>
 
           {/* Categorías de Filtro */}
           <div className="flex flex-wrap items-center gap-2 mb-12 bg-zinc-900/30 p-2 rounded-2xl border border-zinc-900 max-w-fit">
-            {['Todos', ...PORTFOLIO_CATEGORIES].map((tab) => (
+            {tabsToShow.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -1134,7 +1155,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
 
           {activeTab === 'Todos' ? (
             <div className="flex flex-col gap-16">
-              {PORTFOLIO_CATEGORIES.map(category => (
+              {categoriesToUse.map(category => (
                 <div key={category} className="scroll-mt-24">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 border-l-4 border-orange-500 pl-4">
                     {category}

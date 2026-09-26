@@ -9,12 +9,17 @@ const MERCHANDISING_CATEGORIES = [
   {
     title: 'Corporativo y Marcas',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
-    link: '/productos/merchandising'
+    link: '/productos/merchandising?category=Corporativo+y+Marcas'
   },
   {
     title: 'Identidad Comercial',
     image: '/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg',
-    link: '/portfolio?category=Identidad+Comercial'
+    link: '/productos/merchandising?category=Identidad+Comercial'
+  },
+  {
+    title: 'Ventas Mayoristas y Comercios',
+    image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
+    link: '/productos/merchandising?category=Ventas+Mayoristas+y+Comercios'
   }
 ];
 
@@ -32,7 +37,7 @@ const Merchandising: React.FC = () => {
       <div className="pt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
             <h1 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
-              Merchandising <span className="text-orange-500">Corporativo</span>
+              Merchandising <span className="text-orange-500">Corporativo & Marcas</span>
             </h1>
             <div className="text-zinc-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-6 space-y-4">
               <p>
@@ -50,7 +55,7 @@ const Merchandising: React.FC = () => {
 
             <div>
               <a
-                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me interesa cotizar merchandising corporativo o regalos empresariales.')}`}
+                href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me interesa cotizar merchandising corporativo o regalos empresariales para mi marca.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackWhatsAppClick('merchandising_header', 'Cotizar Merchandising Corporativo por WhatsApp')}
@@ -70,7 +75,13 @@ const Merchandising: React.FC = () => {
           />
         </div>
 
-        <Portfolio onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} />
+        <Portfolio 
+          onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} 
+          forceCategory="Corporativo y Marcas"
+          allowedCategories={['Corporativo y Marcas', 'Identidad Comercial', 'Ventas Mayoristas y Comercios']}
+          title={<>Productos de <span className="text-orange-500">Merchandising, Corporativo y Marcas</span></>}
+          subtitle="Catálogo de productos corporativos con logotipo, relieve de alta definición y terminaciones profesionales para empresas, alojamientos turísticos y marcas en Bariloche."
+        />
       </div>
 
       <Lightbox activeImage={activeImage} onClose={() => setActiveImage(null)} />
