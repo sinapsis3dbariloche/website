@@ -76,6 +76,38 @@ const Souvenirs: React.FC = () => {
         }
       },
       {
+        '@type': 'Product',
+        'name': 'Cajitas Milk Box con Broche Temático en 3D',
+        'image': 'https://www.sinapsis3dbariloche.com.ar/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png',
+        'description': 'Cajitas souvenirs tipo milk box personalizadas con temática, nombre y broche impreso en 3D para cumpleaños infantiles en Bariloche.',
+        'brand': {
+          '@type': 'Brand',
+          'name': 'Sinapsis 3D'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'priceCurrency': 'ARS',
+          'availability': 'https://schema.org/InStock',
+          'areaServed': 'Bariloche, Patagonia Argentina'
+        }
+      },
+      {
+        '@type': 'Product',
+        'name': 'Mariposas Contenedoras Caladas Multiuso',
+        'image': 'https://www.sinapsis3dbariloche.com.ar/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png',
+        'description': 'Souvenirs en forma de mariposa con textura calada. Doble uso como golosinero para candy bar o perfumero aromático para placard en festejos de 15 años y cumpleaños.',
+        'brand': {
+          '@type': 'Brand',
+          'name': 'Sinapsis 3D'
+        },
+        'offers': {
+          '@type': 'Offer',
+          'priceCurrency': 'ARS',
+          'availability': 'https://schema.org/InStock',
+          'areaServed': 'Bariloche, Patagonia Argentina'
+        }
+      },
+      {
         '@type': 'FAQPage',
         'mainEntity': FAQS.map((faq) => ({
           '@type': 'Question',
@@ -92,8 +124,8 @@ const Souvenirs: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Souvenirs 3D en Bariloche | Combos Cumpleaños y Fiestas | Sinapsis"
-        description="Combos de cumpleaños y souvenirs personalizados en 3D en Bariloche: bolsitas, cake toppers multicapa, llaveros, animalitos flexi y lápices 3D. ¡Pedí tu presupuesto hoy!"
+        title="Souvenirs en Bariloche | Combos Cumpleaños, Cajitas Milk Box y 3D | Sinapsis"
+        description="Souvenirs para cumpleaños en Bariloche: cajitas milk box con broche 3D, mariposas caladas, cake toppers multicapa, llaveros y golosineros a medida. ¡Cotizá por WhatsApp!"
         canonical="https://www.sinapsis3dbariloche.com.ar/souvenirs"
         schema={structuredData}
       />
@@ -335,6 +367,81 @@ const Souvenirs: React.FC = () => {
           </div>
         </section>
 
+        {/* FEATURED: CAJITAS MILK BOX (NUEVO PRODUCTO) */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-br from-sky-950/30 via-zinc-900 to-zinc-950 p-6 sm:p-10 shadow-2xl shadow-zinc-950 overflow-hidden relative">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Product Visual */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative group max-w-sm w-full">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-orange-500 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                  <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 aspect-square flex items-center justify-center">
+                    <img 
+                      src="/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png" 
+                      alt="Cajitas Milk Box con broche temático en 3D para souvenirs de cumpleaños Bariloche" 
+                      width="546"
+                      height="565"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 bg-zinc-900/90 border border-sky-500/50 text-sky-400 text-xs font-black px-3 py-1 rounded-full">
+                      ¡Novedad Cumpleaños!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product Content & Copy */}
+              <div className="lg:col-span-7 text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+                  <i className="fa-solid fa-sparkles"></i> Alternativa a las bolsitas clásicas
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-3">
+                  Cajitas Milk Box con Broche Temático en 3D
+                </h3>
+                <p className="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6 font-medium">
+                  ¿Buscás una alternativa diferente a las clásicas bolsitas golosineras? Sumamos a las opciones para cumple las cajitas <strong>milk box</strong>, pensadas para que el souvenir sea parte protagonista de la deco de la mesa y un recuerdo hermoso para los chicos.
+                </p>
+
+                <div className="space-y-3 mb-8 text-left max-w-lg mx-auto lg:mx-0">
+                  <div className="flex items-start gap-3">
+                    <i className="fa-solid fa-check text-sky-400 text-base mt-0.5 shrink-0"></i>
+                    <span className="text-sm text-zinc-200"><strong>100% personalizadas</strong> con la temática y el nombre que elijas.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <i className="fa-solid fa-check text-sky-400 text-base mt-0.5 shrink-0"></i>
+                    <span className="text-sm text-zinc-200"><strong>Detalle de broche temático en 3D</strong> para el cierre (exclusivo y reutilizable).</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <i className="fa-solid fa-check text-sky-400 text-base mt-0.5 shrink-0"></i>
+                    <span className="text-sm text-zinc-200"><strong>Espacio ideal</strong> para golosinas, sorpresitas y regalitos.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <i className="fa-solid fa-check text-sky-400 text-base mt-0.5 shrink-0"></i>
+                    <span className="text-sm text-zinc-200">Podés pedirlas por <strong>pack cerrado</strong> o sumarlas reemplazando las bolsitas de cualquier combo.</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                  <a
+                    href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Quisiera consultar presupuesto para las cajitas Milk Box con broche 3D. Mi temática es: [____], Nombre: [____], Fecha estimada: [____], Cantidad: [____]')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('cajitas_milk_box_cta', 'Consultar Cajitas Milk Box WhatsApp')}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg shadow-sky-950/50 hover:scale-105"
+                  >
+                    <i className="fa-brands fa-whatsapp text-lg"></i>
+                    Pedir Presupuesto Cajitas Milk Box
+                  </a>
+                  <span className="text-xs text-zinc-400 font-medium">
+                    📍 Retiro en Bariloche • Pedidos con anticipación
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 2: SOUVENIRS ORIGINALES Y ÚTILES (PUNTO 2) */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -349,7 +456,7 @@ const Souvenirs: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {/* Opción 1: Llaveros 3D */}
             <div className="rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
               <div className="relative h-48 bg-zinc-950 overflow-hidden">
@@ -426,7 +533,47 @@ const Souvenirs: React.FC = () => {
               </div>
             </div>
 
-            {/* Opción 3: Lápices con topper 3D */}
+            {/* Opción 3: Mariposas Contenedoras Caladas (Novedad) */}
+            <div className="rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col group hover:border-rose-500/50 transition-all duration-300">
+              <div className="relative h-48 bg-zinc-950 overflow-hidden">
+                <img 
+                  src="/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png" 
+                  alt="Mariposas contenedor caladas souvenirs 15 años y cumpleaños Bariloche" 
+                  width="551"
+                  height="497"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <span className="absolute top-3 left-3 bg-zinc-900/90 text-rose-400 text-xs font-black px-3 py-1 rounded-full border border-zinc-700">
+                  🦋 Mariposas Caladas
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Mariposas Contenedor</h3>
+                  <p className="text-xs text-zinc-400 leading-relaxed mb-4">
+                    Textura calada y diseño delicado. Doble uso: golosinero para la fiesta o perfumero aromático para colgar en el placard.
+                  </p>
+                  <ul className="text-xs text-zinc-300 space-y-1.5 mb-6">
+                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-rose-400"></i> Rellenas de gomitas o lavanda</li>
+                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-rose-400"></i> Ideal 15 años, 1er año, festejos</li>
+                    <li className="flex items-center gap-2"><i className="fa-solid fa-check text-rose-400"></i> Colores pastel y vivos a elección</li>
+                  </ul>
+                </div>
+                <a
+                  href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Quisiera consultar presupuesto para pack de Mariposas Contenedoras Caladas. Evento: [____], Color deseado: [____]')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('souvenir_mariposas_caladas', 'Consultar Mariposas Caladas')}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-rose-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp text-base"></i>
+                  Pedir Presupuesto Mariposas
+                </a>
+              </div>
+            </div>
+
+            {/* Opción 4: Lápices con topper 3D */}
             <div className="rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
               <div className="relative h-48 bg-zinc-950 overflow-hidden">
                 <img 
@@ -464,7 +611,7 @@ const Souvenirs: React.FC = () => {
               </div>
             </div>
 
-            {/* Opción 4: Señaladores 3D */}
+            {/* Opción 5: Señaladores 3D */}
             <div className="rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col group hover:border-orange-500/50 transition-all duration-300">
               <div className="relative h-48 bg-zinc-950 overflow-hidden">
                 <img 

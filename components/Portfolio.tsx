@@ -42,6 +42,38 @@ const Portfolio: React.FC<PortfolioProps> = ({ onImageClick, forceCategory }) =>
   // Galería completa de 18 trabajos reales con detalles técnicos personalizados (Caption / Pie de página)
   const realWorks = [
     {
+      id: 'mariposas-contenedor-caladas-souvenirs-eventos-3d',
+      title: 'Mariposas Contenedoras Caladas Multiuso',
+      desc: 'Souvenirs innovadores en forma de mariposa calada. Doble uso: golosinero para candy bar o perfumero aromático para placard.',
+      category: 'Souvenirs y Eventos',
+      tags: ["mariposas", "souvenirs", "15 años", "primer añito", "perfumero", "golosinero", "cumpleaños", "bariloche"],
+      imagePath: '/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png',
+      seoFilename: 'mariposas-contenedor-caladas-souvenirs-eventos-3d.png',
+      detail: 'Salí del típico souvenir con estas mariposas contenedoras con textura calada. Ideales para primer añito, cumpleaños infantiles, fiestas de 15, bautismos o festejos de 50. Tienen mil usos: rellenalas de gomitas o confites para los chicos, o con flores de lavanda y bolitas perfumadas para que los invitados las cuelguen en el placard o ropero. Disponibles en una amplia paleta de colores pastel y vibrantes a tono con tu fiesta.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-wand-magic-sparkles text-4xl text-rose-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Mariposas Caladas</span>
+        </div>
+      )
+    },
+    {
+      id: 'cajitas-milk-box-souvenirs-cumpleanos-3d',
+      title: 'Cajitas Milk Box con Broche 3D',
+      desc: 'Cajitas golosineras tipo milk box para cumpleaños con broche temático en 3D para el cierre.',
+      category: 'Souvenirs y Eventos',
+      tags: ["cajitas milk box", "souvenirs", "cumpleaños infantil", "broche 3d", "golosineros", "bariloche", "bluey"],
+      imagePath: '/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png',
+      seoFilename: 'cajitas-milk-box-souvenirs-cumpleanos-3d.png',
+      detail: '¿Buscás una alternativa diferente a las clásicas bolsitas golosineras? Sumamos a las opciones para cumple las cajitas milk box, pensadas para que el souvenir sea parte de la deco de la mesa y un recuerdo hermoso para los chicos. 100% personalizadas con la temática y nombre que elijas, con detalle de broche temático en 3D para el cierre y espacio ideal para golosinas y sorpresitas.',
+      fallback: (
+        <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
+          <i className="fa-solid fa-box-open text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
+          <span className="text-zinc-400 text-xs font-bold text-center">Cajitas Milk Box 3D</span>
+        </div>
+      )
+    },
+    {
       id: 'figuras-brain-rot',
       title: 'Figuras Brain Rot 3D',
       desc: 'Figuras impresas en 3D de personajes "Brain Rot". Diseño divertido y actual, ideal para decorar o regalar.',

@@ -25,16 +25,16 @@ const seoData: Record<string, { title: string, desc: string, h1: string, content
     content: 'Ampliamos nuestra propuesta para que tus eventos y marca destaquen. Diseñamos e imprimimos toda la gráfica adaptada a tus temáticas, con nombres y estilos a elección.'
   },
   '/souvenirs': {
-    title: 'Souvenirs para Eventos y Cumpleaños | Sinapsis 3D Bariloche',
-    desc: 'Souvenirs personalizados en impresión 3D para cumpleaños y eventos en Bariloche. Centros de mesa, llaveros temáticos y adornos.',
-    h1: 'Souvenirs para Eventos y Cumpleaños',
-    content: 'En Sinapsis 3D nos especializamos en fabricar souvenirs y artículos para cumpleaños y eventos de forma completamente personalizada. Transformá tus festejos con detalles únicos que tus invitados van a conservar y recordar. Fabricamos todo a medida mediante impresión 3D: desde llaveros con nombres y temáticas infantiles, centros de mesa exclusivos, adornos para tortas (cake toppers) hasta detalles para mesas dulces, bodas y fiestas infantiles.'
+    title: 'Souvenirs en Bariloche | Combos Cumpleaños, Cajitas Milk Box y 3D | Sinapsis 3D',
+    desc: 'Souvenirs personalizados en Bariloche para cumpleaños y eventos: cajitas milk box con broche 3D, mariposas caladas, cake toppers, llaveros y golosineros a medida.',
+    h1: 'Souvenirs para Eventos, Cumpleaños y Fiestas en Bariloche',
+    content: 'En Sinapsis 3D nos especializamos en fabricar souvenirs y artículos para cumpleaños y eventos de forma completamente personalizada en San Carlos de Bariloche. Novedades en catálogo: cajitas milk box con broche 3D temático, mariposas contenedoras caladas para golosinas o perfumero de placard, llaveros personalizados con nombre, animalitos flexi articulados, cake toppers para tortas multicapa y centros de mesa temáticos.'
   },
   '/merchandising': {
     title: 'Merchandising para Empresas y Comercios | Sinapsis 3D',
     desc: 'Merchandising corporativo y artículos promocionales impresos en 3D para empresas en Bariloche. Llaveros con logo, stands y artículos B2B.',
-    h1: 'Merchandising Corporativo',
-    content: 'Potenciá la imagen de tu empresa o marca con nuestras soluciones en merchandising corporativo y artículos promocionales B2B. En Sinapsis 3D creamos piezas que comunican el valor de tu marca de manera efectiva y original. Desde llaveros corporativos con el logo de tu empresa, regalos empresariales personalizados, soportes institucionales hasta tarjetas de presentación y exhibidores.'
+    h1: 'Merchandising Corporativo en Bariloche',
+    content: 'Potenciá la imagen de tu empresa o marca con nuestras soluciones en merchandising corporativo y artículos promocionales B2B en Bariloche. Llaveros con logo, stands, regalos empresariales y soportes institucionales.'
   },
   '/portfolio': {
     title: 'Portfolio de Trabajos | Sinapsis 3D Bariloche',
@@ -113,9 +113,9 @@ const seoData: Record<string, { title: string, desc: string, h1: string, content
 async function startServer() {
   const app = express();
 
-  // 301 Permanent Redirects para SEO
-  app.get('/souvenirs', (req, res) => res.redirect(301, '/productos/souvenirs'));
-  app.get('/merchandising', (req, res) => res.redirect(301, '/productos/merchandising'));
+  // 301 Permanent Redirects para SEO: unificamos hacia las URLs canónicas limpias
+  app.get('/productos/souvenirs', (req, res) => res.redirect(301, '/souvenirs'));
+  app.get('/productos/merchandising', (req, res) => res.redirect(301, '/merchandising'));
   
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
