@@ -24,8 +24,8 @@ const Souvenirs: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Souvenirs para Eventos y Cumpleaños | Sinapsis 3D Bariloche"
-        description="Souvenirs personalizados en impresión 3D para cumpleaños y eventos en Bariloche. Centros de mesa, llaveros temáticos y adornos."
+        title="Souvenirs 3D en Bariloche | Cumpleaños y Fiestas | Sinapsis 3D"
+        description="Souvenirs personalizados en impresión 3D para cumpleaños y eventos en Bariloche. Centros de mesa, llaveros y adornos únicos con nombre y temática. ¡Escribinos!"
         canonical="https://www.sinapsis3dbariloche.com.ar/souvenirs"
       />
       

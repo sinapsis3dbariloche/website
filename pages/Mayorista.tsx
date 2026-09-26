@@ -34,8 +34,8 @@ const Mayorista: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Ventas Mayoristas | Sinapsis 3D Bariloche"
-        description="Servicio de venta mayorista para cotillones, artísticas, kioskos y comercios. Accedé a precios por mayor y revendé nuestros productos."
+        title="Impresión 3D Mayorista en Bariloche | Precios para Comercios"
+        description="Precios por mayor en impresión 3D para cotillones, librerías y comercios en Bariloche y la Patagonia. Llaveros, exhibidores y figuras. ¡Descargá la lista!"
         canonical="https://www.sinapsis3dbariloche.com.ar/mayorista"
       />
       

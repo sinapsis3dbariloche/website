@@ -24,8 +24,8 @@ const Merchandising: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Merchandising para Empresas y Comercios | Sinapsis 3D"
-        description="Merchandising corporativo y artículos promocionales impresos en 3D para empresas en Bariloche. Llaveros con logo, stands y artículos B2B."
+        title="Merchandising Empresarial en Bariloche | Regalos con Logo 3D"
+        description="Merchandising corporativo en Bariloche: llaveros 3D con logo de tu empresa, soportes y regalos institucionales a medida. Fortalecé tu marca con Sinapsis 3D."
         canonical="https://www.sinapsis3dbariloche.com.ar/merchandising"
       />
       

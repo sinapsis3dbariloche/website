@@ -22,11 +22,11 @@ function App() {
         <Route path="contacto" element={<Contacto />} />
         <Route path="mayorista" element={<Mayorista />} />
         
-        {/* Rutas antiguas redirigidas por SEO */}
-        <Route path="souvenirs" element={<Navigate to="/productos/souvenirs" replace />} />
-        <Route path="merchandising" element={<Navigate to="/productos/merchandising" replace />} />
+        {/* Rutas principales y canónicas indexadas por Google */}
+        <Route path="souvenirs" element={<Souvenirs />} />
+        <Route path="merchandising" element={<Merchandising />} />
 
-        {/* Nuevas rutas jerárquicas de productos */}
+        {/* Alias de rutas de productos */}
         <Route path="productos/souvenirs" element={<Souvenirs />} />
         <Route path="productos/merchandising" element={<Merchandising />} />
         <Route path="productos/:categoria" element={<ProductoCategoria />} />

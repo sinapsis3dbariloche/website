@@ -9,8 +9,8 @@ const PortfolioPage: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Portfolio de Trabajos | Sinapsis 3D Bariloche"
-        description="Galería de trabajos personalizados en Impresión 3D y Gráfica. Diseños a medida, temáticas exclusivas y creaciones."
+        title="Portfolio de Impresión 3D y Gráfica | Sinapsis Bariloche"
+        description="Mirá nuestra galería de fotos reales: souvenirs, lámparas led, figuras, cake toppers y merchandising 3D fabricados en San Carlos de Bariloche. ¡Inspirate!"
         canonical="https://www.sinapsis3dbariloche.com.ar/portfolio"
       />
       

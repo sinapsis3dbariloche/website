@@ -88,8 +88,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Sinapsis 3D Bariloche | Impresión 3D y Gráfica"
-        description="Especialistas en Impresión 3D y Gráfica en Bariloche. Fabricamos souvenirs, trofeos personalizados, y merchandising con envíos a toda la Patagonia."
+        title="Impresión 3D en Bariloche | Souvenirs y Diseños a Medida | Sinapsis 3D"
+        description="Taller de impresión 3D y gráfica en Bariloche. Fabricamos souvenirs, trofeos, figuras y diseños personalizados a medida. ¡Pedí tu presupuesto hoy por WhatsApp!"
         canonical="https://www.sinapsis3dbariloche.com.ar/"
       />
       
