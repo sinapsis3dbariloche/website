@@ -35,7 +35,7 @@ const Servicios: React.FC = () => {
     <>
       <SEO 
         title="Gráfica, Stickers y Etiquetas en Bariloche | Sinapsis 3D"
-        description="Soluciones gráficas en Bariloche: stickers vinílicos, etiquetas escolares, tarjetas comerciales y papelería para eventos. Calidad profesional y entrega rápida."
+        description="Impresión gráfica y papelería comercial en Bariloche: stickers troquelados, vinilos, etiquetas, señaladores y packaging para marcas y fiestas. Pedí tu cotización."
         canonical="https://www.sinapsis3dbariloche.com.ar/grafica"
       />
       

@@ -22,6 +22,8 @@ const Footer: React.FC = () => {
             
             <div className="flex flex-col gap-2 text-center md:text-left">
               <span className="text-white font-bold uppercase tracking-wider text-sm mb-1">Servicios</span>
+              <Link to="/mayorista" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Mayorista & Comercios (B2B)</Link>
+              <Link to="/productos/eventos" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Eventos & Fiestas (Combo 3D)</Link>
               <Link to="/impresion-3d" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Impresión 3D</Link>
               <Link to="/grafica" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Gráfica</Link>
               <Link to="/souvenirs" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Souvenirs y Cumpleaños</Link>

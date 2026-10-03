@@ -3,18 +3,33 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import CategorySlider from '../components/CategorySlider';
 import SEO from '../components/SEO';
-import { trackWhatsAppClick } from '../utils/analytics';
+import { trackWhatsAppClick, trackWhatsAppB2BClick, trackWhatsAppEventosClick } from '../utils/analytics';
 
 const HOME_CATEGORIES = [
   {
-    title: 'Souvenirs y Eventos',
+    title: 'Eventos y Fiestas',
     image: '/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg',
+    link: '/productos/eventos'
+  },
+  {
+    title: 'Ventas Mayoristas & Comercios',
+    image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
+    link: '/mayorista'
+  },
+  {
+    title: 'Souvenirs y Cumpleaños',
+    image: '/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png',
     link: '/souvenirs'
   },
   {
     title: 'Pastelería y Repostería',
     image: '/images/topper-torta-personalizado-plim-plim.png',
     link: '/productos/pasteleria'
+  },
+  {
+    title: 'Herramientas y Texturadores',
+    image: '/images/rueditas-texturizadoras-para-ceramica-porcelana-fria-y-pasteleria.jpeg',
+    link: '/mayorista'
   },
   {
     title: 'Lámparas y Lightboxes',
@@ -32,7 +47,7 @@ const HOME_CATEGORIES = [
     link: '/productos/coleccionables'
   },
   {
-    title: 'Corporativo y Marcas',
+    title: 'Corporativo y Merchandising',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
     link: '/productos/merchandising'
   },
@@ -50,11 +65,6 @@ const HOME_CATEGORIES = [
     title: 'Hogar y Decoración',
     image: '/images/portallaves-de-pared-gatito-3d-organizador-de-llaves.jpeg',
     link: '/productos/deco-y-hogar'
-  },
-  {
-    title: 'Ventas Mayoristas',
-    image: '/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png',
-    link: '/mayorista'
   },
   {
     title: 'Tatuajes Temporales',
@@ -88,8 +98,8 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Impresión 3D en Bariloche | Souvenirs y Diseños a Medida | Sinapsis 3D"
-        description="Taller de impresión 3D y gráfica en Bariloche. Fabricamos souvenirs, trofeos, figuras y diseños personalizados a medida. ¡Pedí tu presupuesto hoy por WhatsApp!"
+        title="Sinapsis 3D Bariloche | Impresión 3D y Gráfica Personalizada"
+        description="Servicio de impresión 3D, souvenirs para eventos, trofeos y gráfica personalizada en San Carlos de Bariloche. Envíos locales y a todo el país. Presupuestos por WhatsApp."
         canonical="https://www.sinapsis3dbariloche.com.ar/"
       />
       
@@ -98,6 +108,69 @@ const Home: React.FC = () => {
       <div>
         <CategorySlider categories={HOME_CATEGORIES} />
       </div>
+
+      {/* MÓDULO 3: B2B Wholesale & Partner Workshop Banner */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="relative rounded-3xl overflow-hidden border border-zinc-700/80 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 p-8 sm:p-12 shadow-2xl shadow-black/80">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-orange-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+          
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/15 text-orange-400 text-xs font-bold uppercase tracking-wider mb-3 border border-orange-500/30">
+                <i className="fa-solid fa-store"></i> Canal B2B & Tercerización
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-3">
+                ¿Tenés un comercio, cotillón o artística?
+              </h2>
+              <p className="text-orange-400 font-semibold text-base sm:text-lg mb-3">
+                Accedé a precios mayoristas y convertite en punto de atención de impresión 3D.
+              </p>
+              <p className="text-zinc-300 text-sm sm:text-base leading-relaxed mb-6">
+                Sumá productos de alta rotación (toppers, cortantes, souvenirs, exhibidores y regalos patagónicos) o recibí pedidos personalizados en tu mostrador: nosotros los fabricamos con calidad profesional en Bariloche y vos obtenés tu margen sin invertir en máquinas ni insumos.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300">
+                <div className="flex items-center gap-2">
+                  <i className="fa-solid fa-circle-check text-orange-500 text-sm"></i>
+                  <span>Precios escalonados para reventa</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <i className="fa-solid fa-circle-check text-orange-500 text-sm"></i>
+                  <span>Taller aliado / Marca blanca</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <i className="fa-solid fa-circle-check text-orange-500 text-sm"></i>
+                  <span>Cero costo de maquinaria o filamento</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <i className="fa-solid fa-circle-check text-orange-500 text-sm"></i>
+                  <span>Entregas rápidas en Bariloche y región</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full lg:w-auto shrink-0 justify-center">
+              <Link
+                to="/mayorista"
+                className="inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-500 text-white font-bold px-7 py-4 rounded-xl text-sm transition-all shadow-lg shadow-orange-950/60 hover:scale-105 whitespace-nowrap"
+              >
+                <i className="fa-solid fa-boxes-stacked"></i>
+                Conocer catálogo y condiciones
+              </Link>
+              <a
+                href="https://wa.me/5492944914816?text=Hola!%20Tengo%20un%20comercio%20y%20me%20interesa%20la%20propuesta%20mayorista%20y%20de%20taller%20aliado%20de%20Sinapsis%203D"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppB2BClick('Consulta_Comercios', 'Home B2B Banner')}
+                className="inline-flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-7 py-4 rounded-xl text-sm border border-zinc-700 hover:border-orange-500/50 transition-colors whitespace-nowrap"
+              >
+                <i className="fa-brands fa-whatsapp text-lg text-green-400"></i>
+                WhatsApp Mayorista B2B
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Party & Souvenirs Section */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">

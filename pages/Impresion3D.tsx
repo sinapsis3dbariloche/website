@@ -65,8 +65,8 @@ const Impresion3D: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Impresión 3D en Bariloche | Diseños a Medida 3D | Sinapsis"
-        description="¿Buscás impresión 3D en Bariloche? Fabricamos piezas, prototipos, trofeos y souvenirs a medida con entrega rápida y máxima calidad. ¡Consultanos por WhatsApp!"
+        title="Impresión 3D en Bariloche | Prototipos, Repuestos y Modelos | Sinapsis"
+        description="Taller de impresión 3D en Bariloche: prototipado rápido, repuestos a medida, piezas técnicas y figuras en PLA/PETG. Asesoramiento personalizado."
         canonical="https://www.sinapsis3dbariloche.com.ar/impresion-3d"
       />
       

@@ -7,19 +7,19 @@ import { trackWhatsAppClick } from '../utils/analytics';
 
 const categoryMap: Record<string, { title: string, desc: string, portfolioCategory: string, h1: string }> = {
   'eventos': {
-    title: 'Cotillón y Artículos para Eventos en Bariloche | Sinapsis 3D',
-    desc: 'Ambientación y detalles en 3D para fiestas y eventos en Bariloche: centros de mesa luminosos, cake toppers y recuerdos temáticos a medida. ¡Pedí tu catálogo!',
+    title: 'Productos para Eventos, Fiestas y Empresas en Bariloche | Sinapsis 3D',
+    desc: 'Soluciones integrales para eventos en Bariloche: souvenirs 3D, trofeos personalizados, toppers y gráfica para cumpleaños, egresados y empresas.',
     portfolioCategory: 'Souvenirs y Eventos',
     h1: 'Productos para Eventos'
   },
   'cumpleanos': {
-    title: 'Souvenirs y Decoración para Cumpleaños en Bariloche | 3D',
-    desc: 'Artículos y souvenirs impresos en 3D para cumpleaños infantiles y temáticos en Bariloche: cake toppers, llaveritos y sorpresas personalizadas con nombre.',
+    title: 'Souvenirs y Decoración para Cumpleaños en Bariloche | Sinapsis 3D',
+    desc: 'Decoración y recuerdos para cumpleaños infantiles en Bariloche: combos personalizados, bolsitas golosineras, llaveros y adornos 3D. Pedí tu cotización.',
     portfolioCategory: 'Souvenirs y Eventos',
     h1: 'Artículos para Cumpleaños'
   },
   'coleccionables': {
-    title: 'Figuras y Coleccionables 3D en Bariloche | Sinapsis',
+    title: 'Figuras y Coleccionables 3D en Bariloche | Sinapsis 3D',
     desc: 'Figuras impresas en 3D y coleccionables en Bariloche: animé, películas, gaming y funkos con pintura detallada. ¡Consultanos por tu personaje favorito!',
     portfolioCategory: 'Figuras y Coleccionables',
     h1: 'Figuras y Coleccionables'
@@ -31,8 +31,8 @@ const categoryMap: Record<string, { title: string, desc: string, portfolioCatego
     h1: 'Decoración y Hogar'
   },
   'trofeos': {
-    title: 'Trofeos y Medallas en Bariloche | Diseños Deportivos 3D',
-    desc: 'Trofeos y medallas personalizadas en impresión 3D en Bariloche. Diseños exclusivos con logo y texto para torneos, carreras y premiaciones. ¡Cotizá en el día!',
+    title: 'Trofeos Deportivos y Medallas en Bariloche | Sinapsis 3D',
+    desc: 'Diseño y fabricación de trofeos y medallas personalizadas con impresión 3D en Bariloche. Grabado de logos y textos para torneos y clubes deportivos.',
     portfolioCategory: 'Trofeos y Medallas',
     h1: 'Trofeos y Medallas'
   },
@@ -43,8 +43,8 @@ const categoryMap: Record<string, { title: string, desc: string, portfolioCatego
     h1: 'Material Escolar y Didáctico'
   },
   'pasteleria': {
-    title: 'Cake Toppers y Cortantes de Galletitas en Bariloche | 3D',
-    desc: 'Cake toppers con nombre en relieve y cortantes de galletitas temáticos en 3D aptos para alimentos. Diseños a medida para pastelería y repostería.',
+    title: 'Cake Toppers y Cortantes de Galletitas en Bariloche | Sinapsis 3D',
+    desc: 'Toppers personalizados para tortas con nombres en relieve y cortantes de galletitas en Bariloche. Material atóxico apto repostería. Cotizá en el día.',
     portfolioCategory: 'Pastelería y Repostería',
     h1: 'Artículos de Pastelería'
   }

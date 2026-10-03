@@ -44,28 +44,32 @@ const Navbar: React.FC = () => {
           </div>
           
           {/* Main Navigation (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-5 xl:space-x-8">
-            <Link to="/" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">Inicio</Link>
-            <Link to="/impresion-3d" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">3D</Link>
-            <Link to="/grafica" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">Gráfica</Link>
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link to="/impresion-3d" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">3D</Link>
+            <Link to="/grafica" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">Gráfica</Link>
+            <Link to="/productos/eventos" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">Eventos</Link>
+            <Link to="/mayorista" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">Mayorista & Comercios</Link>
             
             {/* Dropdown Productos */}
             <div className="relative group py-6 -my-6 flex items-center">
-              <button className="text-zinc-300 group-hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider flex items-center gap-1.5 focus:outline-none whitespace-nowrap">
+              <button className="text-zinc-300 group-hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider flex items-center gap-1.5 focus:outline-none whitespace-nowrap cursor-pointer">
                 Productos
                 <i className="fa-solid fa-chevron-down text-[0.65rem] transition-transform duration-300 group-hover:rotate-180"></i>
               </button>
               
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl py-2 flex flex-col min-w-[220px]">
+                  <Link to="/productos/eventos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                    <i className="fa-solid fa-glass-cheers w-6 text-orange-500"></i> Eventos & Fiestas
+                  </Link>
                   <Link to="/souvenirs" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
-                    <i className="fa-solid fa-gift w-6 text-orange-500"></i> Souvenirs & Fiestas
+                    <i className="fa-solid fa-gift w-6 text-orange-500"></i> Souvenirs & Combos
+                  </Link>
+                  <Link to="/mayorista" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
+                    <i className="fa-solid fa-boxes-packing w-6 text-orange-500"></i> Mayorista & Reventa
                   </Link>
                   <Link to="/productos/merchandising" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
-                    <i className="fa-solid fa-store w-6 text-orange-500"></i> Merchandising
-                  </Link>
-                  <Link to="/productos/eventos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
-                    <i className="fa-solid fa-glass-cheers w-6 text-orange-500"></i> Eventos
+                    <i className="fa-solid fa-store w-6 text-orange-500"></i> Merchandising B2B
                   </Link>
                   <Link to="/productos/cumpleanos" className="px-5 py-3 text-sm font-medium text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors flex items-center">
                     <i className="fa-solid fa-cake-candles w-6 text-orange-500"></i> Cumpleaños
@@ -89,37 +93,27 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/mayorista" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">Mayorista</Link>
-            <Link to="/portfolio" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">Portfolio</Link>
-            <Link to="/contacto" className="text-zinc-300 hover:text-orange-500 transition-colors font-medium text-sm uppercase tracking-wider whitespace-nowrap">Contacto</Link>
+            <Link to="/portfolio" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">Portfolio</Link>
+            <Link to="/contacto" className="text-zinc-300 hover:text-orange-500 transition-colors font-semibold text-xs xl:text-sm uppercase tracking-wider whitespace-nowrap">Contacto</Link>
           </div>
           
-          {/* Socials, CTA and Mobile Toggle */}
-          <div className="flex items-center gap-3 sm:gap-5">
-            <div className="hidden lg:flex items-center gap-3 xl:gap-4 border-r border-zinc-800 pr-3 xl:pr-5 mr-0 xl:mr-2">
+          {/* Social Icons (Desktop) & Mobile Toggle */}
+          <div className="flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-4">
               {SOCIALS.map((social) => (
                 <a 
                   key={social.platform}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-white transition-colors text-lg"
+                  className="text-zinc-400 hover:text-orange-500 transition-colors text-lg p-1.5 rounded-lg hover:bg-zinc-800/40"
                   aria-label={social.platform}
+                  title={social.platform}
                 >
                   <i className={social.icon}></i>
                 </a>
               ))}
             </div>
-            
-            <a 
-              href={`https://wa.me/5492944914816`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick('navbar_desktop', 'Pedir Presupuesto Desktop')}
-              className="hidden md:flex bg-orange-600 hover:bg-orange-700 text-white px-5 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all shadow-lg shadow-orange-900/40 whitespace-nowrap"
-            >
-              Pedir Presupuesto
-            </a>
           </div>
         </div>
       </div>
@@ -138,12 +132,28 @@ const Navbar: React.FC = () => {
               <Link to="/impresion-3d" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">3D</Link>
               <Link to="/grafica" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Gráfica</Link>
               
+              <Link to="/productos/eventos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900 flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <i className="fa-solid fa-glass-cheers text-orange-500 text-xs"></i>
+                  Eventos & Fiestas
+                </span>
+                <span className="text-[10px] font-bold text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded-full border border-orange-500/20">3D + Gráfica</span>
+              </Link>
+
+              <Link to="/mayorista" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900 flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <i className="fa-solid fa-store text-orange-500 text-xs"></i>
+                  Mayorista & Comercios
+                </span>
+                <span className="text-[10px] font-bold text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded-full border border-orange-500/20">B2B & Aliado</span>
+              </Link>
+              
               <div className="border-b border-zinc-900">
                 <button 
                   onClick={() => setIsProductsOpen(!isProductsOpen)} 
                   className="w-full flex items-center justify-between py-4 text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm focus:outline-none"
                 >
-                  Productos
+                  Más Categorías
                   <i className={`fa-solid fa-chevron-down transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}></i>
                 </button>
                 <AnimatePresence>
@@ -160,9 +170,6 @@ const Navbar: React.FC = () => {
                         </Link>
                         <Link to="/productos/merchandising" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-store text-orange-500 mr-3 text-lg w-5"></i> Merchandising
-                        </Link>
-                        <Link to="/productos/eventos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
-                          <i className="fa-solid fa-glass-cheers text-orange-500 mr-3 text-lg w-5"></i> Eventos
                         </Link>
                         <Link to="/productos/cumpleanos" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm pl-4 border-l-2 border-orange-500/30 hover:border-orange-500 transition-colors flex items-center">
                           <i className="fa-solid fa-cake-candles text-orange-500 mr-3 text-lg w-5"></i> Cumpleaños
@@ -188,7 +195,6 @@ const Navbar: React.FC = () => {
                 </AnimatePresence>
               </div>
 
-              <Link to="/mayorista" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Mayorista</Link>
               <Link to="/portfolio" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Portfolio</Link>
               <Link to="/contacto" onClick={closeMenu} className="text-zinc-300 hover:text-orange-500 font-bold uppercase tracking-wider text-sm py-4 border-b border-zinc-900">Contacto</Link>
               

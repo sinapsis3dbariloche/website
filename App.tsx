@@ -9,6 +9,7 @@ import Contacto from './pages/Contacto';
 import Souvenirs from './pages/Souvenirs';
 import Merchandising from './pages/Merchandising';
 import Mayorista from './pages/Mayorista';
+import Eventos from './pages/Eventos';
 import ProductoCategoria from './pages/ProductoCategoria';
 
 function App() {
@@ -25,8 +26,10 @@ function App() {
         {/* Rutas principales y canónicas indexadas por Google */}
         <Route path="souvenirs" element={<Souvenirs />} />
         <Route path="merchandising" element={<Merchandising />} />
+        <Route path="eventos" element={<Eventos />} />
 
         {/* Alias de rutas de productos */}
+        <Route path="productos/eventos" element={<Eventos />} />
         <Route path="productos/souvenirs" element={<Souvenirs />} />
         <Route path="productos/merchandising" element={<Merchandising />} />
         <Route path="productos/:categoria" element={<ProductoCategoria />} />

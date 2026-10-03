@@ -1185,7 +1185,8 @@ const Portfolio: React.FC<PortfolioProps> = ({
                               <>
                                 <img 
                                   src={work.imagePath} 
-                                  alt={work.title} 
+                                  alt={`${work.title} - ${work.desc} | Impresión 3D y Gráfica en San Carlos de Bariloche`} 
+                                  title={`${work.title} - ${work.category} en Bariloche`}
                                   itemProp="image"
                                   loading="lazy"
                                   referrerPolicy="no-referrer"
@@ -1282,7 +1283,8 @@ const Portfolio: React.FC<PortfolioProps> = ({
                         <>
                           <img 
                             src={work.imagePath} 
-                            alt={work.title} 
+                            alt={`${work.title} - ${work.desc} | Impresión 3D y Gráfica en San Carlos de Bariloche`} 
+                            title={`${work.title} - ${work.category} en Bariloche`}
                             itemProp="image"
                             loading="lazy"
                             referrerPolicy="no-referrer"

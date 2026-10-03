@@ -124,8 +124,8 @@ const Souvenirs: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Souvenirs en Bariloche | Combos Cumpleaños, Cajitas Milk Box y 3D | Sinapsis"
-        description="Souvenirs para cumpleaños en Bariloche: cajitas milk box con broche 3D, mariposas caladas, cake toppers multicapa, llaveros y golosineros a medida. ¡Cotizá por WhatsApp!"
+        title="Souvenirs en Bariloche | Cumpleaños, Eventos y Llaveros 3D | Sinapsis"
+        description="Souvenirs personalizados en Bariloche: combos para cumpleaños, llaveros 3D, cajitas temáticas y centros de mesa. Diseños exclusivos impresos en 3D."
         canonical="https://www.sinapsis3dbariloche.com.ar/souvenirs"
         schema={structuredData}
       />

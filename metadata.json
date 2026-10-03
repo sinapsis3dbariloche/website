@@ -1,6 +1,6 @@
 {
   "name": "Sinapsis 3D Bariloche",
-  "description": "Expertos en Diseño, Impresión 3D y Gráfica en Bariloche. Soluciones creativas, souvenirs y trofeos personalizados en toda la Patagonia.",
+  "description": "Servicio de impresión 3D, souvenirs para eventos, trofeos y gráfica personalizada en San Carlos de Bariloche. Envíos locales y a todo el país. Presupuestos por WhatsApp.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

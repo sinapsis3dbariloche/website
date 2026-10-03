@@ -6,6 +6,8 @@ declare global {
     gtag?: (...args: any[]) => void;
     trackConversion?: (eventName: string, category?: string, label?: string) => void;
     trackWhatsAppClick?: (location: string, details?: string) => void;
+    trackWhatsAppB2BClick?: (label?: string, details?: string) => void;
+    trackWhatsAppEventosClick?: (label?: string, details?: string) => void;
   }
 }
 
@@ -66,6 +68,98 @@ export const trackWhatsAppClick = (location: string, details?: string) => {
     }
   } catch (error) {
     console.warn('Analytics event dispatch failed:', error);
+  }
+};
+
+/**
+ * Tracks B2B / Wholesale contact clicks in GA4.
+ * Dispatches exact required event:
+ * gtag('event', 'click_whatsapp_b2b', {
+ *   'event_category': 'Mayorista',
+ *   'event_label': 'Consulta_Comercios'
+ * });
+ */
+export const trackWhatsAppB2BClick = (label: string = 'Consulta_Comercios', details?: string) => {
+  try {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'click_whatsapp_b2b', {
+        event_category: 'Mayorista',
+        event_label: label,
+        button_details: details || '',
+        contact_method: 'whatsapp',
+        transport_type: 'beacon'
+      });
+      window.gtag('event', 'generate_lead', {
+        event_category: 'Mayorista',
+        event_label: label,
+        method: 'whatsapp_b2b',
+        value: 1,
+        currency: 'ARS',
+        transport_type: 'beacon'
+      });
+    } else if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'click_whatsapp_b2b',
+        event_category: 'Mayorista',
+        event_label: label,
+        button_details: details || '',
+        contact_method: 'whatsapp'
+      });
+      window.dataLayer.push({
+        event: 'generate_lead',
+        event_category: 'Mayorista',
+        event_label: label,
+        method: 'whatsapp_b2b'
+      });
+    }
+  } catch (error) {
+    console.warn('Analytics B2B click error:', error);
+  }
+};
+
+/**
+ * Tracks Event quote / WhatsApp clicks in GA4.
+ * Dispatches exact required event:
+ * gtag('event', 'click_whatsapp_eventos', {
+ *   'event_category': 'Eventos',
+ *   'event_label': 'Presupuesto_Evento'
+ * });
+ */
+export const trackWhatsAppEventosClick = (label: string = 'Presupuesto_Evento', details?: string) => {
+  try {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'click_whatsapp_eventos', {
+        event_category: 'Eventos',
+        event_label: label,
+        button_details: details || '',
+        contact_method: 'whatsapp',
+        transport_type: 'beacon'
+      });
+      window.gtag('event', 'generate_lead', {
+        event_category: 'Eventos',
+        event_label: label,
+        method: 'whatsapp_eventos',
+        value: 1,
+        currency: 'ARS',
+        transport_type: 'beacon'
+      });
+    } else if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'click_whatsapp_eventos',
+        event_category: 'Eventos',
+        event_label: label,
+        button_details: details || '',
+        contact_method: 'whatsapp'
+      });
+      window.dataLayer.push({
+        event: 'generate_lead',
+        event_category: 'Eventos',
+        event_label: label,
+        method: 'whatsapp_eventos'
+      });
+    }
+  } catch (error) {
+    console.warn('Analytics Eventos click error:', error);
   }
 };
 
