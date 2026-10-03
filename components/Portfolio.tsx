@@ -345,17 +345,17 @@ const Portfolio: React.FC<PortfolioProps> = ({
 
     {
       id: 'cucharitas-princesas-frozen',
-      title: 'Cucharitas Personalizadas Princesas',
-      desc: 'Cucharitas de diseño exclusivo con temática de Olaf y princesas, ideales como souvenirs originales para cumpleaños y eventos infantiles.',
+      title: 'Cucharitas Personalizadas',
+      desc: 'Cucharitas de diseño temático exclusivo impresas en 3D con siluetas y relieves en los mangos, ideales para candy bars, postres y recuerdos infantiles.',
       category: 'Souvenirs y Eventos',
-      tags: ["cucharitas", "souvenirs", "princesas", "olaf", "cumpleaños"],
+      tags: ["cucharitas", "souvenirs", "princesas", "candy bar", "cumpleaños", "eventos"],
       imagePath: '/images/cucharitas-personalizadas-princesas-frozen-3d.png',
       seoFilename: 'cucharitas-personalizadas-princesas-frozen-3d.png',
-      detail: 'Cucharitas de diseño exclusivo con temática de Olaf y princesas (Frozen/Elena), ideales como souvenirs originales para cumpleaños y eventos infantiles.',
+      detail: 'Cucharitas de diseño exclusivo con siluetas temáticas en 3D (princesas, motivos infantiles y festivos). Fabricadas con materiales atóxicos lavables, son un recuerdo utilitario y hermoso para tus invitados.',
       fallback: (
         <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
           <i className="fa-solid fa-spoon text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
-          <span className="text-zinc-400 text-xs font-bold text-center">Cucharitas Princesas</span>
+          <span className="text-zinc-400 text-xs font-bold text-center">Cucharitas Personalizadas</span>
         </div>
       )
     },
@@ -700,17 +700,17 @@ const Portfolio: React.FC<PortfolioProps> = ({
     },
     {
       id: 'agitadores-tragos',
-      title: 'Agitadores de Tragos Neon Personalizados',
-      desc: 'Agitadores reutilizables con nombres, marcas o frases personalizadas que brillan bajo luz negra, ideales para barras móviles, bodas o fiestas electrónicas.',
+      title: 'Agitadores de Tragos Personalizados',
+      desc: 'Agitadores reutilizables con nombres, marcas o frases personalizadas. Aptos para alimentos, con opciones en colores vivos o neón para barras móviles, casamientos y eventos.',
       category: 'Souvenirs y Eventos',
-      tags: ['Cotillón', 'Neon', 'Barras', 'Agitadores'],
+      tags: ['Cotillón', 'Barras', 'Agitadores', 'Eventos', 'Tragos'],
       imagePath: '/images/agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg',
       seoFilename: 'agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg',
-      detail: 'Material polimérico fluorescente apto para alimentos. Impreso en una sola pieza hermética para máxima higiene y fácil lavado posterior.',
+      detail: 'Material polimérico apto para alimentos y lavable. Diseñados a medida con nombres, fechas, logos o iniciales en relieve para darle un toque exclusivo a las bebidas de tu fiesta.',
       fallback: (
         <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex flex-col justify-center items-center p-6 relative">
           <i className="fa-solid fa-glass-water text-4xl text-orange-500/50 mb-3 animate-pulse"></i>
-          <span className="text-zinc-400 text-xs font-bold">Agitador Neón</span>
+          <span className="text-zinc-400 text-xs font-bold">Agitadores de Tragos</span>
         </div>
       )
     },

@@ -25,7 +25,9 @@ const EVENT_CASES: EventCase[] = [
     elements: [
       'Souvenirs 3D personalizados (figuras, animalitos flexi articulados, llaveros con nombre)',
       'Toppers de torta 3D con nombre en altorrelieve y número temático',
+      'Cucharitas Personalizadas (diseño temático con siluetas y personajes 3D en el mango)',
       'Cajitas golosineras personalizadas (milk box) con broche tridimensional',
+      'Agitadores de Tragos Personalizados (reutilizables para cócteles y jugos infantiles)',
       'Stickers troquelados y calcomanías impermeables para candy bar',
       'Centros de mesa temáticos estables'
     ],
@@ -57,6 +59,7 @@ const EVENT_CASES: EventCase[] = [
     elements: [
       'Trofeos a medida para 1º, 2º y 3º puesto con logos vectorizados',
       'Placas y estatuillas de reconocimiento institucional',
+      'Agitadores de Tragos Personalizados con logo para barras y cócteles de fin de año',
       'Merchandising funcional para acreditaciones (soportes móviles, llaveros)',
       'Identificadores de escritorio y señalética con identidad visual',
       'Premios deportivos (fútbol, básquet, vóley, trekking, carreras patagónicas)'
@@ -71,9 +74,10 @@ const EVENT_CASES: EventCase[] = [
     tagline: 'Detalles únicos para ambientar la noche más esperada',
     desc: 'Detalles visuales modernos que sorprenden a los invitados desde la recepción hasta la pista de baile. El equilibrio justo entre calidez gráfica y piezas tridimensionales delicadas.',
     elements: [
+      'Agitadores de Tragos Personalizados (reutilizables con nombres, iniciales o números de 15)',
+      'Cucharitas Personalizadas para mesa dulce y postres',
       'Identificadores y números de mesa 3D en tipografías elegantes',
       'Souvenirs calados multiuso (mariposas contenedoras perfumeras o golosineras)',
-      'Agitadores de tragos luminosos y fluorescentes para barra de tragos',
       'Photobooth props y carteles fotográficos personalizados',
       'Cake toppers de boda o 15 años con iniciales entrelazadas'
     ],
@@ -305,6 +309,195 @@ const Eventos: React.FC = () => {
           </div>
         </section>
 
+        {/* DETALLES DESTACADOS PARA EVENTOS */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-orange-500 font-bold text-xs uppercase tracking-widest block mb-2">
+              Detalles Exclusivos
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-white uppercase tracking-tight mb-4">
+              Piezas Únicas para tu Celebración
+            </h2>
+            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+              Descubrí los artículos más elegidos para ambientar barras de tragos, mesas dulces y candy bars.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: Agitadores de Tragos Personalizados */}
+            <div className="group bg-zinc-950 border border-zinc-800 hover:border-orange-500/50 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1">
+              <div 
+                className="relative aspect-square overflow-hidden bg-zinc-900 cursor-pointer"
+                onClick={() => setActiveImage({ 
+                  src: '/images/agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg', 
+                  title: 'Agitadores de Tragos Personalizados', 
+                  desc: 'Agitadores reutilizables con nombres, iniciales o marcas. Disponibles en acabados clásicos o flúo luminosos para barras y tragos.' 
+                })}
+              >
+                <img 
+                  src="/images/agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg" 
+                  alt="Agitadores de Tragos Personalizados" 
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <span className="absolute top-3 left-3 bg-orange-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+                  Barra & Fiestas
+                </span>
+                <span className="absolute bottom-3 right-3 text-zinc-400 hover:text-white bg-black/60 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fa-solid fa-magnifying-glass-plus"></i>
+                </span>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-white font-bold text-base mb-2 group-hover:text-orange-400 transition-colors">
+                    Agitadores de Tragos Personalizados
+                  </h4>
+                  <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+                    Agitadores reutilizables con nombres, marcas o frases personalizadas. Fabricados con polímeros aptos para alimentos, con opciones que brillan bajo luz negra para barras móviles, casamientos y cumpleaños.
+                  </p>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppEventos('Hola Sinapsis 3D! Me interesa cotizar Agitadores de Tragos Personalizados para un evento.')}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs border border-zinc-700 hover:border-orange-500 transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp text-sm"></i>
+                  Cotizar Agitadores
+                </button>
+              </div>
+            </div>
+
+            {/* Card 2: Cucharitas Personalizadas */}
+            <div className="group bg-zinc-950 border border-zinc-800 hover:border-orange-500/50 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1">
+              <div 
+                className="relative aspect-square overflow-hidden bg-zinc-900 cursor-pointer"
+                onClick={() => setActiveImage({ 
+                  src: '/images/cucharitas-personalizadas-princesas-frozen-3d.png', 
+                  title: 'Cucharitas Personalizadas', 
+                  desc: 'Cucharitas temáticas exclusivas impresas en 3D con siluetas y relieves en los mangos para postres, candy bars y souvenirs.' 
+                })}
+              >
+                <img 
+                  src="/images/cucharitas-personalizadas-princesas-frozen-3d.png" 
+                  alt="Cucharitas Personalizadas" 
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <span className="absolute top-3 left-3 bg-orange-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+                  Mesa Dulce & Candy Bar
+                </span>
+                <span className="absolute bottom-3 right-3 text-zinc-400 hover:text-white bg-black/60 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fa-solid fa-magnifying-glass-plus"></i>
+                </span>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-white font-bold text-base mb-2 group-hover:text-orange-400 transition-colors">
+                    Cucharitas Personalizadas
+                  </h4>
+                  <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+                    Cucharitas de diseño temático exclusivo con siluetas y relieves tridimensionales en los mangos (princesas, personajes, nombres y motivos festivos). El detalle perfecto para candy bars, postres y recuerdos útiles.
+                  </p>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppEventos('Hola Sinapsis 3D! Me interesa cotizar Cucharitas Personalizadas para una mesa dulce / evento.')}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs border border-zinc-700 hover:border-orange-500 transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp text-sm"></i>
+                  Cotizar Cucharitas
+                </button>
+              </div>
+            </div>
+
+            {/* Card 3: Cajitas Milk Box */}
+            <div className="group bg-zinc-950 border border-zinc-800 hover:border-orange-500/50 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1">
+              <div 
+                className="relative aspect-square overflow-hidden bg-zinc-900 cursor-pointer"
+                onClick={() => setActiveImage({ 
+                  src: '/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png', 
+                  title: 'Cajitas Milk Box con Broche 3D', 
+                  desc: 'Cajitas golosineras rígidas con aplique tridimensional de cierre temático.' 
+                })}
+              >
+                <img 
+                  src="/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png" 
+                  alt="Cajitas Milk Box con Broche 3D" 
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <span className="absolute top-3 left-3 bg-orange-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+                  Packaging 3D + Gráfica
+                </span>
+                <span className="absolute bottom-3 right-3 text-zinc-400 hover:text-white bg-black/60 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fa-solid fa-magnifying-glass-plus"></i>
+                </span>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-white font-bold text-base mb-2 group-hover:text-orange-400 transition-colors">
+                    Cajitas Milk Box con Broche 3D
+                  </h4>
+                  <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+                    Cajitas golosineras tipo milk box personalizadas con broche temático en 3D para el cierre. Una alternativa moderna para decorar la mesa principal y entregar como souvenir.
+                  </p>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppEventos('Hola Sinapsis 3D! Quisiera cotizar cajitas milk box personalizadas con broche 3D para un festejo.')}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs border border-zinc-700 hover:border-orange-500 transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp text-sm"></i>
+                  Cotizar Cajitas
+                </button>
+              </div>
+            </div>
+
+            {/* Card 4: Mariposas Caladas Multiuso */}
+            <div className="group bg-zinc-950 border border-zinc-800 hover:border-orange-500/50 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1">
+              <div 
+                className="relative aspect-square overflow-hidden bg-zinc-900 cursor-pointer"
+                onClick={() => setActiveImage({ 
+                  src: '/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png', 
+                  title: 'Mariposas Contenedoras Caladas', 
+                  desc: 'Souvenirs innovadores en forma de mariposa calada. Doble uso: golosinero para candy bar o perfumero aromático para placard.' 
+                })}
+              >
+                <img 
+                  src="/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png" 
+                  alt="Mariposas Contenedoras Caladas" 
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <span className="absolute top-3 left-3 bg-orange-600/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+                  Souvenir Multiuso
+                </span>
+                <span className="absolute bottom-3 right-3 text-zinc-400 hover:text-white bg-black/60 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <i className="fa-solid fa-magnifying-glass-plus"></i>
+                </span>
+              </div>
+              <div className="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-white font-bold text-base mb-2 group-hover:text-orange-400 transition-colors">
+                    Mariposas Contenedoras Caladas
+                  </h4>
+                  <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+                    Souvenirs de textura calada con doble funcionalidad: contenedor de confites o golosinas durante la fiesta, y perfumero aromático para colgar en el placard en el hogar de los invitados.
+                  </p>
+                </div>
+                <button
+                  onClick={() => handleWhatsAppEventos('Hola Sinapsis 3D! Quisiera consultar por las mariposas caladas contenedoras para souvenirs.')}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-zinc-900 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs border border-zinc-700 hover:border-orange-500 transition-colors"
+                >
+                  <i className="fa-brands fa-whatsapp text-sm"></i>
+                  Cotizar Mariposas
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CONSTRUCTOR INTERACTIVO DE COMBO PARA EVENTOS */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
           <div className="relative rounded-3xl overflow-hidden border border-orange-500/30 bg-gradient-to-br from-zinc-900 via-zinc-950 to-orange-950/30 p-8 sm:p-12 shadow-2xl">
@@ -365,13 +558,14 @@ const Eventos: React.FC = () => {
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {[
+                  'Agitadores de Tragos Personalizados',
+                  'Cucharitas Personalizadas',
                   'Souvenirs 3D personalizados',
                   'Topper de torta con relieve',
                   'Cajitas personalizadas / packaging',
                   'Stickers troquelados y etiquetas',
                   'Centros de mesa temáticos',
                   'Trofeos y medallas deportivas',
-                  'Agitadores luminosos de tragos',
                   'Pines y escarapelas escolares',
                   'Identificadores de mesa / nombres'
                 ].map((item) => {
