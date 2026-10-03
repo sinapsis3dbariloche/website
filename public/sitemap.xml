@@ -2,53 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/souvenirs</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png</image:loc>
-      <image:title>Cajitas Milk Box con broche temático en 3D Bariloche</image:title>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/sinapsis3dlogo.png</image:loc>
+      <image:title>Sinapsis 3D Bariloche - Impresión 3D y Gráfica Personalizada</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png</image:loc>
-      <image:title>Mariposas contenedoras caladas multiuso golosinas y perfumero Bariloche</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/impresion-3d</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/grafica</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/portfolio</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/merchandising</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/mayorista</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png</image:loc>
       <image:title>Exhibidor de Llaveros Mayorista Bariloche</image:title>
@@ -61,18 +27,24 @@
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/rueditas-texturizadoras-para-ceramica-porcelana-fria-y-pasteleria.jpeg</image:loc>
       <image:title>Herramientas y Rodillos Texturadores para Artísticas Bariloche</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/contacto</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png</image:loc>
+      <image:title>Cajitas Milk Box Mayorista para Cotillones</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/eventos</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/agitadores-de-tragos-personalizados-luminosos-cotillon-neon.jpeg</image:loc>
+      <image:title>Agitadores de Tragos Personalizados Bariloche</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/cucharitas-personalizadas-princesas-frozen-3d.png</image:loc>
+      <image:title>Cucharitas Personalizadas temáticas 3D Bariloche</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/centros-de-mesa-infantiles-personalizados-fiestas-eventos.jpeg</image:loc>
       <image:title>Centros de Mesa y Ambientación para Eventos Bariloche</image:title>
@@ -85,41 +57,89 @@
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/toppers-de-graduacion-adornos-para-torta-egresados-3d.jpeg</image:loc>
       <image:title>Souvenirs y Toppers de Graduación y Egresados Bariloche</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png</image:loc>
+      <image:title>Mariposas contenedoras caladas multiuso golosinas y perfumero Bariloche</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://www.sinapsis3dbariloche.com.ar/productos/cumpleanos</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://www.sinapsis3dbariloche.com.ar/souvenirs</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/cajitas-milk-box-souvenirs-cumpleanos-3d.png</image:loc>
+      <image:title>Cajitas Milk Box con broche temático en 3D Bariloche</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/mariposas-contenedor-caladas-souvenirs-eventos-3d.png</image:loc>
+      <image:title>Mariposas contenedoras caladas multiuso golosinas y perfumero Bariloche</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/impresion-3d</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/grafica</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/portfolio</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/merchandising</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/contacto</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/productos/cumpleanos</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/coleccionables</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/deco-y-hogar</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/trofeos</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/escolar</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/productos/pasteleria</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
 </urlset>
