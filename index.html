@@ -2,6 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <script>
+      // Suppress Vite HMR WebSocket connection errors in iframe / proxy dev environment
+      (function() {
+        if (typeof window === 'undefined') return;
+        window.addEventListener('unhandledrejection', function(event) {
+          if (event && event.reason && (
+            (event.reason.message && event.reason.message.indexOf('WebSocket closed without opened') !== -1) ||
+            (event.reason.stack && event.reason.stack.indexOf('createWebSocketModuleRunnerTransport') !== -1)
+          )) {
+            event.preventDefault();
+          }
+        });
+        var OrigWebSocket = window.WebSocket;
+        if (!OrigWebSocket) return;
+        window.WebSocket = function(url, protocols) {
+          if (protocols === 'vite-hmr' || (typeof url === 'string' && (url.indexOf('token=') !== -1 || url.indexOf('vite-hmr') !== -1))) {
+            var listeners = {};
+            return {
+              OPEN: 1,
+              CONNECTING: 0,
+              CLOSING: 2,
+              CLOSED: 3,
+              readyState: 1,
+              url: url,
+              protocol: 'vite-hmr',
+              send: function() {},
+              close: function() {},
+              addEventListener: function(evt, cb) {
+                if (!listeners[evt]) listeners[evt] = [];
+                listeners[evt].push(cb);
+                if (evt === 'open') {
+                  setTimeout(function() { try { cb({ type: 'open' }); } catch(e){} }, 0);
+                }
+              },
+              removeEventListener: function(evt, cb) {
+                if (listeners[evt]) {
+                  listeners[evt] = listeners[evt].filter(function(fn) { return fn !== cb; });
+                }
+              },
+              dispatchEvent: function() { return true; },
+              onopen: null,
+              onclose: null,
+              onerror: null,
+              onmessage: null
+            };
+          }
+          return new OrigWebSocket(url, protocols);
+        };
+        window.WebSocket.prototype = OrigWebSocket.prototype;
+        window.WebSocket.CONNECTING = 0;
+        window.WebSocket.OPEN = 1;
+        window.WebSocket.CLOSING = 2;
+        window.WebSocket.CLOSED = 3;
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Sinapsis 3D Bariloche | Impresión 3D y Gráfica Personalizada</title>

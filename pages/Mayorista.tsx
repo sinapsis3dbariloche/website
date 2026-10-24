@@ -37,14 +37,24 @@ const PRODUCTION_LINES: ProductionLine[] = [
     items: ['Cajitas Milk Box con broche 3D', 'Centros de mesa temáticos', 'Toppers para tortas', 'Souvenirs para armar']
   },
   {
-    title: 'Cartelería & Iluminación',
-    subtitle: 'Cajas de luz LED de alto impacto visual',
-    desc: 'Lámparas y carteles Lightbox corporativos retroiluminados para mostradores, recepciones y bares, además de veladores personalizados y lámparas temáticas.',
-    icon: 'fa-lightbulb',
-    badge: 'Luz LED USB 5V',
-    image: '/images/lightbox_capibara.png',
-    link: '/lamparas-lightbox-bariloche',
-    items: ['Carteles para mostradores', 'Lightboxes corporativos', 'Veladores temáticos', 'Bajo consumo 5V']
+    title: 'Pastelería & Repostería',
+    subtitle: 'Cake toppers, cortantes y texturadores para artísticas y reposteras',
+    desc: 'Cake toppers personalizados con nombres y siluetas en relieve, cortantes con filo de precisión de 0.4 mm y rueditas texturizadoras para arcilla, fondant y masas. Material PLA biodegradable apto para alimentos.',
+    icon: 'fa-cookie-bite',
+    badge: 'Apto Gastronómico',
+    image: '/images/toppers-torta-mayorista-cotillon-3d.png',
+    link: '/productos/pasteleria',
+    items: ['Cake toppers con nombre y edad', 'Cortantes temáticos con expulsor', 'Rueditas y rodillos texturadores', 'Sellos de relieve para fondant']
+  },
+  {
+    title: 'Línea Escolar & Didáctica',
+    subtitle: 'Kits para mochilas, juegos matemáticos y recursos para aulas',
+    desc: 'Kits de etiquetas escolares combinadas con llaveros identificadores 3D para mochilas, juegos de fracciones matemáticas, material sensorial y sets didácticos para colegios y jardines de infantes.',
+    icon: 'fa-graduation-cap',
+    badge: 'Colegios & Familias',
+    image: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
+    link: '/productos/escolar',
+    items: ['Kits etiquetas + llavero mochila', 'Juegos de fracciones matemáticas', 'Material didáctico sensorial', 'Toppers para lápices y útiles']
   },
   {
     title: 'Gráfica & Packaging',
@@ -52,9 +62,9 @@ const PRODUCTION_LINES: ProductionLine[] = [
     desc: 'Stickers troquelados en vinilo mate y brillante resistentes al agua, etiquetas autoadhesivas por pliego o corte individual, fajas de seguridad y papelería comercial.',
     icon: 'fa-tag',
     badge: 'Vinilo Impermeable',
-    image: '/images/kit-etiquetas-y-llaveros-personalizados-para-mochilas-y-utiles.jpeg',
+    image: '/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg',
     link: '/grafica',
-    items: ['Stickers por pliego o corte', 'Etiquetas para frascos y botellas', 'Etiquetas textiles escolares', 'Tarjetas y packaging']
+    items: ['Stickers por pliego o corte', 'Etiquetas para frascos y botellas', 'Etiquetas adhesivas para packaging', 'Tarjetas comerciales']
   }
 ];
 
@@ -195,7 +205,7 @@ const Mayorista: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PRODUCTION_LINES.map((line, idx) => (
               <div 
                 key={idx}
