@@ -20,14 +20,23 @@ const Footer: React.FC = () => {
                </div>
             </div>
             
-            <div className="flex flex-col gap-2 text-center md:text-left">
-              <span className="text-white font-bold uppercase tracking-wider text-sm mb-1">Servicios</span>
-              <Link to="/mayorista" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Mayorista & Comercios (B2B)</Link>
-              <Link to="/productos/eventos" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Eventos & Fiestas (Combo 3D)</Link>
-              <Link to="/impresion-3d" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Impresión 3D</Link>
-              <Link to="/grafica" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Gráfica</Link>
-              <Link to="/souvenirs" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Souvenirs y Cumpleaños</Link>
-              <Link to="/productos/merchandising" className="text-zinc-400 hover:text-orange-500 text-sm transition-colors">Merchandising B2B</Link>
+            <div className="flex flex-col gap-1.5 text-center md:text-left">
+              <span className="text-white font-bold uppercase tracking-wider text-xs mb-1 text-orange-400">Servicios B2B</span>
+              <Link to="/mayorista" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Venta Mayorista y Taller Aliado</Link>
+              <Link to="/grafica" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Stickers, Etiquetas y Vinilo</Link>
+              <Link to="/llaveros-corporativos-bariloche" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Llaveros Corporativos Bariloche</Link>
+              <Link to="/lamparas-lightbox-bariloche" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Lámparas y Carteles Lightbox</Link>
+              <Link to="/trofeos-personalizados-bariloche" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Trofeos Personalizados Bariloche</Link>
+              <Link to="/productos/merchandising" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Merchandising B2B</Link>
+            </div>
+
+            <div className="flex flex-col gap-1.5 text-center md:text-left">
+              <span className="text-white font-bold uppercase tracking-wider text-xs mb-1 text-orange-400">Eventos & 3D</span>
+              <Link to="/productos/eventos" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Eventos & Fiestas (Combo 3D)</Link>
+              <Link to="/souvenirs" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Souvenirs y Cumpleaños</Link>
+              <Link to="/impresion-3d" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Servicio Impresión 3D</Link>
+              <Link to="/portfolio" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Catálogo Completo</Link>
+              <Link to="/contacto" className="text-zinc-400 hover:text-orange-500 text-xs transition-colors">Contacto & Presupuestos</Link>
             </div>
           </div>
 

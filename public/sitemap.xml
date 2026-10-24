@@ -12,12 +12,12 @@
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/mayorista</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/exhibidor-llaveros-futbol-messi-mayorista-3d.png</image:loc>
-      <image:title>Exhibidor de Llaveros Mayorista Bariloche</image:title>
+      <image:title>Venta Mayorista y Taller Aliado 3D en Bariloche | Merchandising y Regalos Empresariales</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.sinapsis3dbariloche.com.ar/images/toppers-torta-mayorista-cotillon-3d.png</image:loc>
@@ -84,9 +84,55 @@
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/grafica</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/tarjetas-de-presentacion-personalizadas-para-clubes-y-negocios.jpeg</image:loc>
+      <image:title>Stickers, Etiquetas y Gráfica Personalizada en Bariloche | Vinilo y Packaging</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/llaveros-corporativos-bariloche</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg</image:loc>
+      <image:title>Llaveros Corporativos Bariloche Regalos Empresariales</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/llaveros-personalizados-para-empresas-instituciones-impresion-3d.jpeg</image:loc>
+      <image:title>Llaveros Personalizados con Logo en Relieve Bariloche</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/lamparas-lightbox-bariloche</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/lightbox_capibara.png</image:loc>
+      <image:title>Lámparas y Carteles Lightbox Bariloche Cajas de Luz LED</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/lampara-luna-3d-velador-led-regulable-usb.jpeg</image:loc>
+      <image:title>Lámpara Luna 3D Velador LED USB Bariloche</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sinapsis3dbariloche.com.ar/trofeos-personalizados-bariloche</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/trofeos-personalizados-futbol-impresion-3d.png</image:loc>
+      <image:title>Trofeos Personalizados Bariloche Medallas y Premiaciones</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.sinapsis3dbariloche.com.ar/images/trofeos-y-medallas-de-basquet-personalizados-impresion-3d.jpeg</image:loc>
+      <image:title>Trofeos y Medallas de Básquet Personalizados Bariloche</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sinapsis3dbariloche.com.ar/portfolio</loc>

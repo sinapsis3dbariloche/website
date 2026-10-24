@@ -47,14 +47,16 @@ const GraphicsServices: React.FC<GraphicsServicesProps> = ({ onImageClick }) => 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <div className="inline-block px-4 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">
-            Totalmente a tu medida
+            Servicios de Impresión Gráfica en Bariloche
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Gráfica y Diseño <span className="text-orange-500 text-orange-glow">100% Personalizado</span>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-4 uppercase tracking-tight">
+            Gráfica, Stickers Troquelados y Packaging en Bariloche
           </h1>
-          <p className="text-zinc-400 text-lg max-w-2xl">
-            Ampliamos nuestra propuesta para que tus eventos y marca destaquen. <br />
-            Diseñamos e imprimimos <span className="text-white font-semibold">toda la gráfica adaptada a tus temáticas, con nombres y estilos a elección.</span>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-400 mb-6">
+            Vinilos adhesivos de alta durabilidad, papelería y personalización para marcas locales.
+          </h2>
+          <p className="text-zinc-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+            Soluciones integrales de impresión y diseño gráfico en San Carlos de Bariloche. Fabricamos <strong>stickers troquelados en vinilo resistente al agua, etiquetas autoadhesivas para packaging, frascos y botellas, etiquetas escolares</strong> y papelería corporativa que complementa a la perfección nuestra línea de producción 3D.
           </p>
         </div>
 

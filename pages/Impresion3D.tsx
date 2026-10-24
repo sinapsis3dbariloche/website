@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
+import FeaturedPortfolioShowcase from '../components/FeaturedPortfolioShowcase';
 import SEO from '../components/SEO';
 import { trackWhatsAppClick } from '../utils/analytics';
 
@@ -65,15 +66,15 @@ const Impresion3D: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Impresión 3D en Bariloche | Prototipos, Repuestos y Modelos | Sinapsis"
-        description="Taller de impresión 3D en Bariloche: prototipado rápido, repuestos a medida, piezas técnicas y figuras en PLA/PETG. Asesoramiento personalizado."
+        title="Impresión 3D en Bariloche | Prototipos, Repuestos y Modelos a Medida | Sinapsis 3D"
+        description="Taller de impresión 3D en Bariloche. Modelado, prototipado rápido, repuestos mecánicos descatalogados y piezas multicolor en PLA y PETG."
         canonical="https://www.sinapsis3dbariloche.com.ar/impresion-3d"
       />
       
       <div className="pt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
             <h1 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tight">
-              Impresión 3D <span className="text-orange-500">100% Personalizada</span>
+              Taller de Diseño e Impresión 3D en Bariloche
             </h1>
             <p className="text-zinc-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed mb-6">
               Diseñamos y fabricamos soluciones tridimensionales totalmente a tu medida. Nuestro fuerte es la <strong className="text-white">personalización absoluta</strong> de cada pieza: desde agregar nombres específicos hasta adaptar la estética completa a la temática de tu evento o marca.
@@ -130,6 +131,11 @@ const Impresion3D: React.FC = () => {
 
         <Portfolio onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} />
       </div>
+
+      <FeaturedPortfolioShowcase 
+        title="Casos de Éxito y Prototipos 3D Destacados"
+        subtitle="De la idea al modelo tangible: piezas técnicas, decoración lumínica y merchandising fabricado en Bariloche"
+      />
 
       <Lightbox activeImage={activeImage} onClose={() => setActiveImage(null)} />
     </>

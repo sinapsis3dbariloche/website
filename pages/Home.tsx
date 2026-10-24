@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import CategorySlider from '../components/CategorySlider';
+import FeaturedPortfolioShowcase from '../components/FeaturedPortfolioShowcase';
 import SEO from '../components/SEO';
 import { trackWhatsAppClick, trackWhatsAppB2BClick, trackWhatsAppEventosClick } from '../utils/analytics';
 
@@ -34,12 +35,12 @@ const HOME_CATEGORIES = [
   {
     title: 'Lámparas y Lightboxes',
     image: '/images/lightbox_stich.png',
-    link: '/portfolio?category=Lámparas+y+Lightboxes'
+    link: '/lamparas-lightbox-bariloche'
   },
   {
     title: 'Trofeos y Medallas',
     image: '/images/trofeos-personalizados-futbol-impresion-3d.png',
-    link: '/productos/trofeos'
+    link: '/trofeos-personalizados-bariloche'
   },
   {
     title: 'Figuras y Coleccionables',
@@ -47,9 +48,9 @@ const HOME_CATEGORIES = [
     link: '/productos/coleccionables'
   },
   {
-    title: 'Corporativo y Merchandising',
+    title: 'Llaveros Corporativos y Marcas',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
-    link: '/productos/merchandising'
+    link: '/llaveros-corporativos-bariloche'
   },
   {
     title: 'Mates y Accesorios',
@@ -322,6 +323,9 @@ const Home: React.FC = () => {
             ))}
          </div>
       </section>
+
+      {/* Featured Portfolio Showcase */}
+      <FeaturedPortfolioShowcase />
 
       <div className="bg-zinc-950 px-4 py-16 md:py-20 border-t border-zinc-900">
         <div className="max-w-4xl mx-auto text-center">

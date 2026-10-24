@@ -81,7 +81,16 @@ export const trackWhatsAppClick = (location: string, details?: string) => {
  */
 export const trackWhatsAppB2BClick = (label: string = 'Consulta_Comercios', details?: string) => {
   try {
+    const eventLabel = details ? `${label} - ${details}` : label;
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'click_whatsapp', {
+        event_category: 'Mayorista',
+        event_label: eventLabel,
+        button_location: 'mayorista_page',
+        button_details: details || '',
+        contact_method: 'whatsapp',
+        transport_type: 'beacon'
+      });
       window.gtag('event', 'click_whatsapp_b2b', {
         event_category: 'Mayorista',
         event_label: label,
@@ -91,13 +100,20 @@ export const trackWhatsAppB2BClick = (label: string = 'Consulta_Comercios', deta
       });
       window.gtag('event', 'generate_lead', {
         event_category: 'Mayorista',
-        event_label: label,
+        event_label: eventLabel,
         method: 'whatsapp_b2b',
         value: 1,
         currency: 'ARS',
         transport_type: 'beacon'
       });
     } else if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'click_whatsapp',
+        event_category: 'Mayorista',
+        event_label: eventLabel,
+        button_location: 'mayorista_page',
+        contact_method: 'whatsapp'
+      });
       window.dataLayer.push({
         event: 'click_whatsapp_b2b',
         event_category: 'Mayorista',
@@ -108,7 +124,7 @@ export const trackWhatsAppB2BClick = (label: string = 'Consulta_Comercios', deta
       window.dataLayer.push({
         event: 'generate_lead',
         event_category: 'Mayorista',
-        event_label: label,
+        event_label: eventLabel,
         method: 'whatsapp_b2b'
       });
     }

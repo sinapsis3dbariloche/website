@@ -13,16 +13,70 @@ const seoData: Record<string, { title: string, desc: string, h1: string, content
     content: 'En Sinapsis 3D Bariloche somos especialistas en materializar tus ideas a través de la impresión 3D y el diseño gráfico. Nos apasiona crear productos únicos y personalizados, desde regalos originales hasta soluciones prácticas para tu día a día, empresa o evento. Ofrecemos un servicio integral que abarca desde el modelado tridimensional hasta la impresión final, garantizando la máxima calidad en cada detalle.'
   },
   '/impresion-3d': {
-    title: 'Impresión 3D en Bariloche | Diseños a Medida | Sinapsis 3D',
-    desc: 'Especialistas en Impresión 3D personalizada en Bariloche. Creamos diseños únicos a medida en trofeos, souvenirs y merchandising.',
-    h1: 'Impresión 3D 100% Personalizada',
-    content: 'Diseñamos y fabricamos soluciones tridimensionales totalmente a tu medida. Nuestro fuerte es la personalización absoluta de cada pieza: desde agregar nombres específicos hasta adaptar la estética completa a la temática de tu evento o marca.'
+    title: 'Impresión 3D en Bariloche | Prototipos, Repuestos y Modelos a Medida | Sinapsis 3D',
+    desc: 'Taller de impresión 3D en Bariloche. Modelado, prototipado rápido, repuestos mecánicos descatalogados y piezas multicolor en PLA y PETG.',
+    h1: 'Taller de Diseño e Impresión 3D en Bariloche',
+    content: 'Diseñamos y fabricamos soluciones tridimensionales totalmente a tu medida en San Carlos de Bariloche. Modelado 3D, prototipado rápido, repuestos mecánicos descatalogados y piezas multicolor en PLA y PETG.'
   },
   '/grafica': {
-    title: 'Gráfica y Papelería Personalizada en Bariloche | Sinapsis 3D',
-    desc: 'Servicios integrales de gráfica y diseño totalmente personalizados en Bariloche. Creamos stickers, papelería y diseños a medida.',
-    h1: 'Gráfica y Diseño 100% Personalizado',
-    content: 'Ampliamos nuestra propuesta para que tus eventos y marca destaquen. Diseñamos e imprimimos toda la gráfica adaptada a tus temáticas, con nombres y estilos a elección.'
+    title: 'Stickers, Etiquetas y Gráfica Personalizada en Bariloche | Vinilo y Packaging | Sinapsis 3D',
+    desc: 'Impresión gráfica de alta resolución, vinilos resistentes al agua, stickers troquelados y etiquetas personalizadas para marcas y packaging en Bariloche. Cotizá online por WhatsApp.',
+    h1: 'Gráfica, Stickers Troquelados y Packaging en Bariloche',
+    content: 'Servicio integral de diseño e impresión gráfica en San Carlos de Bariloche. Fabricamos stickers troquelados en vinilo impermeable, etiquetas adhesivas para packaging de productos artesanales, etiquetas escolares y papelería comercial.'
+  },
+  '/llaveros-corporativos-bariloche': {
+    title: 'Llaveros Corporativos Bariloche | Merchandising y Regalos Empresariales 3D',
+    desc: 'Fabricación de llaveros corporativos con logo en relieve en Bariloche. Regalos empresariales, hotelería, eventos y merchandising 3D con descuentos por volumen. Cotizá en el día.',
+    h1: 'Llaveros Corporativos en Bariloche | Relieve 3D con Tu Logo',
+    content: 'Llaveros corporativos personalizados con relieve 3D indeleble fabricados en San Carlos de Bariloche. Merchandising B2B, numeración para cabañas y hoteles, y regalos empresariales durables con descuentos por volumen.'
+  },
+  '/llaveros-bariloche': {
+    title: 'Llaveros Corporativos Bariloche | Merchandising y Regalos Empresariales 3D',
+    desc: 'Fabricación de llaveros corporativos con logo en relieve en Bariloche. Regalos empresariales, hotelería, eventos y merchandising 3D con descuentos por volumen. Cotizá en el día.',
+    h1: 'Llaveros Corporativos en Bariloche | Relieve 3D con Tu Logo',
+    content: 'Llaveros corporativos personalizados con relieve 3D indeleble fabricados en San Carlos de Bariloche. Merchandising B2B, numeración para cabañas y hoteles, y regalos empresariales durables con descuentos por volumen.'
+  },
+  '/productos/llaveros-corporativos': {
+    title: 'Llaveros Corporativos Bariloche | Merchandising y Regalos Empresariales 3D',
+    desc: 'Fabricación de llaveros corporativos con logo en relieve en Bariloche. Regalos empresariales, hotelería, eventos y merchandising 3D con descuentos por volumen. Cotizá en el día.',
+    h1: 'Llaveros Corporativos en Bariloche | Relieve 3D con Tu Logo',
+    content: 'Llaveros corporativos personalizados con relieve 3D indeleble fabricados en San Carlos de Bariloche. Merchandising B2B, numeración para cabañas y hoteles, y regalos empresariales durables con descuentos por volumen.'
+  },
+  '/lamparas-lightbox-bariloche': {
+    title: 'Lámparas y Carteles Lightbox Bariloche | Cajas de Luz LED 3D Personalizadas',
+    desc: 'Lámparas y carteles lightbox LED 3D en Bariloche. Cajas de luz para mostradores comerciales, anime, películas y veladores personalizados. Fabricación local y envíos.',
+    h1: 'Lámparas y Carteles Lightbox en Bariloche | Cajas de Luz LED 3D',
+    content: 'Cajas de luz LED personalizadas con relieve 3D y veladores lunares para comercios, oficinas y ambientación en Bariloche. Alimentación USB 5V de bajo consumo y difusor multicapa.'
+  },
+  '/carteles-lightbox-bariloche': {
+    title: 'Lámparas y Carteles Lightbox Bariloche | Cajas de Luz LED 3D Personalizadas',
+    desc: 'Lámparas y carteles lightbox LED 3D en Bariloche. Cajas de luz para mostradores comerciales, anime, películas y veladores personalizados. Fabricación local y envíos.',
+    h1: 'Lámparas y Carteles Lightbox en Bariloche | Cajas de Luz LED 3D',
+    content: 'Cajas de luz LED personalizadas con relieve 3D y veladores lunares para comercios, oficinas y ambientación en Bariloche. Alimentación USB 5V de bajo consumo y difusor multicapa.'
+  },
+  '/productos/lamparas-lightbox': {
+    title: 'Lámparas y Carteles Lightbox Bariloche | Cajas de Luz LED 3D Personalizadas',
+    desc: 'Lámparas y carteles lightbox LED 3D en Bariloche. Cajas de luz para mostradores comerciales, anime, películas y veladores personalizados. Fabricación local y envíos.',
+    h1: 'Lámparas y Carteles Lightbox en Bariloche | Cajas de Luz LED 3D',
+    content: 'Cajas de luz LED personalizadas con relieve 3D y veladores lunares para comercios, oficinas y ambientación en Bariloche. Alimentación USB 5V de bajo consumo y difusor multicapa.'
+  },
+  '/trofeos-personalizados-bariloche': {
+    title: 'Trofeos Personalizados Bariloche | Medallas y Premiaciones Deportivas 3D',
+    desc: 'Diseño y fabricación de trofeos y medallas personalizadas con impresión 3D en Bariloche. Copas, placas y reconocimientos deportivos y corporativos a medida. Cotizá en el día.',
+    h1: 'Trofeos Personalizados en Bariloche | Medallas y Premiaciones 3D',
+    content: 'Trofeos, copas y medallas deportivas personalizadas con el escudo y colores de tu club o torneo en Bariloche. Pedestales pesados antivuelco y placas conmemorativas grabadas a medida.'
+  },
+  '/trofeos-bariloche': {
+    title: 'Trofeos Personalizados Bariloche | Medallas y Premiaciones Deportivas 3D',
+    desc: 'Diseño y fabricación de trofeos y medallas personalizadas con impresión 3D en Bariloche. Copas, placas y reconocimientos deportivos y corporativos a medida. Cotizá en el día.',
+    h1: 'Trofeos Personalizados en Bariloche | Medallas y Premiaciones 3D',
+    content: 'Trofeos, copas y medallas deportivas personalizadas con el escudo y colores de tu club o torneo en Bariloche. Pedestales pesados antivuelco y placas conmemorativas grabadas a medida.'
+  },
+  '/productos/trofeos-personalizados': {
+    title: 'Trofeos Personalizados Bariloche | Medallas y Premiaciones Deportivas 3D',
+    desc: 'Diseño y fabricación de trofeos y medallas personalizadas con impresión 3D en Bariloche. Copas, placas y reconocimientos deportivos y corporativos a medida. Cotizá en el día.',
+    h1: 'Trofeos Personalizados en Bariloche | Medallas y Premiaciones 3D',
+    content: 'Trofeos, copas y medallas deportivas personalizadas con el escudo y colores de tu club o torneo en Bariloche. Pedestales pesados antivuelco y placas conmemorativas grabadas a medida.'
   },
   '/souvenirs': {
     title: 'Souvenirs en Bariloche | Combos Cumpleaños, Cajitas Milk Box y 3D | Sinapsis 3D',
@@ -49,10 +103,10 @@ const seoData: Record<string, { title: string, desc: string, h1: string, content
     content: 'Envíos a todo el país. Llegamos a cada rincón de Argentina. Realizamos envíos a domicilio en Bariloche y por encomienda a nivel nacional. Consultas y Pedidos: Presupuestos sin cargo y asesoría personalizada por WhatsApp.'
   },
   '/mayorista': {
-    title: 'Ventas Mayoristas | Sinapsis 3D Bariloche',
-    desc: 'Servicio de venta mayorista para cotillones, artísticas, kioskos y comercios. Accedé a precios por mayor y revendé nuestros productos.',
-    h1: 'Ventas Mayoristas',
-    content: 'Diseñamos y fabricamos una amplia variedad de productos ideales para la reventa en cotillones, artísticas, kioscos, librerías y tiendas de regalos. Ofrecemos precios diferenciales por cantidad, permitiéndote incorporar artículos novedosos, rentables y de alta rotación a tu catálogo. Contamos con cortantes de repostería, llaveros, merchandising, artículos escolares, didácticos y más.'
+    title: 'Venta Mayorista y Taller Aliado 3D en Bariloche | Merchandising y Regalos Empresariales | Sinapsis 3D',
+    desc: 'Fabricación 3D y gráfica por volumen para comercios, eventos corporativos, souvenirs y revendedores en Bariloche y la Patagonia. Taller aliado con precios por escala.',
+    h1: 'Producción Mayorista y Taller Aliado 3D en Bariloche',
+    content: 'Fabricación y tercerización de impresión 3D para comercios en San Carlos de Bariloche y la Patagonia. Merchandising B2B, regalos empresariales con tu logo, herramientas para artísticas y toppers para cotillones sin costo en máquinas.'
   },
   '/productos/souvenirs': {
     title: 'Souvenirs para Eventos y Cumpleaños | Sinapsis 3D Bariloche',
@@ -119,7 +173,7 @@ async function startServer() {
   
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: { middlewareMode: true, hmr: false, ws: false },
       appType: 'custom'
     });
     

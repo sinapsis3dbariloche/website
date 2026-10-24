@@ -4,6 +4,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    hmr: false,
+    ws: false
+  },
   define: {
     'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
   }

@@ -11,6 +11,9 @@ import Merchandising from './pages/Merchandising';
 import Mayorista from './pages/Mayorista';
 import Eventos from './pages/Eventos';
 import ProductoCategoria from './pages/ProductoCategoria';
+import LlaverosCorporativos from './pages/LlaverosCorporativos';
+import LamparasLightbox from './pages/LamparasLightbox';
+import TrofeosPersonalizados from './pages/TrofeosPersonalizados';
 
 function App() {
   return (
@@ -23,12 +26,25 @@ function App() {
         <Route path="contacto" element={<Contacto />} />
         <Route path="mayorista" element={<Mayorista />} />
         
+        {/* Landings locales de alta intención de compra en Bariloche */}
+        <Route path="llaveros-corporativos-bariloche" element={<LlaverosCorporativos />} />
+        <Route path="llaveros-bariloche" element={<LlaverosCorporativos />} />
+        <Route path="lamparas-lightbox-bariloche" element={<LamparasLightbox />} />
+        <Route path="carteles-lightbox-bariloche" element={<LamparasLightbox />} />
+        <Route path="trofeos-personalizados-bariloche" element={<TrofeosPersonalizados />} />
+        <Route path="trofeos-bariloche" element={<TrofeosPersonalizados />} />
+
         {/* Rutas principales y canónicas indexadas por Google */}
         <Route path="souvenirs" element={<Souvenirs />} />
         <Route path="merchandising" element={<Merchandising />} />
         <Route path="eventos" element={<Eventos />} />
 
-        {/* Alias de rutas de productos */}
+        {/* Alias de rutas de productos de alta intención */}
+        <Route path="productos/llaveros-corporativos" element={<LlaverosCorporativos />} />
+        <Route path="productos/lamparas-lightbox" element={<LamparasLightbox />} />
+        <Route path="productos/lightbox" element={<LamparasLightbox />} />
+        <Route path="productos/trofeos-personalizados" element={<TrofeosPersonalizados />} />
+        <Route path="productos/trofeos" element={<TrofeosPersonalizados />} />
         <Route path="productos/eventos" element={<Eventos />} />
         <Route path="productos/souvenirs" element={<Souvenirs />} />
         <Route path="productos/merchandising" element={<Merchandising />} />

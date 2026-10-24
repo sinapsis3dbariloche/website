@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Portfolio from '../components/Portfolio';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
@@ -7,9 +8,9 @@ import { trackWhatsAppClick } from '../utils/analytics';
 
 const MERCHANDISING_CATEGORIES = [
   {
-    title: 'Corporativo y Marcas',
+    title: 'Llaveros Corporativos Bariloche',
     image: '/images/llaveros-corporativos-con-logo-regalos-empresariales-3d.jpeg',
-    link: '/productos/merchandising?category=Corporativo+y+Marcas'
+    link: '/llaveros-corporativos-bariloche'
   },
   {
     title: 'Identidad Comercial',
@@ -53,7 +54,7 @@ const Merchandising: React.FC = () => {
               <span className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-xs font-bold text-orange-500 uppercase tracking-wider">Logos en 3D</span>
             </div>
 
-            <div>
+            <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href={`https://wa.me/5492944914816?text=${encodeURIComponent('Hola Sinapsis 3D! Me interesa cotizar merchandising corporativo o regalos empresariales para mi marca.')}`}
                 target="_blank"
@@ -64,6 +65,13 @@ const Merchandising: React.FC = () => {
                 <i className="fa-brands fa-whatsapp text-lg"></i>
                 Cotizar Merchandising para tu Empresa
               </a>
+              <Link
+                to="/llaveros-corporativos-bariloche"
+                className="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-orange-400 hover:text-orange-300 font-bold px-6 py-3 rounded-xl text-sm border border-zinc-800 transition-colors"
+              >
+                <i className="fa-solid fa-key"></i>
+                Ver Llaveros Corporativos Bariloche
+              </Link>
             </div>
         </div>
 

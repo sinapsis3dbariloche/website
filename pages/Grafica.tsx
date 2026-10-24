@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GraphicsServices from '../components/GraphicsServices';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 import CategorySlider from '../components/CategorySlider';
+import FeaturedPortfolioShowcase from '../components/FeaturedPortfolioShowcase';
 import SEO from '../components/SEO';
 import { trackWhatsAppClick } from '../utils/analytics';
 
@@ -34,9 +35,25 @@ const Servicios: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Gráfica, Stickers y Etiquetas en Bariloche | Sinapsis 3D"
-        description="Impresión gráfica y papelería comercial en Bariloche: stickers troquelados, vinilos, etiquetas, señaladores y packaging para marcas y fiestas. Pedí tu cotización."
+        title="Stickers, Etiquetas y Gráfica Personalizada en Bariloche | Vinilo y Packaging | Sinapsis 3D"
+        description="Impresión gráfica de alta resolución, vinilos resistentes al agua, stickers troquelados y etiquetas personalizadas para marcas y packaging en Bariloche. Cotizá online por WhatsApp."
         canonical="https://www.sinapsis3dbariloche.com.ar/grafica"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Sinapsis 3D Bariloche - Gráfica, Stickers y Packaging",
+          "url": "https://www.sinapsis3dbariloche.com.ar/grafica",
+          "description": "Servicio de diseño e impresión gráfica personalizada, stickers troquelados, vinilos, etiquetas comerciales y packaging en San Carlos de Bariloche.",
+          "telephone": "+542944914816",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Altos del Cóndor",
+            "addressLocality": "San Carlos de Bariloche",
+            "addressRegion": "Río Negro",
+            "addressCountry": "AR"
+          },
+          "areaServed": ["San Carlos de Bariloche", "Dina Huapi", "Patagonia"]
+        }}
       />
       
       <GraphicsServices onImageClick={(src, title, desc) => setActiveImage({ src, title, desc })} />
@@ -54,13 +71,19 @@ const Servicios: React.FC = () => {
         </a>
       </div>
 
-      <div className="pb-20 bg-zinc-950">
+      <div className="pb-12 bg-zinc-950">
         <CategorySlider 
           title="Nuestros Trabajos Gráficos" 
           subtitle="Explorá los productos personalizados impresos en alta calidad"
           categories={GRAFICA_CATEGORIES} 
         />
       </div>
+
+      <FeaturedPortfolioShowcase 
+        title="Portfolio de Gráfica y Piezas Reales"
+        subtitle="Stickers en vinilo, packaging, papelería y combinaciones con impresión 3D realizadas en Bariloche"
+      />
+
       <Lightbox activeImage={activeImage} onClose={() => setActiveImage(null)} />
     </>
   );
