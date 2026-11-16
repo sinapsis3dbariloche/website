@@ -30,6 +30,11 @@ export const SOCIALS = [
     url: 'https://www.facebook.com/profile.php?id=61567870791647',
     icon: 'fa-brands fa-facebook',
   },
+  {
+    platform: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/sinapsis-3d-bariloche/',
+    icon: 'fa-brands fa-linkedin',
+  },
 ];
 
 export const PORTFOLIOS = [
